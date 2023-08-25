@@ -12,40 +12,12 @@
  \end{itemize}
  \end{CpsCol}
 
- \begin{His}
-   
-  \hfill{\em Dieu a fait les nombres entiers, tout le reste est l'œuvre de l'Homme}
+\begin{His}
 
-  \hfill{Leopold Kronecker}
+  
+L'arithmétique est une branche des mathématiques qui correspond à la science des nombres. De nombreux nombres entiers ont des propriétés particulières. Ces propriétés font l'objet de la théorie des nombres. Parmi ces nombres particuliers, les nombres premiers sont sans doute les plus importants.
 
-     \bigskip
-
-     
-\begin{minipage}[b]{0.6\textwidth}{L'arithmétique est la branche des mathématiques qui étudie
-  les nombres entiers et les opérations $+$, $-$, $\times$, $\div$,...
-  Comme le relève la citation en exergue, les concepts de l'arithmétique
-  sont élémentaires et fondamentaux.
-
-  Mais cela ne signifie pas que
-  les problèmes de l'arithmétique sont simples. Par exemple,
-  les nombres premiers sont source de nombreux problèmes
-  non résolus à ce jour, en particulier l'{\em hypothèse de Riemann}
-  qui porte sur la {\em fonction zêta} et qui est reliée à la
-  répartition des nombres premiers.
-
-  L'importance de l'arithmétique dépasse les mathématiques : la plupart des
-  cryptosystèmes (algorithmes qui permettent la sécurité des
-  communications sur internet) sont fondés sur l'arithmétique.
-  }
-\end{minipage}
-\begin{minipage}[b]{0.4\textwidth}
-\begin{center}    
-  \includegraphics[width=5.5cm]{FIG/zeta7b.png}
-
-  Une représentation de la fonction zêta de Riemann
-
-\end{center}
-\end{minipage}
+On connait aussi les nombres pairs et les nombres impairs. 
 
 \end{His}
 
@@ -69,31 +41,63 @@ Combien, au minimum,  y aura-t-il de truffes de chaque sorte dans chaque boîte 
 \begin{pageCours}
 
 
-\section{Les entiers naturels et entiers relatifs}
+\section{Les nombres entiers naturels et nombres entiers relatifs}
 
 \begin{DefT}{Entiers naturels et relatifs.}
 
 \begin{enumerate}
-\item On appelle \textbf{entiers naturels} les nombres : $0$ ; $1$ ; $2$ ; $3$ ; $\ldots$  Leur ensemble est noté $\N$.\index{Ensemble de nombres! Entiers naturels $\N$}, on a donc : $\N =  \lbrace 0 ; 1 ; 2 ; 3 \ldots \rbrace $
+\item On appelle \textbf{entiers naturels} les nombres : $0$ ; $1$ ; $2$ ; $3$ ; $\ldots$  Leur ensemble est noté $\N$.\index{Ensemble de nombres! Entiers naturels $\mathbb N$}, on a donc : $\mathbb N=  \lbrace 0 ; 1 ; 2 ; 3 \ldots \rbrace $
  
-\item  On appelle \textbf{entiers relatifs} ou simplement \textbf{entiers} les nombres entiers naturels et leurs opposés. Leur ensemble est noté $\Z$ \index{Ensemble de nombres! Entiers $\Z$}(d'après le mot allemand Zahl qui signifie chiffre, nombre).
-On a donc : $\Z = \lbrace \ldots -3 ; -2 ; -1 ; 0 ; 1 ; 2 ; 3  \cdots  \rbrace$
+\item  On appelle \textbf{entiers relatifs} ou simplement \textbf{entiers} les nombres entiers naturels et leurs opposés. Leur ensemble est noté $\mathbb Z$ \index{Ensemble de nombres! Entiers $\mathbb Z$}(d'après le mot allemand Zahl qui signifie chiffre, nombre).
+On a donc : $\mathbb Z = \lbrace \ldots -3 ; -2 ; -1 ; 0 ; 1 ; 2 ; 3  \cdots  \rbrace$
 Parfois, on dit abusivement que les nombres entiers sont les nombres sans partie décimale.
 \end{enumerate}
 \end{DefT}
 
+\begin{minipage}{0.6\linewidth}
+\begin{Rqs} 
+\begin{itemize}[leftmargin=*]
+\item L'ensemble des nombres entiers $\Z$ contient l'ensemble des nombres naturels $\N$. 
+
+On écrit $\mathbb N  \subset \mathbb Z$ et on dit que l'ensemble $\mathbb N$ est inclus dans $\mathbb Z$.
+
+\item Si $x \in \mathbb N$ alors $x \in \mathbb Z$. Le symbole $\in$ signifie \textbf{appartient à}. 
+\end{itemize}
+\end{Rqs}
  
-\section{Multiples et diviseurs}
-
-\begin{minipage}{0.5\linewidth}
-
-\begin{DefT}{Multiple}\index{Multiple!Nombres}
-
-  Soit $d$ un nombre entier. Le nombre $m$ est dit \textbf{multiple} de $d$ s'il existe un entier $q \in \Z$ tel que $m=qd$. Dans ce cas, on dit aussi
-  que $d$ est un \textbf{diviseur} de $m$.
-\end{DefT}
 \end{minipage}
-\begin{minipage}{0.5\linewidth}
+\begin{minipage}{0.4\linewidth} 
+ 
+\definecolor{xfqqff}{rgb}{0.4980392156862745,0.,1.}
+\definecolor{ffqqqq}{rgb}{1.,0.,0.}
+\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-0.7,-1.22) rectangle (4.54,2.62);
+\draw [rotate around={12.739646792482095:(2.15,0.66)},line width=2.pt,color=ffqqqq] (2.15,0.66) ellipse (1.5997803770827426cm and 1.08129424991489cm);
+\draw [rotate around={18.434948822922024:(1.92,0.68)},line width=2.pt,color=xfqqff] (1.92,0.68) ellipse (2.576113244705657cm and 1.6710354423374485cm);
+\draw [color=xfqqff](3.32,2.14) node[anchor=north west] {$\mathbb Z$};
+\draw [color=ffqqqq](2.78,1.58) node[anchor=north west] {$\mathbb N$};
+\draw (1.54,0.14) node[anchor=north west] {0};
+\draw (1.96,0.94) node[anchor=north west] {1};
+\draw (2.72,0.38) node[anchor=north west] {2};
+\draw (1.06,-0.46) node[anchor=north west] {$-5$};
+\draw (-0.18,1.36) node[anchor=north west] {$-2$};
+\draw (0.02,0.02) node[anchor=north west] {$-1$};
+\end{tikzpicture}
+ 
+ 
+\end{minipage} 
+
+\section{Multiples et diviseurs, nombre premier, nombre pair, nombre impair}
+
+ 
+
+\begin{DefT}{Multiples et diviseurs}\index{Multiple!Nombres}\index{Diviseur!Nombres}
+
+Soit $d$ un nombre entier. Le nombre $m$ est dit \textbf{multiple} de $d$ s'il existe un entier $q \in \Z$ tel que $m=qd$. Dans ce cas, on dit aussi que $d$ est un \textbf{diviseur} de $m$.
+\end{DefT}
+
+
 \begin{Exs} 
   $35=5 \times 7$ où $7 \in \Z$ donc $35$ est un multiple de $5$
   et $5$ est un diviseur de $35$. Comme $5 \in \Z$, on peut aussi
@@ -102,40 +106,24 @@ Parfois, on dit abusivement que les nombres entiers sont les nombres sans partie
   1 est un diviseur de tous les entiers, et tous les entiers
   divisent 0.
 \end{Exs}
-\end{minipage}
 
 
-%\begin{minipage}{0.5\linewidth}
-%\begin{DefT}{Diviseur}\index{Diviseur!Nombres}%
-%
-%Soit $n$ un nombre entier. Le nombre $q$ est dit \textbf{diviseur} de $n$ s'il %existe un entier $k \in \Z$ tel que $n=kq$.
-%\end{DefT}
-%\end{minipage}
-%\begin{minipage}{0.5\linewidth}
-%\begin{Ex} 
-%
-%$48 = 6 \times 8$ où $6 \in \Z$  donc $8$ est un diviseur de $48$ et aussi,  $6%$ est diviseur de $48$.
-%\end{Ex}
-%\end{minipage}
+ 
 
-\begin{minipage}{0.5\linewidth}
 \begin{DefT}{Nombre premier}\index{Nombre premier}
 
 Un \textbf{nombre premier} est un nombre entier naturel qui a exactement 2 diviseurs positifs (qui sont alors 1 et lui-même) 
 
 \end{DefT}
-\end{minipage}
-\begin{minipage}{0.5\linewidth}
+
+
 \begin{Ex} 
 
   $19$ est un nombre premier :  il n'est divisible que par 1 et lui-même.
 
   $1$ n'est pas premier, car il n'a qu'un seul diviseur.  
 \end{Ex}
-\end{minipage}
 
-
-\begin{minipage}{0.5\linewidth}
 \begin{DefT}{Nombres pairs et impairs}\index{Nombres pairs et impairs}
 
   Un \textbf{nombre pair} est un nombre entier divisible par 2, autrement
@@ -146,106 +134,58 @@ Un \textbf{nombre premier} est un nombre entier naturel qui a exactement 2 divis
   Un entier $n$ est un \textbf{nombre impair} lorsqu'il existe $k \in \Z$
   tel que $n=2k+1$.
 \end{DefT}
-\end{minipage}
-\begin{minipage}{0.5\linewidth}
+
+
 \begin{Exs} 
 $46 = 2 \times 23$ et $23\in\Z$ donc $46$ est un nombre pair.
 
   $15= 2 \times 7,5$. Comme $7,5 \not\in\Z$, $15$ n'est pas pair. Par contre,
   $15=2 \times 7+1$ avec $7 \in \Z$, donc $15$ est impair.
 \end{Exs}
-\end{minipage}
-
-
-\begin{minipage}{0.5\linewidth}
-  \begin{ThT}{Décomposition en facteurs premiers}
-    Tout entier naturel supérieur ou égal à 2 se décompose de façon unique en produit de facteurs premiers.
-  \end{ThT}
-\end{minipage}
-\begin{minipage}{0.5\linewidth}
-\begin{Exs}
-Les décompositions en facteurs premiers de $8$, $15$ et $19$ sont respectivement  
-$8=2^3$ ; $15=3 \times 5$ ; $19=19$.
-  
-\end{Exs}
-\end{minipage}
-
-\begin{minipage}{0.5\linewidth}
-  \begin{DefT}{Nombres premiers entre eux}\index{Premiers entre eux}
-
-    Deux nombres entiers $a$ et $b$ sont \textbf{premiers entre eux}
-    lorsque leur seul diviseur positif commun est $1$.
-  \end{DefT}
-\end{minipage}
-\begin{minipage}{0.5\linewidth}
-\begin{Ex}
-  Les diviseurs positifs de $8$ sont $1$ ; $2$ ; $4$ et $8$. Ceux de $15$ sont
-  $1$ ; $3$ ; $5$ et $15$. Le seul diviseur commun est $1$ et \textbf{$8$ et $15$ sont donc premiers entre eux} (Pourtant, ils ne sont pas premiers)
-\end{Ex}
-\end{minipage}
-
-
-
-
-\section{Logique}
-
-\begin{minipage}{0.5\linewidth}
-\begin{DefT}{Proposition universelle}\index{Proposition universelle}
-
-  Une \textbf{proposition universelle} est une proposition qui porte sur tous
-  les éléments d'un ensemble. 
-
-\end{DefT}
-\end{minipage}
-\begin{minipage}{0.5\linewidth}
-\begin{Ex} 
-  Le théorème de décomposition en facteurs premiers est une proposition
-  universelle (et elle est vraie).
-  
-%Quels que soient trois nombres $a$, $b$ et  $c$, $a(b+c)=ab+ac$. La distributivité est une proposition universelle.
-
-\end{Ex}
-\end{minipage}
-
-\begin{minipage}{0.5\linewidth}
-\begin{DefT}{Contre-exemple}\index{Contre-exemple}
-
-Un \textbf{contre-exemple} est un cas particulier qui vient contredire une proposition universelle. 
-
-\end{DefT}
-
-\end{minipage}
-\begin{minipage}{0.5\linewidth}
-
-\begin{Ex} 
-
-Considérons une proposition universelle : « tous les nombres sont pairs ». Pour démontrer que cette proposition est fausse, il suffit de démontrer qu'un seul nombre n'est pas pair. La contradiction vient sur le mot \textbf{tous}.
-
-$3=2\times1,5$ et $1,5 \not\in\Z$ donc $3$ n'est pas pair. \textbf{Il existe
-  des nombres non-pairs}, la proposition universelle initiale est fausse. 
-
-\end{Ex}
-\end{minipage}
-
-
 
 
 \end{pageCours} 
 \begin{pageAD} 
  
 
+\Sf{Connaitre les ensembles $\mathbb N$ et $\mathbb Z$}
+
+\begin{ExoCad}{Calculer.}{1234}{0}{0}{0}{0}{0}
+
+Complète avec $\in$ ou $\not \in$.
+
+\begin{enumerate}
+\begin{minipage}{0.3\linewidth}
+\item $2 \ldots \ldots \mathbb Z$
+\item $-4 \ldots \ldots \mathbb N$
+\item $7 \ldots \ldots \mathbb N$
+\end{minipage}
+\begin{minipage}{0.3\linewidth}
+\item $42 \ldots \ldots \mathbb N$
+\item $-123 \ldots \ldots \mathbb Z$
+\item $-9 \ldots \ldots \mathbb N$
+\end{minipage}
+\begin{minipage}{0.3\linewidth}
+\item $-22 \ldots \ldots \mathbb N$
+\item $25 \ldots \ldots \mathbb Z$
+\item $0 \ldots \ldots \mathbb Z$
+\end{minipage}
+\end{enumerate}
+
+
+\end{ExoCad}
+
 \Sf{Utiliser les multiples et les diviseurs}
 
-\begin{ExoCad}{Calculer.}{b/14}{0}{0}{0}{0}{0}
+\begin{ExoCad}{Calculer.}{1234}{0}{0}{0}{0}{0}
 \begin{enumerate}
 \item Déterminer les 10 premiers multiples positifs de 4 : \point{1}
 \item Déterminer les 10 premiers multiples positifs de 6 : \point{1}
-\item Déterminer tous les multiples communs de 4 et de 6 : \point{1}
+\item Déterminer les 3 premiers multiples communs de 4 et de 6 : \point{1}
 \end{enumerate}
 \end{ExoCad}
 
-
-\begin{ExoCad}{Calculer.}{b/15}{0}{0}{0}{0}{0}
+\begin{ExoCad}{Calculer.}{1234}{0}{0}{0}{0}{0}
 
 $51$ est-il un nombre premier ? Justifier. 
 
@@ -254,9 +194,9 @@ $51$ est-il un nombre premier ? Justifier.
 \end{ExoCad}
 
 
-\begin{ExoCad}{Calculer.}{b/16}{0}{0}{0}{0}{0}
+\begin{ExoCad}{Raisonner.}{1234}{0}{0}{0}{0}{0}
 
-Décomposer 24 en produit de facteurs premiers.
+Démontrer que $126$ est un nombre pair.
 
 \point{3}
 
@@ -264,9 +204,9 @@ Décomposer 24 en produit de facteurs premiers.
 
 
 
-\begin{ExoCad}{Calculer.}{1234}{0}{0}{0}{0}{0}
+\begin{ExoCad}{Raisonner.}{1234}{0}{0}{0}{0}{0}
 
-Simplifier la fraction $\dfrac{735}{840}$ 
+Démontrer que si $n$ est un nombre impair alors $n^2$ est impair.
 
 \point{3}
 
@@ -276,9 +216,198 @@ Simplifier la fraction $\dfrac{735}{840}$
 
 \begin{ExoCad}{Calculer, raisonner.}{1234}{0}{0}{0}{0}{0}
 
-Soit $a$ un entier. Démontrer que la somme de deux multiples de $a$ est un multiple de $a$. \point{3}
+Démontrer que la somme de deux multiples de $3$ est un multiple de $3$. \point{4}
+
+Soit $a$ un entier. Démontrer que la somme de deux multiples de $a$ est un multiple de $a$. \point{4}
 
 \end{ExoCad}
+
+
+
+
+\end{pageAD}
+\begin{pageCours}
+
+\section{Nombres premiers entre eux}
+
+  \begin{DefT}{Nombres premiers entre eux}\index{Premiers entre eux}
+
+    Deux nombres entiers $a$ et $b$ sont \textbf{premiers entre eux}
+    lorsque leur seul diviseur positif commun est $1$.
+  \end{DefT}
+
+\begin{Ex}
+  Les diviseurs positifs de $8$ sont $1$ ; $2$ ; $4$ et $8$. Ceux de $15$ sont
+  $1$ ; $3$ ; $5$ et $15$. Le seul diviseur commun est $1$ et \textbf{$8$ et $15$ sont donc premiers entre eux} (Pourtant, ils ne sont pas premiers)
+\end{Ex}
+
+\section{Décomposition en facteurs premiers}
+
+  \begin{ThT}{Décomposition en facteurs premiers}
+    Tout entier naturel supérieur ou égal à 2 se décompose de façon unique en produit de facteurs premiers.
+  \end{ThT}
+
+
+\begin{Exs}
+Les décompositions en facteurs premiers de $8$, $15$ et $19$ sont respectivement  
+$8=2^3$ ; $15=3 \times 5$ ; $19=19$.
+  
+\end{Exs}
+
+
+
+
+
+
+
+\section{Logique}
+
+ 
+\begin{DefT}{Proposition universelle}\index{Proposition universelle}
+
+  Une \textbf{proposition universelle} est une proposition qui porte sur tous
+  les éléments d'un ensemble. 
+
+\end{DefT}
+ 
+ 
+\begin{Rq} 
+  Le théorème de décomposition en facteurs premiers est une proposition
+  universelle (et elle est vraie).
+  
+%Quels que soient trois nombres $a$, $b$ et  $c$, $a(b+c)=ab+ac$. La distributivité est une proposition universelle.
+
+\end{Rq}
+ 
+\begin{DefT}{Contre-exemple}\index{Contre-exemple}
+
+Un \textbf{contre-exemple} est un cas particulier qui vient contredire une proposition universelle. 
+
+\end{DefT}
+ 
+
+\begin{Ex} 
+
+Considérons une proposition universelle : « tous les nombres sont pairs ». Pour démontrer que cette proposition est fausse, il suffit de démontrer qu'un seul nombre n'est pas pair. La contradiction vient sur le mot \textbf{tous}.
+
+$3=2\times1,5$ et $1,5 \not\in\Z$ donc $3$ n'est pas pair. \textbf{Il existe
+  des nombres non-pairs}, la proposition universelle initiale est fausse. 
+
+\end{Ex}
+ 
+
+\begin{LogT}{On souhaite répondre à la proposition : "Tout entier est-il un entier naturel ?"  }
+
+Cette proposition est une proposition universelle qui se traduit par : "Tout nombre entier appartient-il à $\N$ ?". 
+
+A priori, on ne sait pas quelle est la réponse. On peut utiliser alors des exemples pour tester la proposition.
+
+Il suffit de trouver un seul nombre entier n'appartenant pas à $\N$ pour informer la proposition : Principe du contre exemple. 
+
+
+$-2 \in \Z$ mais $-2 \not \in \N$. Donc $\Z \not \subset \N$.
+
+\end{LogT}
+
+
+\end{pageCours} 
+\begin{pageAD} 
+
+
+
+\Sf{Décomposer en produit de facteurs premiers}
+
+\begin{ExoCad}{Calculer.}{1234}{0}{0}{0}{0}{0}
+
+Les nombres $145$ et $126$ sont-ils premiers entre eux ? Justifier.
+
+\point{3}
+
+\end{ExoCad}
+
+
+
+
+
+\begin{ExoCad}{Calculer.}{1234}{0}{0}{0}{0}{0}
+
+Décomposer 24 en produit de facteurs premiers.
+
+\point{3}
+
+\end{ExoCad}
+
+\begin{ExoCad}{Représenter. Calculer. }{1234}{1}{0}{0}{0}
+
+\begin{minipage}{0.55\linewidth}
+
+Pour déterminer tous les diviseurs d'un nombre, on utilise un arbre de diviseurs. C'est un représentation qui propose tous les calculs possibles avec les facteurs premiers du nombre.
+
+On donne en exemple l'arbre de diviseurs de $36$.
+
+Construire l'arbre des diviseurs de $20$.
+
+\vspace{4cm}
+
+\end{minipage}
+\begin{minipage}{0.4\linewidth}
+
+\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-3.6,-1.) rectangle (3.9,5.42);
+\draw (-3.34,2.36) node[anchor=north west] {$36=2^2\times 3^2$};
+\draw [line width=1.pt] (-1.,2.)-- (1.,4.);
+\draw [line width=1.pt] (-1.,2.)-- (1.,2.);
+\draw [line width=1.pt] (-1.,2.)-- (1.,0.);
+\draw [line width=1.pt] (1.,2.)-- (2.04,2.78);
+\draw [line width=1.pt] (1.,2.)-- (2.,2.);
+\draw [line width=1.pt] (1.,2.)-- (1.98,1.24);
+\draw [line width=1.pt] (1.,0.)-- (2.02,0.64);
+\draw [line width=1.pt] (1.,0.)-- (2.,0.);
+\draw [line width=1.pt] (1.,0.)-- (2.02,-0.74);
+\draw [line width=1.pt] (1.,4.)-- (1.96,4.66);
+\draw [line width=1.pt] (1.,4.)-- (2.,4.);
+\draw [line width=1.pt] (1.,4.)-- (2.06,3.5);
+\begin{scriptsize}
+\draw[color=ududff] (2.9,2.91) node {$2^1 \times 3^0=2$};
+\draw[color=ududff] (2.9,2.09) node {$2^1 \times 3^1=6$};
+\draw[color=ududff] (2.9,1.31) node {$2^1 \times 3^2=18$};
+\draw[color=ududff] (2.9,0.77) node {$2^2 \times 3^0=4$};
+\draw[color=ududff] (2.9,0.07) node {$2^2 \times 3^1=12$};
+\draw[color=ududff] (2.9,-0.63) node {$2^2 \times 3^2=36$};
+\draw[color=ududff] (2.9,4.73) node {$2^0 \times 3^0=1$};
+\draw[color=ududff] (2.9,4.09) node {$2^0 \times 3^1=3$}; 
+
+\draw[color=black] (0.16,3.37) node {$2^0$};
+\draw[color=black] (0.16,2.35) node {$2^1$};
+\draw[color=black] (0.16,1.23) node {$2^2$};
+
+\draw[color=black] (1.56,4.5) node {$3^0$};
+\draw[color=black] (1.56,4.15) node {$3^1$};
+\draw[color=black] (1.56,3.55) node {$3^2$};
+
+\draw[color=black] (1.56,2.61) node {$3^0$};
+\draw[color=black] (1.56,2.2) node {$3^1$};
+\draw[color=black] (1.56,1.35) node {$3^2$};
+
+\draw[color=black] (1.56,0.63) node {$3^0$};
+\draw[color=black] (1.56,0.15) node {$3^1$};
+\draw[color=black] (1.56,-0.63) node {$3^2$};
+
+\end{scriptsize}
+\end{tikzpicture}
+\end{minipage}
+
+\end{ExoCad} 
+
+\begin{ExoCad}{Calculer.}{1234}{0}{0}{0}{0}{0}
+
+Simplifier la fraction $\dfrac{735}{840}$ 
+
+\point{3}
+
+\end{ExoCad}
+
 
 
 \begin{ExoCad}{Raisonner.}{1234}{0}{0}{0}{0}{0}
@@ -310,6 +439,8 @@ Les propositions suivantes sont-elles vraies ou fausses ?
 \begin{pageParcoursu} 
 
 
+
+ 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{ExoCu}{Représenter.}{1234}{2}{0}{0}{0}{0}
 
@@ -404,6 +535,14 @@ Démontrer que tout nombre entier $n$ multiple de $9$ est un multiple de $3$.  \
 \begin{ExoCdN}{Raisonner.}{1}{0}{0}{0}{0}
 Montrer que la somme de trois entiers consécutifs est toujours un multiple de 3. \point{6}
 \end{ExoCdN}
+
+
+\begin{ExoCdN}{Raisonner.}{2}{0}{0}{0}{0}
+Le produit de deux nombres impairs est-il impair ? \point{3}
+\end{ExoCdN}
+
+
+
 
 
 \end{pageParcoursd}
@@ -553,9 +692,6 @@ Simplifier le nombre $a=\dfrac{60}{126}$ pour la rendre irréductible. \point{4}
 Simplifier le nombre $b=\dfrac{12a+4}{8}$. \point{2}
 \end{ExoAutoN}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{ExoAutoN}{Raisonner.}{2}{0}{0}{0}{0}
-Le produit de deux nombres impairs est-il impair ? \point{4}
-\end{ExoAutoN}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -598,9 +734,9 @@ On appelle ce procédé « la méthode par divisions successives » ou
     
   \end{itemize}
   \begin{enumerate}
-  \item Quel est le côté $c$ des carreaux qui répond à ces deux contraintes ?
+  \item Quel est le côté $c$ des carreaux qui répond à ces deux contraintes ?\point{3}
   \item Combien de carreaux seront disposés en longueur ? en largeur ?
-    Combien de carreaux seront utilisés au total ?
+    Combien de carreaux seront utilisés au total ?\point{4}
   \end{enumerate}
 \end{enumerate}
 \end{ExoAutoN}

@@ -1,6 +1,6 @@
-=>PYTHONTEX#py#default#default#0#code#####279#
+=>PYTHONTEX#py#default#default#0#code#####275#
 import qrcode
-def qr(data):
+def qr(data,taille):
      fic=r"qrcodes/qr"+data+'.png'
      urlcourte=r"sacado.xyz/"+data
      urllongue=r"https://"+urlcourte
@@ -10,7 +10,13 @@ error_correction=qrcode.constants.ERROR_CORRECT_L,box_size=2, border=0)
      qr.make(fit=True)
      qr_image = qr.make_image(fill_color="black", back_color="white")
      qr_image.save(fic)
-     return r"""\parbox{3.5cm}{\begin{center}
+
+     if taille==1 :  # grand qrcode
+         s=r"""\parbox{3.5cm}"""
+     else :
+         s=r"""\parbox{1cm}"""
+
+     return s+r"""{\begin{center}
 \includegraphics{"""+fic+r"}\\{\scriptsize\tt "+urlcourte+r"}\end{center}}"
 =>PYTHONTEX:SETTINGS#
 version=0.18
