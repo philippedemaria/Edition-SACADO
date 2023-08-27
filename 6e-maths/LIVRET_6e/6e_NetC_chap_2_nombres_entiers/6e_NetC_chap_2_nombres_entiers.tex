@@ -6,6 +6,8 @@
 \author{L'équipe SACADO}
 
 \usepackage{multido}
+\usepackage{multirow}
+
 
 \begin{document}
 
@@ -48,17 +50,20 @@
 
 \section{Nombres entiers}
 
+\mini{.25\linewidth}{
 \begin{Def}
 Un \textbf{nombre entier} est un nombre qui peut s'écrire \textbf{sans virgule}
 \end{Def}
-
+}{.75\linewidth}{
 \begin{Rqs}
 \begin{itemize}
 \item $0$, $1$, $2$, $3$, $4$, $5$, $6$, $7$, $8$ et $9$ sont les dix \textbf{chiffres} qui permettent d'écrire tous les nombres entiers.
 \item Pour pouvoir lire les grands nombres entiers facilement, on regroupe les chiffres par groupe de 3 : $345\,202$
 \end{itemize}
 \end{Rqs}
+}
 
+\mini{.52\linewidth}{
 \begin{Reg}
 Règles orthographiques pour l'écriture des nombres :
 \begin{itemize}
@@ -70,7 +75,7 @@ Règles orthographiques pour l'écriture des nombres :
     \end{itemize}
 \end{itemize}
 \end{Reg}
-
+}{.48\linewidth}{
 \begin{Ex}
 \begin{itemize}
 \item $895$ s'écrit : 'huit-cent-quatre-vingt-quinze'
@@ -80,6 +85,7 @@ Règles orthographiques pour l'écriture des nombres :
 \item $1\,285$ s'écrit : 'mille-deux-cent-quatre-vingt-cinq'
 \end{itemize}
 \end{Ex}
+}
 
 \section{Position d'un chiffre dans un nombre}
 
@@ -90,31 +96,112 @@ Règles orthographiques pour l'écriture des nombres :
 \end{itemize}
 \end{Def}
 
-\begin{Ex}
-Un million = $1\,000\,000$ unités
-\end{Ex}
-
+\mini{.22\linewidth}{
 \begin{DefT}{Vocabulaire}
-Chaque position (rang) possède un nom spécifique : unité, dizaine, centaines....
-    
-\begin{center}
-    \includegraphics[width=13cm]{FIG/tableau_position.png}
-\end{center}
+Chaque position (rang) possède un nom spécifique : unité, dizaine, centaines, milliers, millions, milliards\ldots
 \end{DefT}
-
+}{.78\linewidth}{
 \begin{Mt}
 Décomposition de $437\,640\,881$ :
 \begin{itemize}
 \item Décomposition 1 : 
-\[437\,000\,000+640\,000+881\]
+$437\,000\,000+640\,000+881$
 \item Décomposition 2 :
-\[(437\times1\,000\,000)+(640\times 1\,000)+(881\times1)\]
+$(437\times1\,000\,000)+(640\times 1\,000)+(881\times1)$
 \item Décomposition 3 :
-\[400\,000\,000+30\,000\,000+7\,000\,000+600\,000+40\,000+800+80+1\]
+$400\,000\,000+30\,000\,000+7\,000\,000+600\,000+40\,000+800+80+1$
 \item Décomposition 4 :
-\[4\times100\,000\,000+3\times10\,000\,000+7\times1\,000\,000+6\times100\,000+4\times10\,000+8\times100+8\times10+1\times1\]
+$4\times100\,000\,000+3\times10\,000\,000+7\times1\,000\,000+6\times100\,000+4\times10\,000+8\times100+8\times10+1\times1$
 \end{itemize}
 \end{Mt}
+}
+
+\end{pageCours} % Fin page de cours 1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Application direct 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageAD}  % Début page d'exercice d'application direct 1
+\restoregeometry %Ne pas toucher cette ligne
+
+\Sf{Écrire un nombre entier en chiffres et en lettres}
+
+\begin{ExoCadN}{Communiquer.}{0}{0}{0}{0}{0}
+Écris les nombres suivants en chiffres :
+\begin{itemize}
+\item neuf-millions-sept-cent-neuf-mille-cinq-cents : $\ldots\ldots\ldots\ldots$
+\item vingt-millions-quatre-cent-cinquante-mille-sept-cent-cinquante-six : $\ldots\ldots\ldots\ldots$
+\item quatre-vingt-millions-deux-cent-vingt-mille-neuf-cents : $\ldots\ldots\ldots\ldots$
+\end{itemize}
+\end{ExoCadN}
+
+\begin{ExoCadN}{Communiquer.}{0}{0}{0}{0}{0}
+Écris les nombres suivants en lettres :
+\begin{itemize}
+\item $\np{90103116}$ : \point{1}
+\item $\np{598819}$ : \point{1}
+\item $\np{318380}$ : \point{1}
+\end{itemize}
+\end{ExoCadN}
+
+\Sf{Déterminer la valeur d'un chiffre selon sa position}
+
+\begin{ExoCadN}{Communiquer.}{0}{0}{0}{0}{0}
+Considérons le nombre $\np{68347239}$, complète les phrases :
+\begin{itemize}
+\mini{.48\linewidth}{
+\item Le chiffre des unités de milliers est : $\ldots\ldots$
+\item Le chiffre des unités est : $\ldots\ldots$
+\item Le chiffre des unités de millions est : $\ldots\ldots$
+\item Le chiffre des dizaines est : $\ldots\ldots$
+}{.48\linewidth}{
+\item Le chiffre des centaines est : $\ldots\ldots$
+\item Le chiffre des centaines de milliers est : $\ldots\ldots$
+\item Le chiffre des dizaines de milliers est : $\ldots\ldots$
+\item Le chiffre des dizaines de millions est : $\ldots\ldots$
+}
+\end{itemize}
+\end{ExoCadN}
+
+\begin{ExoCadN}{Communiquer.}{0}{0}{0}{0}{0}
+Complète les phrases :
+\begin{enumerate}
+\item Dans le nombre $A=72\,505\,0\underline{1}2$, le $\underline{1}$ est le chiffre des  $\ldots\ldots\ldots\ldots$
+\item Dans le nombre $A=914\,216\,\underline{5}54$, le $\underline{5}$ est le chiffre des  $\ldots\ldots\ldots\ldots$
+\item Dans le nombre $A=2\underline{2}7\,074\,541$, le $\underline{2}$ est le chiffre des  $\ldots\ldots\ldots\ldots$
+\end{enumerate}
+\end{ExoCadN}
+
+\begin{ExoCadN}{Communiquer.}{0}{0}{0}{0}{0}
+Complète les phrases :
+\begin{enumerate}
+\item Dans le nombre $A=\np{33189207}$, le chiffre des centaines est $\ldots\ldots$
+\item Dans le nombre $A=\np{944597319}$, le chiffre des dizaines de milliers est $\ldots\ldots$
+\item Dans le nombre $A=\np{5664432}$, le chiffre des unités de millions est $\ldots\ldots$
+\end{enumerate}
+\end{ExoCadN}
+
+\Sf{Décomposer un nombre entier}
+
+\begin{ExoCadN}{Représenter.}{0}{0}{0}{0}{0}
+Margaux a décomposé le nombre $\np{963652}=9\times\np{100000}+6\times\np{10000}+3\times\np{1000}+6\times100+5\times10+2$ décompose les nombres suivants avec la même méthode :
+\begin{itemize}
+\item $\np{949009}=$\point{1}
+\item $\np{745017003}=$\point{1}
+\item $\np{6009060}=$\point{1}
+\end{itemize}
+\end{ExoCadN}
+ 
+\end{pageAD} % Fin page d'exercice d'application direct 1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Page de cours 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageCours} % Début page de cours 1
+
+\newgeometry{left=2cm,right=.8cm,top=1.5cm} %Ne pas toucher cette ligne
 
 \section{Comparer des nombres entiers}
 
@@ -199,19 +286,61 @@ ytick={-0.0,1.0,...,0.0},]
 \begin{pageAD}  % Début page d'exercice d'application direct 1
 \restoregeometry %Ne pas toucher cette ligne
 
-\Sf{Premier SF}
+\Sf{Comparer et ordonner des nombres entiers}
 
-\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+\begin{ExoCadN}{Représenter. Communiquer.}{0}{0}{0}{0}{0}
+Range les nombres donnés dans l'ordre \textbf{décroissant} :
+\begin{itemize}
+\item $\np{678093}-\np{267879}-\np{803830}-\np{510819}$ :
 
-\end{ExoCad}
+\point{1}
+\item $\np{294669}-\np{67611}-\np{336306}-\np{476448}$ :
 
-\Sf{Deuxième SF}
+\point{1}
+\end{itemize}
+Range les nombres donnés dans l'ordre \textbf{croissant} :
+\begin{itemize}
+\item $\np{417904}-\np{993961}-\np{357198}-\np{811940}$ :
 
-\begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
+\point{1}
+\item $\np{426488}-\np{948073}-\np{670748}-\np{618317}$ :
 
-\end{ExoCad}
+\point{1}
+\end{itemize}
+\end{ExoCadN}
 
-\Sf{Troisième SF}
+\Sf{Encadrer des nombres entiers}
+
+\begin{ExoCadN}{Représenter.}{0}{0}{0}{0}{0}
+\begin{enumerate}
+\item Amir a placé les nombres $\np{750264}$, $\np{121696}$ et $\np{289054}$ dans un tableau, déduis-en un encadrement au rang indiqué.
+
+\mini{.45\linewidth}{
+\vspace{.2cm}
+\includegraphics[width=\linewidth]{FIG/tableau_position_exo.png} 
+}{.45\linewidth}{
+\begin{itemize}
+\item Encadrement de $\np{750264}$ aux \textbf{dizaines} près : 
+$\ldots\ldots\ldots<\np{750264}<\ldots\ldots\ldots$
+\item Encadrement de $\np{121696}$ aux \textbf{unités de milliers} près :
+$\ldots\ldots\ldots<\np{121696}<\ldots\ldots\ldots$
+\item Encadrement de $\np{289054}$ aux \textbf{centaines} près :
+$\ldots\ldots\ldots<\np{289054}<\ldots\ldots\ldots$
+\end{itemize}
+}
+\item Maintenant que tu as compris essaye sans le tableau :
+\begin{itemize}
+\item Encadrement de $\np{46121215}$ aux \textbf{centaine de milliers} près :
+
+$\ldots\ldots\ldots<\np{46121215}<\ldots\ldots\ldots$
+\item Encadrement de $\np{6571845}$ aux \textbf{dizaines} près :
+
+$\ldots\ldots\ldots<\np{546571845}<\ldots\ldots\ldots$
+\end{itemize}
+\end{enumerate}
+\end{ExoCadN}
+
+\Sf{Repérer/Placer un nombre entier sur une demi-droite graduée.}
 
 \begin{ExoCad}{Compétence.}{1234}{0}{0}{0}{0}{0}
 
