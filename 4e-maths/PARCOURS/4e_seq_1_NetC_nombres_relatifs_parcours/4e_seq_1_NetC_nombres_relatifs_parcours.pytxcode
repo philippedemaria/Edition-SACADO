@@ -14,7 +14,7 @@ error_correction=qrcode.constants.ERROR_CORRECT_L,box_size=2, border=0)
 \includegraphics{"""+fic+r"}\\{\scriptsize\tt "+urlcourte+r"}\end{center}}"
 =>PYTHONTEX:SETTINGS#
 version=0.18
-outputdir=pythontex-files-2nd_chap_10_F_fonctions_de_references
+outputdir=pythontex-files-4e_seq_1_NetC_nombres_relatifs_parcours
 workingdir=.
 workingdirset=false
 gobble=none

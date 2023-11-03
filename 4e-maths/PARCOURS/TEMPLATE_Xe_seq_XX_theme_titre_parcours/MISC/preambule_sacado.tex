@@ -5,14 +5,14 @@
 %----------------------------------------------------------------------------------------
 %		Géometrie de la page
 %----------------------------------------------------------------------------------------
-\documentclass[dvipsnames,french,10pt]{book}
+%\documentclass[dvipsnames,french,10pt]{book}
 
 \usepackage[
-paperheight=27.5cm, %hauteur du papier
-paperwidth=20cm, %largeur du papier
-left=.8cm, %marge de gauche
-right=.8cm, %marge de droite
-top=1.5cm, %marge du haut
+%paperheight=27.5cm, %hauteur du papier
+%paperwidth=20cm, %largeur du papier
+left=1.4cm, %marge de gauche
+right=1.4cm, %marge de droite
+top=2cm, %marge du haut
 bottom=1cm, %marge du bas
 %marginparsep=0pt, %distance entre le texte et les notes de marges 
 reversemp, %inverse l'emplacement de la marge
@@ -20,7 +20,7 @@ headheight=20.60pt %hauteur du header
 %showframe, %permet d'afficher le cadre défini ci-dessus
 %bindingoffset=1cm %permet d'ajouter le décalage dû au reliage
 ]{geometry} %Redéfinition de la taille des pages
-\raggedbottom
+%\raggedbottom
 
 
 %----------------------------------------------------------------------------------------
@@ -151,12 +151,10 @@ headheight=20.60pt %hauteur du header
 
 %%%%% Pour une double minipage
 \newcommand{\mini}[4]{
-\noindent
 \begin{minipage}[c]{#1}
 #2
 \end{minipage}
 \hfill
-\noindent
 \begin{minipage}[c]{#3}
 #4
 \end{minipage}

@@ -1,4 +1,4 @@
-=>PYTHONTEX#py#default#default#0#code#####282#
+=>PYTHONTEX#py#default#default#0#code#####280#
 import qrcode
 def qr(data):
      fic=r"QRcodes/qr"+data+'.png'
@@ -14,7 +14,7 @@ error_correction=qrcode.constants.ERROR_CORRECT_L,box_size=2, border=0)
 \includegraphics{"""+fic+r"}\\{\scriptsize\tt "+urlcourte+r"}\end{center}}"
 =>PYTHONTEX:SETTINGS#
 version=0.18
-outputdir=pythontex-files-2nd_chap_10_F_fonctions_de_references
+outputdir=pythontex-files-TEMPLATE_Xe_seq_XX_theme_titre
 workingdir=.
 workingdirset=false
 gobble=none
