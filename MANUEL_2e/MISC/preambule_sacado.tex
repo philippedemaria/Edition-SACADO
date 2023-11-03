@@ -236,21 +236,25 @@ headheight=20.60pt %hauteur du header
 %----------------------------------------------------------------------------------------
 
 %\usepackage[
-%%final %Pour la compilation finale
+%final %Pour la compilation finale
 %draft %Pour le travail sur les documents
 %]{qrcode}
 %\usepackage{fontawesome}
-\usepackage{fancyqr}
+%\usepackage{fancyqr}
 %\FancyQrLoad{flat}
 %\fancyqrset{
-%%image=\scalebox{.8}{\includegraphics[scale=1]{sacadoA1.png}},image padding=.5,
+%image=\scalebox{.8}{\includegraphics[scale=1]{sacadoA1.png}},image padding=.5,
 %l color=sacado_violet,r color=sacado_blue}
 %\newcommand{\qr}[2]{\centering \fancyqr{https://sacado.xyz/qcm/show_course_from_qrcode/#1}
-%
+
 %\vspace{.2cm}
-%
+
 %#2} %\qr{id} Pour obtenir un qrcode en indiquant seulement l'id de l'exercice
-%
+
+
+
+
+
 %\newcommand{\miniqr}[3]{
 %\begin{minipage}[c]{.8\linewidth}
 %#1
@@ -262,7 +266,7 @@ headheight=20.60pt %hauteur du header
 %\fancyqr{https://sacado.xyz/qcm/show\_course\_from\_qrcode/#2}
 %
 %\vspace{.2cm}
-%
+
 %#3
 %\end{center}
 %\end{minipage}
@@ -275,28 +279,32 @@ headheight=20.60pt %hauteur du header
 \begin{pycode}
 import qrcode
 def qr(data,taille):
-     fic=r"qrcodes/qr"+data+'.png'
-     urlcourte=r"sacado.xyz/"+data
-     urllongue=r"https://"+urlcourte
+     fic=r"qrcodes/qr"+data[0]+data[2:]+'.png'
+     urllongue=r"https://sacado.xyz/"+data
      qr = qrcode.QRCode(version=1,
-error_correction=qrcode.constants.ERROR_CORRECT_L,box_size=2, border=0)
-     qr.add_data(urlcourte)
+error_correction=qrcode.constants.ERROR_CORRECT_L,box_size=1.5, border=0)
+     qr.add_data(urllongue)
      qr.make(fit=True)
      qr_image = qr.make_image(fill_color="black", back_color="white")
      qr_image.save(fic)
      
      if taille==1 :  # grand qrcode
-         s=r"""\parbox{3.5cm}"""
+         s=r"""\parbox{1.6cm}"""
      else :
          s=r"""\parbox{1cm}"""
          
      return s+r"""{\begin{center}
-\includegraphics{"""+fic+r"}\\{\scriptsize\tt "+urlcourte+r"}\end{center}}"
+\includegraphics{"""+fic+r"}\\{\scriptsize\tt "+data+r"}\end{center}}"
 \end{pycode}
 
-\newcommand{\qr}[1]{\py{qr("#1")}} % compilation complete
+% compilation complete
+
+\newcommand{\qr}[1]{\py{qr("#1",1)}} % compilation complete
 %utiliser :
-%  pdflatex --shell-escape MANUEL_6e_V1.tex ; pythontex MANUEL_6e_V1.tex --interpreter python:python3 ; pdflatex --shell-escape % %MANUEL_6e_V1.tex
+%  pdflatex --shell-escape MANUEL_6e.tex ; pythontex MANUEL_6e.tex --interpreter python:python3 ; pdflatex --shell-escape MANUEL_6e.tex
+
+
+\newcommand{\miniqr}[1]{\py{qr("#1",0)}} 
 
 %  draft
 %\newcommand{\qr}[1]{
@@ -305,7 +313,7 @@ error_correction=qrcode.constants.ERROR_CORRECT_L,box_size=2, border=0)
 %       %\\{\tt dummy}
 %\end{center}}
 %}
-%
+
 %\newcommand{\miniqr}[1]{
 %       \includegraphics[height=1cm]{qrcodes/qrDummy.png}
 %       %\\{\tt dummy}}
