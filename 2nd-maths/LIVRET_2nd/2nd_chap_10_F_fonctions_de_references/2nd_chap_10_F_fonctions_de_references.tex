@@ -17,13 +17,31 @@
  \begin{CpsCol}
 	\textbf{Les savoir-faire du parcours}
  	\begin{itemize}
- 		\item SF1
- 		\item SF2
+ 		\item Savoir étudier la parité d'une fonction.
+		\item Savoir déterminer graphiquement la parité d'une fonction.
+ 		\item Savoir étudier les variations de la fonction carré.
+ 		\item Savoir comparer des images par la fonction carré. 
+ 		\item Savoir résoudre une équation, inéquation avec la fonction carré.
+ 		\item Savoir étudier les variations de la fonction cube.
+ 		\item Savoir comparer des images par la fonction cube. 
+ 		\item Savoir résoudre une inéquation avec la fonction cube.
+ 		\item Savoir étudier les variations de la fonction inverse.
+ 		\item Savoir résoudre une inéquation avec la fonction inverse.
+ 		\item Savoir étudier les variations de la fonction racine carrée.
+ 		\item Savoir résoudre une inéquation avec la fonction racine carrée.
+ 		\item Savoir reconnaitre une fonction de référence.
  	\end{itemize}
  \end{CpsCol}
 
 \begin{His}
-	% Un paragraphe parlant de la vie d'un ou une mathématicien ou mathématicienne
+\mini{.7\linewidth}{
+Sophie Germain (1776-1831) était une mathématicienne française pionnière du XIXe siècle. Malgré les obstacles dus à sa condition de femme, elle a contribué de manière significative à la théorie des nombres et à la théorie des équations diophantiennes. Elle a utilisé un pseudonyme masculin pour correspondre avec d'autres mathématiciens, dont Carl Friedrich Gauss, et a été la première femme à recevoir la médaille de l'Académie des Sciences de Paris. Ses travaux ont jeté les bases de la théorie des nombres modernes.
+}{.3\linewidth}{
+\begin{center}
+\includegraphics[width=.6\linewidth]{FIG/06-Sophie-Germain.png} 
+\end{center}
+}
+
 \end{His}
 
 \begin{ExoDec}{Compétence.}{1234}{1}{0}{0}{0}
@@ -38,6 +56,46 @@
 \begin{pageCours} % Début page de cours 1
 
 \newgeometry{left=2cm,right=.8cm,top=1.5cm} %Ne pas toucher cette ligne
+
+\section{Fonctions paires, fonctions impaires}
+
+\mini{.5\linewidth}{
+\begin{DefT}{Fonction paire}
+On dit qu'une fonction $f$ est \textbf{paire} si :
+
+\begin{itemize}
+\item $\forall x\in D_f,-x\in D_f$
+\item $\forall x\in D_f, f(-x)=f(x)$
+\end{itemize}
+\end{DefT}
+
+\begin{Rq}
+La \textbf{courbe représentative} d'une fonction pair est \textbf{symétrique} par rapport à l'\textbf{axe des ordonnées}.
+\end{Rq}
+}{.5\linewidth}{
+\begin{center}
+\includegraphics[width=.6\linewidth]{FIG/fonction_paire.png} 
+\end{center}
+}
+
+\mini{.5\linewidth}{
+\begin{DefT}{Fonction impaire}
+On dit qu'une fonction $f$ est \textbf{impaire} si :
+
+\begin{itemize}
+\item $\forall x\in D_f,-x\in D_f$
+\item $\forall x\in D_f, f(-x)=-f(x)$
+\end{itemize}
+\end{DefT}
+
+\begin{Rq}
+La \textbf{courbe représentative} d'une fonction pair est \textbf{symétrique} par rapport à l'\textbf{origine du repère}.
+\end{Rq}
+}{.5\linewidth}{
+\begin{center}
+\includegraphics[width=.6\linewidth]{FIG/fonction_impaire.png} 
+\end{center}
+}
 
 \section{La fonction Carré}
 
@@ -68,38 +126,33 @@ La fonction Carré est strictement décroissante sur $\mathbb{R}^-$ et stricteme
 
 \end{ThT}
 
-
-
 \end{minipage}
 \hfill
 \begin{minipage}{0.48\linewidth}
 
 %\begin{Ill}
-\definecolor{xfqqff}{rgb}{0.4980392156862745,0.,1.}
-\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.7772020725388601cm,y=0.7772020725388601cm]
-\begin{axis}[
-x=0.7772020725388601cm,y=0.7772020725388601cm,
-axis lines=middle,
-ymajorgrids=true,
-xmajorgrids=true,
-xmin=-3.2800000000000002,
-xmax=3.42,
-ymin=-0.8400000000000007,
-ymax=7.079999999999996,
-xtick={-3.0,-2.0,...,3.0},
-ytick={-0.0,1.0,...,7.0},]
-\clip(-3.28,-0.84) rectangle (3.42,7.08);
-\draw [color=xfqqff](1.3,1.84) node[anchor=north west] {$y=x^2$};
-\draw[line width=2.pt,color=xfqqff,smooth,samples=100,domain=-3.2800000000000002:3.42] plot(\x,{(\x)*(\x)});
-\begin{scriptsize}
-\draw[color=xfqqff] (-2.96,8.93) node {$g$};
-\end{scriptsize}
-\end{axis}
-\end{tikzpicture}
+%\definecolor{xfqqff}{rgb}{0.4980392156862745,0.,1.}
+%\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.7772020725388601cm,y=0.7772020725388601cm]
+%\begin{axis}[
+%x=0.7772020725388601cm,y=0.7772020725388601cm,
+%axis lines=middle,
+%ymajorgrids=true,
+%xmajorgrids=true,
+%xmin=-3.2800000000000002,
+%xmax=3.42,
+%ymin=-0.8400000000000007,
+%ymax=7.079999999999996,
+%xtick={-3.0,-2.0,...,3.0},
+%ytick={0,1.0,...,7.0},]
+%\clip(-3.28,-0.84) rectangle (3.42,7.08);
+%\draw [color=xfqqff](1.3,1.84) node[anchor=north west] {$y=x^2$};
+%\draw[line width=2.pt,color=xfqqff,smooth,samples=100,domain=-3.2800000000000002:3.42] plot(\x,{(\x)*(\x)});
+%\begin{scriptsize}
+%\draw[color=xfqqff] (-2.96,8.93) node {$g$};
+%\end{scriptsize}
+%\end{axis}
+%\end{tikzpicture}
 %%\end{Ill}
-
-\end{minipage}
-
 \begin{Pv}
 Etude des variations de $f:x\mapsto x^2$ sur $[0;+\infty[$ :
 
@@ -122,112 +175,46 @@ $f(a)-f(b)=a^2-b^2=(a+b)(a-b)$
 Les images de $a$ et $b$ par la fonction $f$ sont rangés dans le même ordre que ces nombres. La fonction est donc croissante sur $[0;+\infty[$.
 
 \end{Pv}
-
-\section{La fonction Cube}
-
-\begin{DefT}{Fonction Cube}\index{Inverse!Fonction}
-La \textbf{fonction Cube} $f$ est la fonction définie sur $\mathbb{R}$ par $f(x)=x^3$.
-
-\end{DefT}
-
-\begin{minipage}{0.48\linewidth}
-\begin{Th} 
-La fonction Cube $f$ est impaire.
-
-La courbe d'équation $y=x^3$ est symétrique par rapport à l'origine du repère.
-\end{Th}
-
-
-\begin{ThT}{Variations de la fonction Cube}
-
-La fonction Cube est strictement  croissante sur $\mathbb{R}^-$ et strictement  croissante sur $\mathbb{R}^+$. 
-
-\begin{tikzpicture}
-\tkzTabInit[lgt=1,espcl=2]{ $x$ / 1,$f $ / 2}
-{ $-\infty$ , $0$ ,$+\infty$}
-\tkzTabVar{+/$ $,-/$0$,+/$ $ }
-\end{tikzpicture}
-
-\end{ThT}
-
-\end{minipage}
-\hfill
-\begin{minipage}{0.48\linewidth}
-
-%\begin{Ill}
-\definecolor{xfqqff}{rgb}{0.4980392156862745,0.,1.}
-\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.7772020725388601cm,y=0.7772020725388601cm]
-\begin{axis}[
-x=0.7772020725388601cm,y=0.7772020725388601cm,
-axis lines=middle,
-ymajorgrids=true,
-xmajorgrids=true,
-xmin=-3.4,
-xmax=3.3200000000000003,
-ymin=-5.199999999999999,
-ymax=5.139999999999999,
-xtick={-3.0,-2.0,...,3.0},
-ytick={-5.0,-4.0,...,5.0},]
-\clip(-3.4,-5.2) rectangle (3.32,5.14);
-\draw [color=xfqqff](1.3,1.84) node[anchor=north west] {$y=x^3$};
-\draw[line width=2.pt,color=xfqqff,smooth,samples=100,domain=-3.4:3.3200000000000003] plot(\x,{(\x)*(\x)*(\x)});
-\end{axis}
-\end{tikzpicture}
-%%\end{Ill}
-
 \end{minipage}
 
-\section{{Positions relatives des courbes de $x$, $x^2$ et $x^3$}}
-
-\mini{.5\linewidth}{
-\begin{Pp}
-\textcolor{red}{Démonstration exigible}
-
-\begin{itemize}
-\item Si $0\leq x \leq 1$ alors $x\geq x^2 \geq x^3$.
-\item Si $x\geq 1$ alors $x\leq x^2 \leq x^3$
-\end{itemize}
-\end{Pp}
-}{.5\linewidth}{
-\begin{center}
-\includegraphics[width=.7\linewidth]{FIG/position_relative.png}
-\end{center}
-}
-
-\begin{Pv}
-Comparaison de $x$ et $x^2$ sur $[0;+\infty[$.
-
-Pour les comparer, on étudie le signe de leur différence.
-
-On définit la fonction $f$ par $f(x)=x^2-x$.
-
-$f(x)=x^2-x=x(x-1)$
-
-On peut établir le tableau de signes de $f(x)$.
-
-$(E):f(x)=0$ alors $S(E)=\{0;1\}$\vspace{.2cm}
-
-\begin{tikzpicture}
-   \tkzTabInit{$x$ / 1 , $x$ / 1, $x-1$ / 1, $f(x)$ / 1}{$-\infty$, $0$, $1$, $+\infty$}
-   \tkzTabLine{, -, z, +, t, +, }
-   \tkzTabLine{, -, t, -, z, +, }
-   \tkzTabLine{, +, z, -, z, +, }
-\end{tikzpicture}
-
-Ainsi :
-\begin{itemize}
-\item $\forall x \in ]0;1[,f(x)<0$ donc $x^2-x<0$ donc $x^2<x$
-\item $\forall x \in ]1;+\infty,f(x)>0$ donc $x^2-x>0$ donc $x^2>x$
-\end{itemize}
-\end{Pv}
 \end{pageCours} % Fin page de cours 1
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%% Application direct 1
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pageAD}
 
-\begin{pageAD}  % Début page d'exercice d'application direct 1
-\restoregeometry %Ne pas toucher cette ligne
+\Sf{Parité d'une fonction}
+
+\begin{ExoCad}{Représenter. Raisonner.}{1234}{0}{0}{0}{0}{0}
+
+Déterminer si les fonctions suivantes sont paires ou impaires.
+
+\mini{.5\linewidth}{
+\begin{center}
+\includegraphics[width=.8\linewidth]{FIG/exo_parite_3.png} 
+\end{center}\vspace{.2cm}
+
+La fonction est .\dotfill
+}{.5\linewidth}{
+\begin{center}
+\includegraphics[width=.8\linewidth]{FIG/exo_parite_2.png} 
+\end{center}\vspace{.2cm}
+
+La fonction est .\dotfill
+}
+\end{ExoCad} 
+
+\begin{ExoCad}{Raisonner.}{1234}{0}{0}{0}{0}{0}
+A partir de la définition, démontrer que la fonction $f:x\mapsto x^2$ est \textbf{paire}.
+
+%\point{3}
+
+La fonction $f$ est définie sur l'ensemble des réels, ainsi : $\forall x\in D_f,-x\in D_f$.
+
+Montrons que l'image de $-x$ par la fonction $f$ est égale à l'image de $x$.
+
+$f(-x)=(-x)^2=(-x)\times(-x)=x^2=f(x)$.
+
+Ainsi, la fonction $f :x\mapsto x^2$ est paire.
+\end{ExoCad} 
 
 \Sf{Connaitre et utiliser la fonction Carré}
 
@@ -307,8 +294,143 @@ Comparer sans les calculer.
 
 \end{ExoCad}
 
+\end{pageAD}
+
+\begin{pageCours} 
+
+\section{La fonction Cube}
+
+\begin{DefT}{Fonction Cube}\index{Inverse!Fonction}
+La \textbf{fonction Cube} $f$ est la fonction définie sur $\mathbb{R}$ par $f(x)=x^3$.
+
+\end{DefT}
+
+\begin{minipage}{0.48\linewidth}
+\begin{Th} 
+La fonction Cube $f$ est impaire.
+
+La courbe d'équation $y=x^3$ est symétrique par rapport à l'origine du repère.
+\end{Th}
+
+
+\begin{ThT}{Variations de la fonction Cube}
+
+La fonction Cube est strictement  croissante sur $\mathbb{R}^-$ et strictement  croissante sur $\mathbb{R}^+$. 
+
+\begin{tikzpicture}
+\tkzTabInit[lgt=1,espcl=2]{ $x$ / 1,$f $ / 2}
+{ $-\infty$ , $0$ ,$+\infty$}
+\tkzTabVar{+/$ $,-/$0$,+/$ $ }
+\end{tikzpicture}
+
+\end{ThT}
+
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\linewidth}
+
+%\begin{Ill}
+\definecolor{xfqqff}{rgb}{0.4980392156862745,0.,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.7772020725388601cm,y=0.7772020725388601cm]
+\begin{axis}[
+x=0.7772020725388601cm,y=0.7772020725388601cm,
+axis lines=middle,
+ymajorgrids=true,
+xmajorgrids=true,
+xmin=-3.4,
+xmax=3.3200000000000003,
+ymin=-5.199999999999999,
+ymax=5.139999999999999,
+xtick={-3.0,-2.0,...,3.0},
+ytick={-5.0,-4.0,...,5.0},]
+\clip(-3.4,-5.2) rectangle (3.32,5.14);
+\draw [color=xfqqff](1.3,1.84) node[anchor=north west] {$y=x^3$};
+\draw[line width=2.pt,color=xfqqff,smooth,samples=100,domain=-3.4:3.3200000000000003] plot(\x,{(\x)*(\x)*(\x)});
+\end{axis}
+\end{tikzpicture}
+%%\end{Ill}
+
+\end{minipage}
+
+\section{{Positions relatives des courbes de $x$, $x^2$ et $x^3$}}
+
+\mini{.7\linewidth}{
+\begin{Pp}
+\textcolor{red}{Démonstration exigible}
+
+\begin{itemize}
+\item Si $0\leq x \leq 1$ alors $x\geq x^2 \geq x^3$.
+\item Si $x\geq 1$ alors $x\leq x^2 \leq x^3$
+\end{itemize}
+
+\begin{tikzpicture}
+   \tkzTabInit{$x$ / 1 , $x$ / 1, $x-1$ / 1, $f(x)$ / 1}{$-\infty$, $0$, $1$, $+\infty$}
+   \tkzTabLine{, -, z, +, t, +, }
+   \tkzTabLine{, -, t, -, z, +, }
+   \tkzTabLine{, +, z, -, z, +, }
+\end{tikzpicture}
+\end{Pp}
+
+\begin{Pv}
+Comparaison de $x$ et $x^2$ sur $[0;+\infty[$.
+
+Pour les comparer, on étudie le signe de leur différence.
+
+On définit la fonction $f$ par $f(x)=x^2-x$.
+
+$f(x)=x^2-x=x(x-1)$
+
+On peut établir le tableau de signes de $f(x)$.
+
+$(E):f(x)=0$ alors $S(E)=\{0;1\}$\vspace{.2cm}
+
+\begin{tikzpicture}
+   \tkzTabInit{$x$ / 1 , $x$ / 1, $x-1$ / 1, $f(x)$ / 1}{$-\infty$, $0$, $1$, $+\infty$}
+   \tkzTabLine{, -, z, +, t, +, }
+   \tkzTabLine{, -, t, -, z, +, }
+   \tkzTabLine{, +, z, -, z, +, }
+\end{tikzpicture}
+
+Ainsi :
+\begin{itemize}
+\item $\forall x \in ]0;1[,f(x)<0$ donc $x^2-x<0$ donc $x^2<x$
+\item $\forall x \in ]1;+\infty,f(x)>0$ donc $x^2-x>0$ donc $x^2>x$
+\end{itemize}
+\end{Pv}
+}{.3\linewidth}{
+\begin{center}
+\includegraphics[width=\linewidth]{FIG/position_relative.png}
+\end{center}
+}
+
+
+
+\end{pageCours} % Fin page de cours 2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Application direct 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{pageAD}  % Début page d'exercice d'application direct 1
+\restoregeometry %Ne pas toucher cette ligne
  
 \Sf{Connaitre et utiliser la fonction Cube}
+
+\begin{ExoCad}{Raisonner.}{1234}{0}{0}{0}{0}{0}
+
+A partir de la définition, démontrer que la fonction $f:x\mapsto x^3$ est \textbf{impaire}.
+
+%\point{3}
+
+La fonction $f$ est définie sur l'ensemble des réels, ainsi : $\forall x\in D_f,-x\in D_f$.
+
+Montrons que l'image de $-x$ par la fonction $f$ est égale à l'inverse de l'image de $x$.
+
+$f(-x)=(-x)^3=(-x)\times(-x)\times(-x)=x^2\times(-x)=-x^3=-f(x)$.
+
+Ainsi, la fonction $f :x\mapsto x^3$ est impaire.
+
+\end{ExoCad} 
 
 \begin{ExoCad}{Raisonner.}{1234}{0}{0}{0}{0}{0}
 
@@ -340,7 +462,49 @@ Comparer sans les calculer.
 
 Comparer la position relative des courbes de $x^2$ et $x^3$ sur $[0;+\infty]$.
 
-\point{5}
+%\point{5}
+
+Pour comparer la position relative des courbes de $x^2$ et $x^3$ on étudie le signe de leur différence.
+
+On définit la fonction $f$ par $f(x)=x^3-x^2=x^2(x-1)$
+
+On peut établir le tableau de signe de $f(x)$.
+
+$(E):f(x)=0$ alors $S(E)=\{0;1\}$
+
+\begin{tikzpicture}
+   \tkzTabInit{$x$ / 1 , $x^2$ / 1, $x-1$ / 1, $f(x)$ / 1}{$-\infty$, $0$, $1$, $+\infty$}
+   \tkzTabLine{, +, z, +, t, +, }
+   \tkzTabLine{, -, t, -, z, +, }
+   \tkzTabLine{, -, z, -, z, +, }
+\end{tikzpicture}
+
+Ainsi :
+
+\begin{itemize}
+\item $\forall x \in ]0;1[,f(x)<0$ donc $x^3-x^2<0$ donc $x^3<x^2$
+\item $\forall x \in ]1;+\infty,f(x)>0$ donc $x^3-x^2>0$ donc $x^3>x^2$
+\end{itemize}
+
+\end{ExoCad} 
+
+\begin{ExoCad}{Raisonner.}{1234}{0}{0}{0}{0}{0}
+
+Comparer sans les calculer.
+
+\begin{description}[leftmargin=*]
+\item $(\frac{1}{3})^3$ et $(\frac{1}{3})^2$  
+
+
+
+\point{2}
+
+\item $\frac{10}{9}$ et $(\frac{10}{9})^2$
+
+
+
+\point{2}
+\end{description}
 
 \end{ExoCad} 
 
@@ -407,7 +571,9 @@ xtick={-4.0,-3.0,...,5.0},
 ytick={-4.0,-3.0,...,4.0},]
 \clip(-4.52,-4.48) rectangle (5.6,4.5);
 \draw [color=xfqqff](0.62,3.38) node[anchor=north west] {$y=\dfrac{1}{x}$};
-\draw[line width=2.pt,color=xfqqff,smooth,samples=100,domain=-4.5200000000000005:5.6000000000000005] plot(\x,{1/(\x)});
+\draw[line width=2.pt,color=xfqqff,smooth,samples=100,domain=-4.5200000000000005:-0.1] plot(\x,{1/(\x)});
+\draw[line width=2.pt,color=xfqqff,smooth,samples=100,domain=0.1:5.6000000000000005] plot(\x,{1/(\x)});
+
 \end{axis}
 \end{tikzpicture}
 %%\end{Ill}
@@ -524,7 +690,21 @@ Les images de $a$ et $b$ par la fonction $f$ sont rangés dans le même ordre qu
 
 \Sf{Connaitre et utiliser les fonctions Inverse et Racine Carrée}
 
+\begin{ExoCad}{Raisonner.}{1234}{0}{0}{0}{0}{0}
 
+A partir de la définition, démontrer que la fonction $f:x\mapsto \frac{1}{x}$ est \textbf{impaire}.
+
+%\point{3}
+
+La fonction $f$ est définie sur l'ensemble des réels privé de $0$, ainsi : $\forall x\in D_f,-x\in D_f$.
+
+Montrons que l'image de $-x$ par la fonction $f$ est égale à l'inverse de l'image de $x$.
+
+$f(-x)=\frac{1}{-x}=-(\frac{1}{x})=-f(x)$.
+
+Ainsi, la fonction $f :x\mapsto \frac{1}{x}$ est impaire.
+
+\end{ExoCad} 
 
 \begin{ExoCad}{Raisonner.}{1234}{0}{0}{0}{0}{0}
 
@@ -759,12 +939,8 @@ ytick={-4.0,-2.0,...,4.0},]
 \end{ExoCuN}
 
 %Deuxième exo du parcours 1
-\begin{ExoCuN}{Raisonner. Communiquer.}{0}{0}{0}{0}{0}
-Rappel : Une fonction $f$ définie sur un intervalle $I$ est dite \textbf{paire} lorsque, pour tout $x\in I$, $f(x)=f(-x)$.\\
+\begin{ExoCuN}{Compétence.}{0}{0}{0}{0}{0}
 
-Démontrer que $f:x\mapsto x^2$ est paire.\vspace{.2cm}
-
-\point{3}
 \end{ExoCuN}
 
 %Troisième exo du parcours 1
