@@ -187,33 +187,57 @@ Les images de $a$ et $b$ par la fonction $f$ sont rangés dans le même ordre qu
 
 Déterminer si les fonctions suivantes sont paires ou impaires.
 
-\mini{.5\linewidth}{
 \begin{center}
-\includegraphics[width=.8\linewidth]{FIG/exo_parite_3.png} 
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=.7cm,y=.7cm]
+\begin{axis}[
+x=.7cm,y=.7cm,
+axis lines=middle,
+ymajorgrids=true,
+xmajorgrids=true,
+xmin=-5.987525829224177,
+xmax=5.987964363878517,
+ymin=-3.9956200100092336,
+ymax=3.9880401187258965,
+xtick={-5.0,-4.0,...,5.0},
+ytick={-3.0,-2.0,...,3.0},]
+\clip(-5.987525829224177,-3.9956200100092336) rectangle (5.987964363878517,3.9880401187258965);
+\draw[line width=2.pt,color=sacado_orange,smooth,samples=100,domain=-5.987525829224177:5.987964363878517] plot(\x,{0-sin(((\x)/2)*180/pi)*3});
+\end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=.7cm,y=.7cm]
+\begin{axis}[
+x=.7cm,y=.7cm,
+axis lines=middle,
+ymajorgrids=true,
+xmajorgrids=true,
+xmin=-5.987525829224177,
+xmax=5.987964363878517,
+ymin=-3.9956200100092336,
+ymax=3.9880401187258965,
+xtick={-5.0,-4.0,...,5.0},
+ytick={-3.0,-2.0,...,3.0},]
+\clip(-5.987525829224177,-3.9956200100092336) rectangle (5.987964363878517,3.9880401187258965);
+\draw[line width=2.pt,color=sacado_orange,smooth,samples=100,domain=-9.161981166126003:11.063291160002994] plot(\x,{sqrt((\x)^(2)+1)-2});
+\end{axis}
+\end{tikzpicture}
 \end{center}\vspace{.2cm}
 
-La fonction est .\dotfill
-}{.5\linewidth}{
-\begin{center}
-\includegraphics[width=.8\linewidth]{FIG/exo_parite_2.png} 
-\end{center}\vspace{.2cm}
+La fonction est .\dotfill La fonction est .\dotfill
 
-La fonction est .\dotfill
-}
 \end{ExoCad} 
 
 \begin{ExoCad}{Raisonner.}{1234}{0}{0}{0}{0}{0}
 A partir de la définition, démontrer que la fonction $f:x\mapsto x^2$ est \textbf{paire}.
 
-%\point{3}
+\point{3}
 
-La fonction $f$ est définie sur l'ensemble des réels, ainsi : $\forall x\in D_f,-x\in D_f$.
-
-Montrons que l'image de $-x$ par la fonction $f$ est égale à l'image de $x$.
-
-$f(-x)=(-x)^2=(-x)\times(-x)=x^2=f(x)$.
-
-Ainsi, la fonction $f :x\mapsto x^2$ est paire.
+%La fonction $f$ est définie sur l'ensemble des réels, ainsi : $\forall x\in D_f,-x\in D_f$.
+%
+%Montrons que l'image de $-x$ par la fonction $f$ est égale à l'image de $x$.
+%
+%$f(-x)=(-x)^2=(-x)\times(-x)=x^2=f(x)$.
+%
+%Ainsi, la fonction $f :x\mapsto x^2$ est paire.
 \end{ExoCad} 
 
 \Sf{Connaitre et utiliser la fonction Carré}
@@ -420,15 +444,15 @@ Ainsi :
 
 A partir de la définition, démontrer que la fonction $f:x\mapsto x^3$ est \textbf{impaire}.
 
-%\point{3}
+\point{3}
 
-La fonction $f$ est définie sur l'ensemble des réels, ainsi : $\forall x\in D_f,-x\in D_f$.
-
-Montrons que l'image de $-x$ par la fonction $f$ est égale à l'inverse de l'image de $x$.
-
-$f(-x)=(-x)^3=(-x)\times(-x)\times(-x)=x^2\times(-x)=-x^3=-f(x)$.
-
-Ainsi, la fonction $f :x\mapsto x^3$ est impaire.
+%La fonction $f$ est définie sur l'ensemble des réels, ainsi : $\forall x\in D_f,-x\in D_f$.
+%
+%Montrons que l'image de $-x$ par la fonction $f$ est égale à l'inverse de l'image de $x$.
+%
+%$f(-x)=(-x)^3=(-x)\times(-x)\times(-x)=x^2\times(-x)=-x^3=-f(x)$.
+%
+%Ainsi, la fonction $f :x\mapsto x^3$ est impaire.
 
 \end{ExoCad} 
 
@@ -462,29 +486,29 @@ Comparer sans les calculer.
 
 Comparer la position relative des courbes de $x^2$ et $x^3$ sur $[0;+\infty]$.
 
-%\point{5}
+\point{5}
 
-Pour comparer la position relative des courbes de $x^2$ et $x^3$ on étudie le signe de leur différence.
-
-On définit la fonction $f$ par $f(x)=x^3-x^2=x^2(x-1)$
-
-On peut établir le tableau de signe de $f(x)$.
-
-$(E):f(x)=0$ alors $S(E)=\{0;1\}$
-
-\begin{tikzpicture}
-   \tkzTabInit{$x$ / 1 , $x^2$ / 1, $x-1$ / 1, $f(x)$ / 1}{$-\infty$, $0$, $1$, $+\infty$}
-   \tkzTabLine{, +, z, +, t, +, }
-   \tkzTabLine{, -, t, -, z, +, }
-   \tkzTabLine{, -, z, -, z, +, }
-\end{tikzpicture}
-
-Ainsi :
-
-\begin{itemize}
-\item $\forall x \in ]0;1[,f(x)<0$ donc $x^3-x^2<0$ donc $x^3<x^2$
-\item $\forall x \in ]1;+\infty,f(x)>0$ donc $x^3-x^2>0$ donc $x^3>x^2$
-\end{itemize}
+%Pour comparer la position relative des courbes de $x^2$ et $x^3$ on étudie le signe de leur différence.
+%
+%On définit la fonction $f$ par $f(x)=x^3-x^2=x^2(x-1)$
+%
+%On peut établir le tableau de signe de $f(x)$.
+%
+%$(E):f(x)=0$ alors $S(E)=\{0;1\}$
+%
+%\begin{tikzpicture}
+%   \tkzTabInit{$x$ / 1 , $x^2$ / 1, $x-1$ / 1, $f(x)$ / 1}{$-\infty$, $0$, $1$, $+\infty$}
+%   \tkzTabLine{, +, z, +, t, +, }
+%   \tkzTabLine{, -, t, -, z, +, }
+%   \tkzTabLine{, -, z, -, z, +, }
+%\end{tikzpicture}
+%
+%Ainsi :
+%
+%\begin{itemize}
+%\item $\forall x \in ]0;1[,f(x)<0$ donc $x^3-x^2<0$ donc $x^3<x^2$
+%\item $\forall x \in ]1;+\infty,f(x)>0$ donc $x^3-x^2>0$ donc $x^3>x^2$
+%\end{itemize}
 
 \end{ExoCad} 
 
@@ -694,15 +718,15 @@ Les images de $a$ et $b$ par la fonction $f$ sont rangés dans le même ordre qu
 
 A partir de la définition, démontrer que la fonction $f:x\mapsto \frac{1}{x}$ est \textbf{impaire}.
 
-%\point{3}
+\point{3}
 
-La fonction $f$ est définie sur l'ensemble des réels privé de $0$, ainsi : $\forall x\in D_f,-x\in D_f$.
-
-Montrons que l'image de $-x$ par la fonction $f$ est égale à l'inverse de l'image de $x$.
-
-$f(-x)=\frac{1}{-x}=-(\frac{1}{x})=-f(x)$.
-
-Ainsi, la fonction $f :x\mapsto \frac{1}{x}$ est impaire.
+%La fonction $f$ est définie sur l'ensemble des réels privé de $0$, ainsi : $\forall x\in D_f,-x\in D_f$.
+%
+%Montrons que l'image de $-x$ par la fonction $f$ est égale à l'inverse de l'image de $x$.
+%
+%$f(-x)=\frac{1}{-x}=-(\frac{1}{x})=-f(x)$.
+%
+%Ainsi, la fonction $f :x\mapsto \frac{1}{x}$ est impaire.
 
 \end{ExoCad} 
 
@@ -939,18 +963,53 @@ ytick={-4.0,-2.0,...,4.0},]
 \end{ExoCuN}
 
 %Deuxième exo du parcours 1
-\begin{ExoCuN}{Compétence.}{0}{0}{0}{0}{0}
+\begin{ExoCuN}{Raisonner. Calculer.}{0}{0}{0}{0}{0}
+Résoudre dans $\mathbb{R}$ les équations et inéquations suivantes :
 
+\begin{enumerate}
+\item $x^2=6$
+\item $x^2=\frac{5}{3}$
+\item $x^2\leq 3$
+\item $\frac{1}{x}\geq1$
+\end{enumerate}
 \end{ExoCuN}
 
 %Troisième exo du parcours 1
 \begin{ExoCuN}{Compétence.}{1}{0}{0}{0}{0}
+Associer à chaque courbe la fonction qui correspond :
+\[f:x\mapsto 2x^2 \quad g:x\mapsto x^2+2 \quad h:x\mapsto x^2-1\]
+\begin{center}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=.8cm,y=.8cm]
+	\begin{axis}[
+	x=.8cm,y=.8cm,
+	axis lines=middle,
+	ymajorgrids=true,
+	xmajorgrids=true,
+	xmin=-2.9997324598484885,
+	xmax=3.0081249478055305,
+	ymin=-1.9900228646581366,
+	ymax=3.993754954187645,
+	xtick={-2.0,-1.0,...,3.0},
+	ytick={-1.0,0.0,...,3.0},]
+\clip(-3,-2) rectangle (3.0081249478055305,3.993754954187645);
+\draw[line width=2.pt,color=sacado_violet,smooth,samples=100,domain=-2.9997324598484885:3.0081249478055305] plot(\x,{(\x)^(2.0)+2});
+\draw[line width=2.pt,color=sacado_blue,smooth,samples=100,domain=-2.9997324598484885:3.0081249478055305] plot(\x,{(\x)^(2)-1});
+\draw[line width=2.pt,color=sacado_green,smooth,samples=100,domain=-2.9997324598484885:3.0081249478055305] plot(\x,{2*(\x)^(2)});
+	\end{axis}
+\end{tikzpicture}
+\end{center}
 
 \end{ExoCuN}
 
 %Quatrième exo du parcours 1
-\begin{ExoCuN}{Compétence.}{1}{0}{0}{0}{0}
-
+\begin{ExoCuN}{Raisonner.}{1}{0}{0}{0}{0}
+Dire si les phrases suivantes sont vraies ou fausses :
+\begin{enumerate}
+\item Un nombre et son carré ont toujours le même signe.
+\item L'équation $x^2=k$ a toujours une solution.
+\item La fonction $x\mapsto x^2$ sera toujours supérieure à $x\mapsto -1$.
+\item Si $x\in[0,1]$ alors $x^2\in[0,1]$.
+\end{enumerate}
 \end{ExoCuN}
 
 %Cinquième exo du parcours 1
@@ -989,18 +1048,61 @@ En utilisant la propriété de parité de la fonction $x\mapsto x^2$, montrer qu
 \end{ExoCdN}
 
 %Troisième exo du parcours 2
-\begin{ExoCdN}{Compétence.}{2}{0}{0}{0}{0}
+\begin{ExoCdN}{Raisonner. Calculer.}{2}{0}{0}{0}{0}
+Résoudre dans $\mathbb{R}$ les équations et inéquations suivantes :
 
+\begin{enumerate}
+\item $x^2+3=4$
+\item $\sqrt{x}=25$
+\item $x^2\geq \frac{16}{36}$
+\item $\frac{1}{x}\leq1$
+\end{enumerate}
 \end{ExoCdN}
 
 %Quatrième exo du parcours 2
-\begin{ExoCdN}{Compétence.}{2}{0}{0}{0}{0}
+\begin{ExoCdN}{Raisonner.}{1}{0}{0}{0}{0}
+Les hyperboles suivantes correspondent toutes à une fonction ayant la forme $x\mapsto \frac{k}{x}$. Analyser les courbes et identifier les fonctions :
 
+\[f(x)=\frac{\ldots}{x}\hspace{1cm}g(x)=\frac{\ldots}{x}\hspace{1cm}h(x)=\frac{\ldots}{x}\]
+
+\begin{center}
+\definecolor{ffxfqq}{rgb}{1.,0.4980392156862745,0.}
+\definecolor{ffvvqq}{rgb}{1.,0.3333333333333333,0.}
+\definecolor{qqqqff}{rgb}{0.,0.,1.}
+\definecolor{xfqqff}{rgb}{0.4980392156862745,0.,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\begin{axis}[
+x=1.0cm,y=1.0cm,
+axis lines=middle,
+ymajorgrids=true,
+xmajorgrids=true,
+xmin=-6.9930343163225785,
+xmax=6.992498216875903,
+ymin=-4.007317166218129,
+ymax=4.00485492441223,
+xtick={-6.0,-5.0,...,6.0},
+ytick={-4.0,-3.0,...,4.0},]
+\clip(-6.9930343163225785,-4.007317166218129) rectangle (6.992498216875903,4.00485492441223);
+\draw[line width=2.pt,color=xfqqff,smooth,samples=100,domain=-6.9930343163225785:6.992498216875903] plot(\x,{5/(\x)});
+\draw[line width=2.pt,color=qqqqff,smooth,samples=100,domain=-6.9930343163225785:6.992498216875903] plot(\x,{4/(\x)});
+\draw[line width=2.pt,color=ffvvqq,smooth,samples=100,domain=-6.9930343163225785:6.992498216875903] plot(\x,{0-1/(\x)});
+\draw [color=xfqqff](2.4141141650871423,2.8423745987627362) node[anchor=north west] {$\mathcal{C}_f$};
+\draw [color=qqqqff](1.6093200934836491,2.0018119017546403) node[anchor=north west] {$\mathcal{C}_g$};
+\draw [color=ffxfqq](-1.860236570762522,1.5368197714948428) node[anchor=north west] {$\mathcal{C}_h$};
+\end{axis}
+\end{tikzpicture}
+\end{center}
 \end{ExoCdN}
 
 %Cinquième exo du parcours 2
-\begin{ExoCdN}{Compétence.}{2}{0}{0}{0}{0}
-
+\begin{ExoCdN}{Raisonner.}{0}{0}{0}{0}{0}
+Dire si les phrases suivantes sont vraies ou fausses :
+\begin{enumerate}
+\item Un nombre et son cube ont toujours le même signe.
+\item L'équation $\sqrt{x}=k$ admet toujours une solution.
+\item La fonction $x\mapsto x^2$ n'admet pas de maximum.
+\item La fonction inverse est décroissante sur $[-1,1]$.
+\end{enumerate}
 \end{ExoCdN}
 
 %Sixième exo du parcours 2
@@ -1016,9 +1118,23 @@ En utilisant la propriété de parité de la fonction $x\mapsto x^2$, montrer qu
 
 \begin{pageParcourst} % Début du parcours niveau 3
 
+% Cinquième exo du parcours 3
+\begin{ExoCtN}{Raisonner.}{1}{1}{0}{0}{0}
+Déterminer la parité de la fonction $f:x\mapsto \frac{1}{x^2+1}$.
+
+\point{4}
+\end{ExoCtN}
+
 % Premier exo du parcours 3
-\begin{ExoCtN}{Compétence.}{1}{1}{0}{0}{0}
- 
+\begin{ExoCtN}{Raisonner. Calculer}{1}{0}{0}{0}{0}
+ Résoudre dans $\mathbb{R}$ les équations et inéquations suivantes :
+
+\begin{enumerate}
+\item $4x^2+3=8$
+\item $2\sqrt{x}=72$
+\item $x^2+2\leq 6$
+\item $\frac{1}{x}-1\leq-2$
+\end{enumerate}
 \end{ExoCtN}
 
 % Deuxième exo du parcours 3
@@ -1030,13 +1146,50 @@ Sachant que $a^3-a^3=(a-b)(a^2+ab+b^2)$, montrer que $f:x\mapsto x^3$ est croiss
 \end{ExoCtN}
 
 % Troisième exo du parcours 3
-\begin{ExoCtN}{Compétence.}{1}{1}{0}{0}{0}
- 
+\begin{ExoCtN}{Raisonner.}{1}{1}{0}{0}{0}
+Les courbes suivantes correspondent toutes à une fonction cubique, retrouver leur expressions.
+
+\[f(x)=\ldots\ldots\ldots\hspace{1cm}g(x)=\ldots\ldots\ldots\hspace{1cm}h(x)=\ldots\ldots\ldots\]
+
+ \definecolor{xfqqff}{rgb}{0.4980392156862745,0.,1.}
+\definecolor{zzttqq}{rgb}{0.6,0.2,0.}
+\definecolor{dcrutc}{rgb}{0.8627450980392157,0.0784313725490196,0.23529411764705882}
+\definecolor{zzttff}{rgb}{0.6,0.2,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\begin{axis}[
+x=1.0cm,y=1.0cm,
+axis lines=middle,
+ymajorgrids=true,
+xmajorgrids=true,
+xmin=-2.9733677267582084,
+xmax=2.9846155317648115,
+ymin=-5.012969380833157,
+ymax=5.018523198213632,
+xtick={-2.0,-1.0,...,2.0},
+ytick={-5.0,-4.0,...,5.0},]
+\clip(-2.9733677267582084,-5.012969380833157) rectangle (2.9846155317648115,5.018523198213632);
+\draw[line width=2.pt,color=zzttff,smooth,samples=100,domain=-2.9733677267582084:2.9846155317648115] plot(\x,{(\x)^(3)/2});
+\draw[line width=2.pt,color=dcrutc,smooth,samples=100,domain=-2.9733677267582084:2.9846155317648115] plot(\x,{(\x)^(3)+1});
+\draw[line width=2.pt,color=zzttqq,smooth,samples=100,domain=-2.9733677267582084:2.9846155317648115] plot(\x,{(\x)^(3)-2});
+\draw [color=xfqqff](2.280317191300429,3.533786156153576) node[anchor=north west] {$\mathcal{C}_f$};
+\draw [color=zzttqq](1.271457406310908,-0.5777933449358101) node[anchor=north west] {$\mathcal{C}_g$};
+\draw [color=dcrutc](0.376808163018314,3.2672948921940788) node[anchor=north west] {$\mathcal{C}_h$};
+\begin{scriptsize}
+\draw[color=zzttff] (-2.17389393487972,-5.384153641348171) node {$f$};
+\draw[color=dcrutc] (-1.8122272195061182,-5.36511855106535) node {$g$};
+\draw[color=zzttqq] (-1.4695955944153376,-5.384153641348171) node {$h$};
+\end{scriptsize}
+\end{axis}
+\end{tikzpicture}
 \end{ExoCtN}
 
 % Quatrième exo du parcours 3
 \begin{ExoCtN}{Compétence.}{1}{1}{0}{0}{0}
- 
+ Dire si les phrases suivantes sont vraies ou fausses :
+\begin{enumerate}
+\item A partir de $x=1$ la courbe de $x^2$ est toujours comprise entre celles de $x^3$ et $x$.
+\item 
+\end{enumerate}
 \end{ExoCtN}
 
 % Cinquième exo du parcours 3
