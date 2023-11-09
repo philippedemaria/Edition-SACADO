@@ -175,6 +175,7 @@ $f(a)-f(b)=a^2-b^2=(a+b)(a-b)$
 Les images de $a$ et $b$ par la fonction $f$ sont rangés dans le même ordre que ces nombres. La fonction est donc croissante sur $[0;+\infty[$.
 
 \end{Pv}
+
 \end{minipage}
 
 \end{pageCours} % Fin page de cours 1
@@ -963,6 +964,18 @@ ytick={-4.0,-2.0,...,4.0},]
 \end{ExoCuN}
 
 %Deuxième exo du parcours 1
+\begin{ExoCuN}{Compétence.}{1}{0}{0}{0}{0}
+\begin{enumerate}
+\item La fonction $g$ est paire et telle que $g(3)=6$. Quelle est la valeur de $g(-3)$ ?
+
+\point{1}
+\item La fonction $i$ est impaire et telle que $i(2)=-5$. Quelle est la valeur de $i(-2)$ ?
+
+\point{1}
+\end{enumerate}
+\end{ExoCuN}
+
+%Troisième exo du parcours 1
 \begin{ExoCuN}{Raisonner. Calculer.}{0}{0}{0}{0}{0}
 Résoudre dans $\mathbb{R}$ les équations et inéquations suivantes :
 
@@ -972,9 +985,16 @@ Résoudre dans $\mathbb{R}$ les équations et inéquations suivantes :
 \item $x^2\leq 3$
 \item $\frac{1}{x}\geq1$
 \end{enumerate}
+
+%\begin{enumerate}
+%\item $x=6$ et $x=-6$
+%\item $x=\frac{\sqrt{5}}{\sqrt{3}}$ et $x=-\frac{\sqrt{5}}{\sqrt{3}}$
+%\item $x\in[-\sqrt{3};\sqrt{3}]$
+%\item $x\in]0;1]$
+%\end{enumerate}
 \end{ExoCuN}
 
-%Troisième exo du parcours 1
+%Quatrième exo du parcours 1
 \begin{ExoCuN}{Compétence.}{1}{0}{0}{0}{0}
 Associer à chaque courbe la fonction qui correspond :
 \[f:x\mapsto 2x^2 \quad g:x\mapsto x^2+2 \quad h:x\mapsto x^2-1\]
@@ -995,27 +1015,26 @@ Associer à chaque courbe la fonction qui correspond :
 \draw[line width=2.pt,color=sacado_violet,smooth,samples=100,domain=-2.9997324598484885:3.0081249478055305] plot(\x,{(\x)^(2.0)+2});
 \draw[line width=2.pt,color=sacado_blue,smooth,samples=100,domain=-2.9997324598484885:3.0081249478055305] plot(\x,{(\x)^(2)-1});
 \draw[line width=2.pt,color=sacado_green,smooth,samples=100,domain=-2.9997324598484885:3.0081249478055305] plot(\x,{2*(\x)^(2)});
+\draw [color=sacado_green](0.12498705389372598,1.319067207314755) node[anchor=north west] {$2x^2$};
+\draw [color=sacado_violet](0.23869861211403115,3.2774329322200093) node[anchor=north west] {$x^2+2$};
+\draw [color=sacado_blue](0.7819871680554893,-0.5508561945302624) node[anchor=north west] {$x^2-1$};
 	\end{axis}
 \end{tikzpicture}
 \end{center}
 
 \end{ExoCuN}
 
-%Quatrième exo du parcours 1
+%Cinquième exo du parcours 1
 \begin{ExoCuN}{Raisonner.}{1}{0}{0}{0}{0}
 Dire si les phrases suivantes sont vraies ou fausses :
 \begin{enumerate}
 \item Un nombre et son carré ont toujours le même signe.
 \item L'équation $x^2=k$ a toujours une solution.
-\item La fonction $x\mapsto x^2$ sera toujours supérieure à $x\mapsto -1$.
+\item La fonction $x\mapsto x^2$ sera toujours supérieure à $x\mapsto x^2-1$.
 \item Si $x\in[0,1]$ alors $x^2\in[0,1]$.
 \end{enumerate}
 \end{ExoCuN}
 
-%Cinquième exo du parcours 1
-\begin{ExoCuN}{Compétence.}{1}{0}{0}{0}{0}
-
-\end{ExoCuN}
 
 %Sixième exo du parcours 1
 \begin{ExoCuN}{Compétence.}{1}{0}{0}{0}{0}
@@ -1038,6 +1057,26 @@ Démontrer que $f:x\mapsto x^2$ est décroissante sur $[-\infty;0[$.\vspace{.2cm
 
 \point{5}
 
+%Etude des variations de $f:x\mapsto x^2$ sur $[-\infty;0[$ :
+%
+%Soient $a$ et $b$ deux nombres appartenant à $[-\infty;0[$ tels que $a<b$. 
+%
+%Comparons les images de $a$ et $b$ par la fonction $f$.
+%
+%$f(a)=a^2$ et $f(b)=b^2$
+%
+%Pour les comparer on étudie le signe de leur différence :
+%
+%$f(a)-f(b)=a^2-b^2=(a+b)(a-b)$
+%
+%\begin{itemize}
+%\item $a$ et $b$ appartiennent à $[-\infty;0[$ donc $a+b<0$
+%\item $a<b$ donc $a-b<0$
+%\item $(a+b)(a-b)>0\Rightarrow a^2-b^2>0 \Rightarrow f(a)>f(b) \Rightarrow f(a)>f(b)$
+%\end{itemize}
+%
+%Les images de $a$ et $b$ par la fonction $f$ sont rangés dans l'ordre contraire de celui de ces nombres. La fonction inverse est donc décroissante sur $]-\infty;0[$.
+
 \end{ExoCdN}
 
 %Deuxième exo du parcours 2
@@ -1045,6 +1084,8 @@ Démontrer que $f:x\mapsto x^2$ est décroissante sur $[-\infty;0[$.\vspace{.2cm
 En utilisant la propriété de parité de la fonction $x\mapsto x^2$, montrer que $2x^2+3$ est paire.\vspace{.2cm}
 
 \point{3}
+
+%Soit la fonction $f:x\mapsto 2x^2+3$. $f$ est une fonction carré, donc définie sur $\mathbb{R}$. De plus $f(-x)=2(-x)^2+3=2x^2+3=f(x)$. La fonction est donc paire. Graphiquement, le produit par $2$ augmente l'ouverture de la courbe et l'addition de $+3$ translate verticalement la courbe de $3$ unités. Elle reste une fonction carrée centrée en $0$ et symétrique par rapport à la droite des ordonnées.
 \end{ExoCdN}
 
 %Troisième exo du parcours 2
@@ -1054,9 +1095,16 @@ Résoudre dans $\mathbb{R}$ les équations et inéquations suivantes :
 \begin{enumerate}
 \item $x^2+3=4$
 \item $\sqrt{x}=25$
-\item $x^2\geq \frac{16}{36}$
+\item $x^3\geq \frac{8}{27}$
 \item $\frac{1}{x}\leq1$
 \end{enumerate}
+
+%\begin{enumerate}
+%\item $x=1$ et $x=-1$
+%\item $x=5$
+%\item $x\in [\frac{2}{3};+\infty[$
+%\item $x\in [-\infty;0[\cup]0;1]$
+%\end{enumerate}
 \end{ExoCdN}
 
 %Quatrième exo du parcours 2
@@ -1184,23 +1232,69 @@ ytick={-5.0,-4.0,...,5.0},]
 \end{ExoCtN}
 
 % Quatrième exo du parcours 3
-\begin{ExoCtN}{Compétence.}{1}{1}{0}{0}{0}
- Dire si les phrases suivantes sont vraies ou fausses :
-\begin{enumerate}
-\item A partir de $x=1$ la courbe de $x^2$ est toujours comprise entre celles de $x^3$ et $x$.
-\item 
-\end{enumerate}
-\end{ExoCtN}
+%\begin{ExoCtN}{Compétence.}{1}{1}{0}{0}{0}
+% Dire si les phrases suivantes sont vraies ou fausses :
+%\begin{enumerate}
+%\item A partir de $x=1$ la courbe de $x^2$ est toujours comprise entre celles de $x^3$ et $x$.
+%\item 
+%\end{enumerate}
+%\end{ExoCtN}
 
 % Cinquième exo du parcours 3
 \begin{ExoCtN}{Compétence.}{1}{1}{0}{0}{0}
- 
+Les courbes de la fonction racine carrée $f:x\mapsto \sqrt{x}$ et de la fonction linéaire $y=x$ sont représentées sur le graphique suivant. Les points $A$ et $A'$ sont symétriques l'un de l'autre par rapport à la droite $y=x$
+
+\begin{enumerate}
+\item Donner les coordonnées des points $A$ et $A'$ : $A(\ldots\ldots;\ldots\ldots)\quad A'(\ldots\ldots;\ldots\ldots)$.*
+\item Le point $B$ a pour coordonnées $B(3;1,73)$ sachant que l'ordonnée est approximative, quelle est son ordonnée exacte ? Expliquer.
+
+\point{2} 
+\item Déterminer les coordonnées exactes du point $B'$ symétrique du point $B$ par rapport à la droite $y=x$ : $B'(\ldots\ldots;\ldots\ldots)$. Placer ce point sur le graphique.
+\item Quelle relation existe-t-il entre les coordonnées de $A$ et $A'$, $B$ et $B'$ ?
+
+\point{2}
+\item Conjecturer de quelle fonction est la courbe symétrique de $\mathcal{C}_k$ par rapport à la droite $y=x$.
+
+\point{1}
+
+\item Démontrer cette conjecture.
+
+\point{3}
+\end{enumerate}
+
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\begin{axis}[
+x=1.0cm,y=1.0cm,
+axis lines=middle,
+ymajorgrids=true,
+xmajorgrids=true,
+xmin=-0.985122827005976,
+xmax=6.991122569999474,
+ymin=-1.0307416367857374,
+ymax=5.993699700584179,
+xtick={-0.0,1.0,...,6.0},
+ytick={-1.0,0.0,...,5.0},]
+\clip(-0.985122827005976,-1.0307416367857374) rectangle (6.991122569999474,5.993699700584179);
+\draw [line width=1.pt,domain=-0.985122827005976:6.991122569999474] plot(\x,{(-0.--1.*\x)/1.});
+\draw[line width=2.pt,color=sacado_blue,smooth,samples=100,domain=7.2894873734060685E-6:6.991122569999474] plot(\x,{sqrt((\x))});
+\draw [color=sacado_blue](4,3.3712416012994098) node[anchor=north west] {$k:x\mapsto \sqrt{x}$};
+\draw (4.1074030803128885,5.400524654317385) node[anchor=north west] {$y=x$};
+\begin{scriptsize}
+\draw [fill=black] (4.,2.) circle (2.5pt);
+\draw[color=black] (4.1074030803128885,2.286355661416723) node {$A$};
+\draw [fill=black] (2.,4.) circle (2.5pt);
+\draw[color=black] (2.159358531428865,4.284418975157499) node {$A'$};
+\draw [fill=black] (3.002999871496749,1.7329165794973367) circle (2.5pt);
+\draw[color=black] (3.1103724056872073,2.020987877560526) node {$B$};
+\end{scriptsize}
+\end{axis}
+\end{tikzpicture}
 \end{ExoCtN}
 
 % Sixième exo du parcours 3
-\begin{ExoCtN}{Compétence.}{1}{1}{0}{0}{0}
- 
-\end{ExoCtN}
+%\begin{ExoCtN}{Compétence.}{1}{1}{0}{0}{0}
+% 
+%\end{ExoCtN}
  
 \end{pageParcourst} % Fin du parcours niveau 3
 
@@ -1212,10 +1306,12 @@ ytick={-5.0,-4.0,...,5.0},]
 
 %QCM
 \begin{ExoAutoN}{Compétence.}{1}{0}{0}{0}{0}
-\begin{tabular}{|c|c|c|c|}
+\vspace{.2cm}
+\begin{tabular}{|M{.4\linewidth}|M{.18\linewidth}|M{.18\linewidth}|M{.18\linewidth}|}
 \hline
 Enoncé & A & B & C \\\hline
-$f:\mapsto \frac{1}{x}$, sachant que $f(a)=-7,54$ que vaut $f(-a)$ ? & $f(-a)=-7,54$ & $f(-a)=7,54$ & On ne peut pas savoir \\\hline
+$f:x\mapsto \frac{1}{x}$, sachant que $f(a)=-7,54$ que vaut $f(-a)$ ? & $f(-a)=-7,54$ & $f(-a)=7,54$ & On ne peut pas savoir \\\hline
+La fonction $g$ est telle que $g(5)=g(-5)$ & La fonction est paire. & La fonction est impaire. & On ne peut pas conclure quand à sa parité. \\\hline
 \end{tabular}
 \end{ExoAutoN}
 
