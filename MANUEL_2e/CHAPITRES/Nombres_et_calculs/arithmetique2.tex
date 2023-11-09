@@ -1,39 +1,51 @@
-\input{../MISC/preambule_sacado.tex}
-\input{../MISC/environnements_sacado_g5.tex}
-\input{../MISC/macro_sacado.tex}
-
-\title{Mathématiques 2nde  : le livre sacado}
-\author{L'équipe SACADO}
-
-%%%%%%%%%%%%%%%  Indentation  %%%%%%%%%%%%%%%%%%
-\parindent=0pt
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-\begin{document}
-
-%\maketitle
-\chapter{Arithmétique}{2}
+\chapter{Arithmétique}
 {https://sacado.xyz/qcm/parcours_show_course/0/117129}
 {
 
 
-\begin{CpsCol}
- \textbf{Les savoir-faire du parcours}
+ \begin{CpsCol}
+\textbf{Les savoir-faire du parcours}
  \begin{itemize}
  \item \textbf{Utiliser des nombres pour calculer et résoudre des problèmes}
  \item Connaitre les bases de l'arithmétique
- \item Simplifier& une fraction pour la rendre irréductible
+ \item Simplifier une fraction pour la rendre irréductible
  \end{itemize}
-\end{CpsCol}
+ \end{CpsCol}
 
-\begin{His}
+ \begin{His}
+   
+  \hfill{\em Dieu a fait les nombres entiers, tout le reste est l'œuvre de l'Homme}
 
-  
-L'arithmétique est une branche des mathématiques qui correspond à la science des nombres. De nombreux nombres entiers ont des propriétés particulières. Ces propriétés font l'objet de la théorie des nombres. Parmi ces nombres particuliers, les nombres premiers sont sans doute les plus importants.
+  \hfill{Leopold Kronecker}
 
-On connait aussi les nombres pairs et les nombres impairs. 
+     \bigskip
+
+     
+\begin{minipage}[b]{0.6\textwidth}{L'arithmétique est la branche des mathématiques qui étudie
+  les nombres entiers et les opérations $+$, $-$, $\times$, $\div$,...
+  Comme le relève la citation en exergue, les concepts de l'arithmétique
+  sont élémentaires et fondamentaux.
+
+  Mais cela ne signifie pas que
+  les problèmes de l'arithmétique sont simples. Par exemple,
+  les nombres premiers sont source de nombreux problèmes
+  non résolus à ce jour, en particulier l'{\em hypothèse de Riemann}
+  qui porte sur la {\em fonction zêta} et qui est reliée à la
+  répartition des nombres premiers.
+
+  L'importance de l'arithmétique dépasse les mathématiques : la plupart des
+  cryptosystèmes (algorithmes qui permettent la sécurité des
+  communications sur internet) sont fondés sur l'arithmétique.
+  }
+\end{minipage}
+\begin{minipage}[b]{0.4\textwidth}
+\begin{center}    
+  \includegraphics[width=5.5cm]{FIG/zeta7b.png}
+
+  Une représentation de la fonction zêta de Riemann
+
+\end{center}
+\end{minipage}
 
 \end{His}
 
@@ -62,20 +74,86 @@ Combien, au minimum,  y aura-t-il de truffes de chaque sorte dans chaque boîte 
 \begin{DefT}{Entiers naturels et relatifs.}
 
 \begin{enumerate}
+
+\item On appelle \textbf{entiers naturels} les nombres : $0$ ; $1$ ; $2$ ; $3$ ; $\ldots$  Leur ensemble est noté $\N$.\index{Ensemble de nombres! Entiers naturels $\N$}, on a donc : $\N =  \lbrace 0 ; 1 ; 2 ; 3 \ldots \rbrace $
+ 
+\item  On appelle \textbf{entiers relatifs} ou simplement \textbf{entiers} les nombres entiers naturels et leurs opposés. Leur ensemble est noté $\Z$ \index{Ensemble de nombres! Entiers $\Z$}(d'après le mot allemand Zahl qui signifie chiffre, nombre).
+On a donc : $\Z = \lbrace \ldots -3 ; -2 ; -1 ; 0 ; 1 ; 2 ; 3  \cdots  \rbrace$
+=======
 \item On appelle \textbf{entiers naturels} les nombres : $0$ ; $1$ ; $2$ ; $3$ ; $\ldots$  Leur ensemble est noté $\N$.\index{Ensemble de nombres! Entiers naturels $\mathbb N$}, on a donc : $\mathbb N=  \lbrace 0 ; 1 ; 2 ; 3 \ldots \rbrace $
  
 \item  On appelle \textbf{entiers relatifs} ou simplement \textbf{entiers} les nombres entiers naturels et leurs opposés. Leur ensemble est noté $\mathbb Z$ \index{Ensemble de nombres! Entiers $\mathbb Z$}(d'après le mot allemand Zahl qui signifie chiffre, nombre).
 On a donc : $\mathbb Z = \lbrace \ldots -3 ; -2 ; -1 ; 0 ; 1 ; 2 ; 3  \cdots  \rbrace$
+
 Parfois, on dit abusivement que les nombres entiers sont les nombres sans partie décimale.
 \end{enumerate}
 \end{DefT}
 
+\begin{minipage}{0.6\linewidth}
+\begin{Rqs} 
+\begin{itemize}[leftmargin=*]
+\item L'ensemble des nombres entiers $\Z$ contient l'ensemble des nombres naturels $\N$. 
+
+On écrit $\mathbb N  \subset \mathbb Z$ et on dit que l'ensemble $\mathbb N$ est inclus dans $\mathbb Z$.
 
 
-\section{Multiples et diviseurs, nombre premier, nombre pair, impair}
-
+  Soit $d$ un nombre entier. Le nombre $m$ est dit \textbf{multiple} de $d$ s'il existe un entier $q \in \Z$ tel que $m=qd$. Dans ce cas, on dit aussi
+  que $d$ est un \textbf{diviseur} de $m$.
+\end{DefT}
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+\begin{Exs} 
+  $35=5 \times 7$ où $7 \in \Z$ donc $35$ est un multiple de $5$
+  et $5$ est un diviseur de $35$. Comme $5 \in \Z$, on peut aussi
+  dire que $35$ est un multiple de $7$ et que $7$ est un diviseur de
+  $35$.
+  1 est un diviseur de tous les entiers, et tous les entiers
+  divisent 0.
+\end{Exs}
+\end{minipage}
+=======
+\item Si $x \in \mathbb N$ alors $x \in \mathbb Z$. Le symbole $\in$ signifie \textbf{appartient à}. 
+\end{itemize}
+\end{Rqs}
  
+\end{minipage}
+\begin{minipage}{0.4\linewidth} 
+ 
+\definecolor{xfqqff}{rgb}{0.4980392156862745,0.,1.}
+\definecolor{ffqqqq}{rgb}{1.,0.,0.}
+\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-0.7,-1.22) rectangle (4.54,2.62);
+\draw [rotate around={12.739646792482095:(2.15,0.66)},line width=2.pt,color=ffqqqq] (2.15,0.66) ellipse (1.5997803770827426cm and 1.08129424991489cm);
+\draw [rotate around={18.434948822922024:(1.92,0.68)},line width=2.pt,color=xfqqff] (1.92,0.68) ellipse (2.576113244705657cm and 1.6710354423374485cm);
+\draw [color=xfqqff](3.32,2.14) node[anchor=north west] {$\mathbb Z$};
+\draw [color=ffqqqq](2.78,1.58) node[anchor=north west] {$\mathbb N$};
+\draw (1.54,0.14) node[anchor=north west] {0};
+\draw (1.96,0.94) node[anchor=north west] {1};
+\draw (2.72,0.38) node[anchor=north west] {2};
+\draw (1.06,-0.46) node[anchor=north west] {$-5$};
+\draw (-0.18,1.36) node[anchor=north west] {$-2$};
+\draw (0.02,0.02) node[anchor=north west] {$-1$};
+\end{tikzpicture}
+ 
+ 
+\end{minipage} 
 
+\section{Multiples et diviseurs, nombre premier, nombre pair, nombre impair}
+
+%\begin{minipage}{0.5\linewidth}
+%\begin{DefT}{Diviseur}\index{Diviseur!Nombres}%
+%
+%Soit $n$ un nombre entier. Le nombre $q$ est dit \textbf{diviseur} de $n$ s'il %existe un entier $k \in \Z$ tel que $n=kq$.
+%\end{DefT}
+%\end{minipage}
+%\begin{minipage}{0.5\linewidth}
+%\begin{Ex} 
+%
+%$48 = 6 \times 8$ où $6 \in \Z$  donc $8$ est un diviseur de $48$ et aussi,  $6%$ est diviseur de $48$.
+%\end{Ex}
+%\end{minipage}
+=======
 \begin{DefT}{Multiples et diviseurs}\index{Multiple!Nombres}\index{Diviseur!Nombres}
 
 Soit $d$ un nombre entier. Le nombre $m$ est dit \textbf{multiple} de $d$ s'il existe un entier $q \in \Z$ tel que $m=qd$. Dans ce cas, on dit aussi que $d$ est un \textbf{diviseur} de $m$.
@@ -92,8 +170,31 @@ Soit $d$ un nombre entier. Le nombre $m$ est dit \textbf{multiple} de $d$ s'il e
 \end{Exs}
 
 
-\section{ Nombres pairs et impairs}
+ 
 
+\begin{DefT}{Nombre premier}\index{Nombre premier}
+
+Un \textbf{nombre premier} est un nombre entier naturel qui a exactement 2 diviseurs positifs (qui sont alors 1 et lui-même) 
+
+\end{DefT}
+
+
+\begin{Ex} 
+
+  $19$ est un nombre premier :  il n'est divisible que par 1 et lui-même.
+<<<<<<< HEAD
+
+  $1$ n'est pas premier, car il n'a qu'un seul diviseur.  
+\end{Ex}
+\end{minipage}
+=======
+
+
+  $1$ n'est pas premier, car il n'a qu'un seul diviseur.  
+\end{Ex}
+
+\begin{minipage}{0.5\linewidth}
+=======
 
 \begin{DefT}{Nombres pairs et impairs}\index{Nombres pairs et impairs}
 
@@ -106,6 +207,11 @@ Soit $d$ un nombre entier. Le nombre $m$ est dit \textbf{multiple} de $d$ s'il e
   tel que $n=2k+1$.
 \end{DefT}
 
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+=======
+
+
 
 \begin{Exs} 
 $46 = 2 \times 23$ et $23\in\Z$ donc $46$ est un nombre pair.
@@ -113,38 +219,9 @@ $46 = 2 \times 23$ et $23\in\Z$ donc $46$ est un nombre pair.
   $15= 2 \times 7,5$. Comme $7,5 \not\in\Z$, $15$ n'est pas pair. Par contre,
   $15=2 \times 7+1$ avec $7 \in \Z$, donc $15$ est impair.
 \end{Exs}
+<<<<<<< HEAD
+=======
 
-
-
-\section{ Nombres premiers }
- 
-\begin{DefT}{Nombre premier}\index{Nombre premier}
-
-Un \textbf{nombre premier} est un nombre entier naturel qui a exactement 2 diviseurs positifs (qui sont alors 1 et lui-même) 
-
-\end{DefT}
- 
-\begin{Ex} 
-
-  $19$ est un nombre premier :  il n'est divisible que par 1 et lui-même.
-
-  $1$ n'est pas premier, car il n'a qu'un seul diviseur.  
-\end{Ex}
- 
-\section{Décomposition en facteurs premiers}
-
-  \begin{ThT}{Décomposition en facteurs premiers}
-    Tout entier naturel supérieur ou égal à 2 se décompose de façon unique en produit de facteurs premiers.
-  \end{ThT}
-
-
-\begin{Exs}
-Les décompositions en facteurs premiers de $8$, $15$ et $19$ sont respectivement  
-$8=2^3$ ; $15=3 \times 5$ ; $19=19$.
-  
-\end{Exs}
-
- 
 
 \end{pageCours} 
 \begin{pageAD} 
@@ -161,6 +238,7 @@ Complète avec $\in$ ou $\not \in$.
 \item $2 \ldots \ldots \mathbb Z$
 \item $-4 \ldots \ldots \mathbb N$
 \item $7 \ldots \ldots \mathbb N$
+>>>>>>> 7790c873eeb877c30171cf6889621e79efc5a84a
 \end{minipage}
 \begin{minipage}{0.3\linewidth}
 \item $42 \ldots \ldots \mathbb N$
@@ -175,6 +253,13 @@ Complète avec $\in$ ou $\not \in$.
 \end{enumerate}
 
 
+\begin{minipage}{0.5\linewidth}
+  \begin{ThT}{Décomposition en facteurs premiers}
+    Tout entier naturel supérieur ou égal à 2 se décompose de façon unique en produit de facteurs premiers.
+  \end{ThT}
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+=======
 \end{ExoCad}
 
 \Sf{Utiliser les multiples et les diviseurs}
@@ -243,25 +328,70 @@ Soit $a$ un entier. Démontrer que la somme de deux multiples de $a$ est un mult
   $1$ ; $3$ ; $5$ et $15$. Le seul diviseur commun est $1$ et \textbf{$8$ et $15$ sont donc premiers entre eux} (Pourtant, ils ne sont pas premiers)
 \end{Ex}
 
+\section{Décomposition en facteurs premiers}
+
+  \begin{ThT}{Décomposition en facteurs premiers}
+    Tout entier naturel supérieur ou égal à 2 se décompose de façon unique en produit de facteurs premiers.
+  \end{ThT}
 
 
 
- \section{Logique}
+\begin{Exs}
+Les décompositions en facteurs premiers de $8$, $15$ et $19$ sont respectivement  
+$8=2^3$ ; $15=3 \times 5$ ; $19=19$.
+  
+\end{Exs}
+
+\end{minipage}
+
+\begin{minipage}{0.5\linewidth}
+  \begin{DefT}{Nombres premiers entre eux}\index{Premiers entre eux}
+
+    Deux nombres entiers $a$ et $b$ sont \textbf{premiers entre eux}
+    lorsque leur seul diviseur positif commun est $1$.
+  \end{DefT}
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+\begin{Ex}
+  Les diviseurs positifs de $8$ sont $1$ ; $2$ ; $4$ et $8$. Ceux de $15$ sont
+  $1$ ; $3$ ; $5$ et $15$. Le seul diviseur commun est $1$ et \textbf{$8$ et $15$ sont donc premiers entre eux} (Pourtant, ils ne sont pas premiers)
+\end{Ex}
+\end{minipage}
+=======
+
+
+
+
+
+
+
+\section{Logique}
 
  
-\begin{LogT}{Proposition universelle}\index{Proposition universelle}
+\begin{DefT}{Proposition universelle}\index{Proposition universelle}
 
   Une \textbf{proposition universelle} est une proposition qui porte sur tous
   les éléments d'un ensemble. 
 
-\end{LogT}
+\end{DefT}
+
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+\begin{Ex} 
+=======
  
  
 \begin{Rq} 
+
   Le théorème de décomposition en facteurs premiers est une proposition
   universelle (et elle est vraie).
   
 %Quels que soient trois nombres $a$, $b$ et  $c$, $a(b+c)=ab+ac$. La distributivité est une proposition universelle.
+
+
+\end{Ex}
+\end{minipage}
+=======
 
 \end{Rq}
  
@@ -289,6 +419,8 @@ Cette proposition est une proposition universelle qui se traduit par : "Tout nom
 A priori, on ne sait pas quelle est la réponse. On peut utiliser alors des exemples pour tester la proposition.
 
 Il suffit de trouver un seul nombre entier n'appartenant pas à $\N$ pour informer la proposition : Principe du contre exemple. 
+
+
 $-2 \in \Z$ mais $-2 \not \in \N$. Donc $\Z \not \subset \N$.
 
 \end{LogT}
@@ -297,6 +429,16 @@ $-2 \in \Z$ mais $-2 \not \in \N$. Donc $\Z \not \subset \N$.
 \end{pageCours} 
 \begin{pageAD} 
 
+
+
+\begin{ExoCad}{Calculer.}{1234}{0}{0}{0}{0}{0}
+\begin{enumerate}
+\item Déterminer les 10 premiers multiples positifs de 4 : \point{1}
+\item Déterminer les 10 premiers multiples positifs de 6 : \point{1}
+\item Déterminer tous les multiples communs de 4 et de 6 : \point{1}
+\end{enumerate}
+\end{ExoCad}
+=======
 
 
 \Sf{Décomposer en produit de facteurs premiers}
@@ -327,7 +469,11 @@ Décomposer 24 en produit de facteurs premiers.
 
 Pour déterminer tous les diviseurs d'un nombre, on utilise un arbre de diviseurs. C'est un représentation qui propose tous les calculs possibles avec les facteurs premiers du nombre.
 
+
+Simplifier la fraction $\dfrac{735}{840}$ 
+=======
 On donne en exemple l'arbre de diviseurs de $36$.
+
 
 Construire l'arbre des diviseurs de $20$.
 
@@ -384,14 +530,21 @@ Construire l'arbre des diviseurs de $20$.
 
 \end{ExoCad} 
 
-\begin{ExoCad}{Calculer.}{1234}{0}{0}{0}{0}{0}
+\begin{ExoCad}{Calculer, raisonner.}{1234}{0}{0}{0}{0}{0}
 
+
+Soit $a$ un entier. Démontrer que la somme de deux multiples de $a$ est un multiple de $a$. \point{3}
+=======
 Simplifier la fraction $\dfrac{735}{840}$ 
 
 \point{3}
 
+
 \end{ExoCad}
 
+
+
+=======
 
 
 \begin{ExoCad}{Raisonner.}{1234}{0}{0}{0}{0}{0}
@@ -586,18 +739,6 @@ Pour tester l'algorithme, on peut utiliser l'éditeur Python : \url{https://saca
  
 \end{ExoCtN}
 
-
-%Quatrième exo du parcours 2
-\begin{ExoCtN}{Raisonner. Calculer}{2}{0}{0}{0}{0}
-\begin{enumerate}
-\item Donner l'ensemble des diviseurs positifs de 36.
-\item En déduire les solutions de $x(x+5)=36$.
-\end{enumerate}
-\end{ExoCtN}
-
-
-
-
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{ExoCtN}{Raisonner.}{2}{1}{0}{0}{0}
  
@@ -730,14 +871,17 @@ On appelle ce procédé « la méthode par divisions successives » ou
     
   \end{itemize}
   \begin{enumerate}
+<<<<<<< HEAD
+  \item Quel est le côté $c$ des carreaux qui répond à ces deux contraintes ?
+  \item Combien de carreaux seront disposés en longueur ? en largeur ?
+    Combien de carreaux seront utilisés au total ?
+=======
   \item Quel est le côté $c$ des carreaux qui répond à ces deux contraintes ?\point{3}
   \item Combien de carreaux seront disposés en longueur ? en largeur ?
     Combien de carreaux seront utilisés au total ?\point{4}
+>>>>>>> 7790c873eeb877c30171cf6889621e79efc5a84a
   \end{enumerate}
 \end{enumerate}
 \end{ExoAutoN}
 
 \end{pageAuto}
-
-
-\end{document}

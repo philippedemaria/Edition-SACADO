@@ -1,32 +1,16 @@
-\input{../MISC/preambule_sacado.tex}
-\input{../MISC/environnements_sacado_g5.tex}
-\input{../MISC/macro_sacado.tex}
-
-\title{Mathématiques 2nde  : le livre sacado}
-\author{L'équipe SACADO}
-
-%%%%%%%%%%%%%%%  Indentation  %%%%%%%%%%%%%%%%%%
-\parindent=0pt
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-\begin{document}
-
-%\maketitle
-\chapter{Arithmétique}{2}
+\chapter{Arithmétique}
 {https://sacado.xyz/qcm/parcours_show_course/0/117129}
 {
 
 
-\begin{CpsCol}
- \textbf{Les savoir-faire du parcours}
+ \begin{CpsCol}
+\textbf{Les savoir-faire du parcours}
  \begin{itemize}
  \item \textbf{Utiliser des nombres pour calculer et résoudre des problèmes}
  \item Connaitre les bases de l'arithmétique
- \item Simplifier& une fraction pour la rendre irréductible
+ \item Simplifier une fraction pour la rendre irréductible
  \end{itemize}
-\end{CpsCol}
+ \end{CpsCol}
 
 \begin{His}
 
@@ -70,9 +54,41 @@ Parfois, on dit abusivement que les nombres entiers sont les nombres sans partie
 \end{enumerate}
 \end{DefT}
 
+\begin{minipage}{0.6\linewidth}
+\begin{Rqs} 
+\begin{itemize}[leftmargin=*]
+\item L'ensemble des nombres entiers $\Z$ contient l'ensemble des nombres naturels $\N$. 
 
+On écrit $\mathbb N  \subset \mathbb Z$ et on dit que l'ensemble $\mathbb N$ est inclus dans $\mathbb Z$.
 
-\section{Multiples et diviseurs, nombre premier, nombre pair, impair}
+\item Si $x \in \mathbb N$ alors $x \in \mathbb Z$. Le symbole $\in$ signifie \textbf{appartient à}. 
+\end{itemize}
+\end{Rqs}
+ 
+\end{minipage}
+\begin{minipage}{0.4\linewidth} 
+ 
+\definecolor{xfqqff}{rgb}{0.4980392156862745,0.,1.}
+\definecolor{ffqqqq}{rgb}{1.,0.,0.}
+\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-0.7,-1.22) rectangle (4.54,2.62);
+\draw [rotate around={12.739646792482095:(2.15,0.66)},line width=2.pt,color=ffqqqq] (2.15,0.66) ellipse (1.5997803770827426cm and 1.08129424991489cm);
+\draw [rotate around={18.434948822922024:(1.92,0.68)},line width=2.pt,color=xfqqff] (1.92,0.68) ellipse (2.576113244705657cm and 1.6710354423374485cm);
+\draw [color=xfqqff](3.32,2.14) node[anchor=north west] {$\mathbb Z$};
+\draw [color=ffqqqq](2.78,1.58) node[anchor=north west] {$\mathbb N$};
+\draw (1.54,0.14) node[anchor=north west] {0};
+\draw (1.96,0.94) node[anchor=north west] {1};
+\draw (2.72,0.38) node[anchor=north west] {2};
+\draw (1.06,-0.46) node[anchor=north west] {$-5$};
+\draw (-0.18,1.36) node[anchor=north west] {$-2$};
+\draw (0.02,0.02) node[anchor=north west] {$-1$};
+\end{tikzpicture}
+ 
+ 
+\end{minipage} 
+
+\section{Multiples et diviseurs, nombre premier, nombre pair, nombre impair}
 
  
 
@@ -92,8 +108,21 @@ Soit $d$ un nombre entier. Le nombre $m$ est dit \textbf{multiple} de $d$ s'il e
 \end{Exs}
 
 
-\section{ Nombres pairs et impairs}
+ 
 
+\begin{DefT}{Nombre premier}\index{Nombre premier}
+
+Un \textbf{nombre premier} est un nombre entier naturel qui a exactement 2 diviseurs positifs (qui sont alors 1 et lui-même) 
+
+\end{DefT}
+
+
+\begin{Ex} 
+
+  $19$ est un nombre premier :  il n'est divisible que par 1 et lui-même.
+
+  $1$ n'est pas premier, car il n'a qu'un seul diviseur.  
+\end{Ex}
 
 \begin{DefT}{Nombres pairs et impairs}\index{Nombres pairs et impairs}
 
@@ -114,37 +143,6 @@ $46 = 2 \times 23$ et $23\in\Z$ donc $46$ est un nombre pair.
   $15=2 \times 7+1$ avec $7 \in \Z$, donc $15$ est impair.
 \end{Exs}
 
-
-
-\section{ Nombres premiers }
- 
-\begin{DefT}{Nombre premier}\index{Nombre premier}
-
-Un \textbf{nombre premier} est un nombre entier naturel qui a exactement 2 diviseurs positifs (qui sont alors 1 et lui-même) 
-
-\end{DefT}
- 
-\begin{Ex} 
-
-  $19$ est un nombre premier :  il n'est divisible que par 1 et lui-même.
-
-  $1$ n'est pas premier, car il n'a qu'un seul diviseur.  
-\end{Ex}
- 
-\section{Décomposition en facteurs premiers}
-
-  \begin{ThT}{Décomposition en facteurs premiers}
-    Tout entier naturel supérieur ou égal à 2 se décompose de façon unique en produit de facteurs premiers.
-  \end{ThT}
-
-
-\begin{Exs}
-Les décompositions en facteurs premiers de $8$, $15$ et $19$ sont respectivement  
-$8=2^3$ ; $15=3 \times 5$ ; $19=19$.
-  
-\end{Exs}
-
- 
 
 \end{pageCours} 
 \begin{pageAD} 
@@ -243,18 +241,34 @@ Soit $a$ un entier. Démontrer que la somme de deux multiples de $a$ est un mult
   $1$ ; $3$ ; $5$ et $15$. Le seul diviseur commun est $1$ et \textbf{$8$ et $15$ sont donc premiers entre eux} (Pourtant, ils ne sont pas premiers)
 \end{Ex}
 
+\section{Décomposition en facteurs premiers}
+
+  \begin{ThT}{Décomposition en facteurs premiers}
+    Tout entier naturel supérieur ou égal à 2 se décompose de façon unique en produit de facteurs premiers.
+  \end{ThT}
+
+
+\begin{Exs}
+Les décompositions en facteurs premiers de $8$, $15$ et $19$ sont respectivement  
+$8=2^3$ ; $15=3 \times 5$ ; $19=19$.
+  
+\end{Exs}
 
 
 
- \section{Logique}
+
+
+
+
+\section{Logique}
 
  
-\begin{LogT}{Proposition universelle}\index{Proposition universelle}
+\begin{DefT}{Proposition universelle}\index{Proposition universelle}
 
   Une \textbf{proposition universelle} est une proposition qui porte sur tous
   les éléments d'un ensemble. 
 
-\end{LogT}
+\end{DefT}
  
  
 \begin{Rq} 
@@ -289,6 +303,8 @@ Cette proposition est une proposition universelle qui se traduit par : "Tout nom
 A priori, on ne sait pas quelle est la réponse. On peut utiliser alors des exemples pour tester la proposition.
 
 Il suffit de trouver un seul nombre entier n'appartenant pas à $\N$ pour informer la proposition : Principe du contre exemple. 
+
+
 $-2 \in \Z$ mais $-2 \not \in \N$. Donc $\Z \not \subset \N$.
 
 \end{LogT}
@@ -586,18 +602,6 @@ Pour tester l'algorithme, on peut utiliser l'éditeur Python : \url{https://saca
  
 \end{ExoCtN}
 
-
-%Quatrième exo du parcours 2
-\begin{ExoCtN}{Raisonner. Calculer}{2}{0}{0}{0}{0}
-\begin{enumerate}
-\item Donner l'ensemble des diviseurs positifs de 36.
-\item En déduire les solutions de $x(x+5)=36$.
-\end{enumerate}
-\end{ExoCtN}
-
-
-
-
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{ExoCtN}{Raisonner.}{2}{1}{0}{0}{0}
  
@@ -738,6 +742,3 @@ On appelle ce procédé « la méthode par divisions successives » ou
 \end{ExoAutoN}
 
 \end{pageAuto}
-
-
-\end{document}
