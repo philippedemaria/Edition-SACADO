@@ -17,13 +17,31 @@
  \begin{CpsCol}
 	\textbf{Les savoir-faire du parcours}
  	\begin{itemize}
- 		\item SF1
- 		\item SF2
+ 		\item Savoir étudier la parité d'une fonction.
+		\item Savoir déterminer graphiquement la parité d'une fonction.
+ 		\item Savoir étudier les variations de la fonction carré.
+ 		\item Savoir comparer des images par la fonction carré. 
+ 		\item Savoir résoudre une équation, inéquation avec la fonction carré.
+ 		\item Savoir étudier les variations de la fonction cube.
+ 		\item Savoir comparer des images par la fonction cube. 
+ 		\item Savoir résoudre une inéquation avec la fonction cube.
+ 		\item Savoir étudier les variations de la fonction inverse.
+ 		\item Savoir résoudre une inéquation avec la fonction inverse.
+ 		\item Savoir étudier les variations de la fonction racine carrée.
+ 		\item Savoir résoudre une inéquation avec la fonction racine carrée.
+ 		\item Savoir reconnaitre une fonction de référence.
  	\end{itemize}
  \end{CpsCol}
 
 \begin{His}
-	% Un paragraphe parlant de la vie d'un ou une mathématicien ou mathématicienne
+\mini{.7\linewidth}{
+Sophie Germain (1776-1831) était une mathématicienne française pionnière du XIXe siècle. Malgré les obstacles dus à sa condition de femme, elle a contribué de manière significative à la théorie des nombres et à la théorie des équations diophantiennes. Elle a utilisé un pseudonyme masculin pour correspondre avec d'autres mathématiciens, dont Carl Friedrich Gauss, et a été la première femme à recevoir la médaille de l'Académie des Sciences de Paris. Ses travaux ont jeté les bases de la théorie des nombres modernes.
+}{.3\linewidth}{
+\begin{center}
+\includegraphics[width=.6\linewidth]{FIG/06-Sophie-Germain.png} 
+\end{center}
+}
+
 \end{His}
 
 \begin{ExoDec}{Compétence.}{1234}{1}{0}{0}{0}
@@ -38,6 +56,46 @@
 \begin{pageCours} % Début page de cours 1
 
 \newgeometry{left=2cm,right=.8cm,top=1.5cm} %Ne pas toucher cette ligne
+
+\section{Fonctions paires, fonctions impaires}
+
+\mini{.5\linewidth}{
+\begin{DefT}{Fonction paire}
+On dit qu'une fonction $f$ est \textbf{paire} si :
+
+\begin{itemize}
+\item $\forall x\in D_f,-x\in D_f$
+\item $\forall x\in D_f, f(-x)=f(x)$
+\end{itemize}
+\end{DefT}
+
+\begin{Rq}
+La \textbf{courbe représentative} d'une fonction pair est \textbf{symétrique} par rapport à l'\textbf{axe des ordonnées}.
+\end{Rq}
+}{.5\linewidth}{
+\begin{center}
+\includegraphics[width=.6\linewidth]{FIG/fonction_paire.png} 
+\end{center}
+}
+
+\mini{.5\linewidth}{
+\begin{DefT}{Fonction impaire}
+On dit qu'une fonction $f$ est \textbf{impaire} si :
+
+\begin{itemize}
+\item $\forall x\in D_f,-x\in D_f$
+\item $\forall x\in D_f, f(-x)=-f(x)$
+\end{itemize}
+\end{DefT}
+
+\begin{Rq}
+La \textbf{courbe représentative} d'une fonction pair est \textbf{symétrique} par rapport à l'\textbf{origine du repère}.
+\end{Rq}
+}{.5\linewidth}{
+\begin{center}
+\includegraphics[width=.6\linewidth]{FIG/fonction_impaire.png} 
+\end{center}
+}
 
 \section{La fonction Carré}
 
@@ -54,8 +112,9 @@ La fonction Carré $f$ est paire.
 La parabole d'équation $y=x^2$ est symétrique par rapport à l'axe des ordonnées.
 \end{Th}
 
-
 \begin{ThT}{Variations de la fonction Carré}
+
+\textcolor{red}{Démonstration exigible}
 
 La fonction Carré est strictement décroissante sur $\mathbb{R}^-$ et strictement croissante sur $\mathbb{R}^+$. 
 
@@ -72,31 +131,196 @@ La fonction Carré est strictement décroissante sur $\mathbb{R}^-$ et stricteme
 \begin{minipage}{0.48\linewidth}
 
 %\begin{Ill}
-\definecolor{xfqqff}{rgb}{0.4980392156862745,0.,1.}
-\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.7772020725388601cm,y=0.7772020725388601cm]
+%\definecolor{xfqqff}{rgb}{0.4980392156862745,0.,1.}
+%\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.7772020725388601cm,y=0.7772020725388601cm]
+%\begin{axis}[
+%x=0.7772020725388601cm,y=0.7772020725388601cm,
+%axis lines=middle,
+%ymajorgrids=true,
+%xmajorgrids=true,
+%xmin=-3.2800000000000002,
+%xmax=3.42,
+%ymin=-0.8400000000000007,
+%ymax=7.079999999999996,
+%xtick={-3.0,-2.0,...,3.0},
+%ytick={0,1.0,...,7.0},]
+%\clip(-3.28,-0.84) rectangle (3.42,7.08);
+%\draw [color=xfqqff](1.3,1.84) node[anchor=north west] {$y=x^2$};
+%\draw[line width=2.pt,color=xfqqff,smooth,samples=100,domain=-3.2800000000000002:3.42] plot(\x,{(\x)*(\x)});
+%\begin{scriptsize}
+%\draw[color=xfqqff] (-2.96,8.93) node {$g$};
+%\end{scriptsize}
+%\end{axis}
+%\end{tikzpicture}
+%%\end{Ill}
+\begin{Pv}
+Etude des variations de $f:x\mapsto x^2$ sur $[0;+\infty[$ :
+
+Soient $a$ et $b$ deux nombres appartenant à $[0;+\infty[$ tels que $a<b$. 
+
+Comparons les images de $a$ et $b$ par la fonction $f$.
+
+$f(a)=a^2$ et $f(b)=b^2$
+
+Pour les comparer on étudie le signe de leur différence :
+
+$f(a)-f(b)=a^2-b^2=(a+b)(a-b)$
+
+\begin{itemize}
+\item $a$ et $b$ appartiennent à $[0;+\infty[$ donc $a+b>0$
+\item $a<b$ donc $a-b<0$
+\item $(a+b)(a-b)<0\Rightarrow a^2-b^2<0 \Rightarrow f(a)<f(b) \Rightarrow f(a)<f(b)$
+\end{itemize}
+
+Les images de $a$ et $b$ par la fonction $f$ sont rangés dans le même ordre que ces nombres. La fonction est donc croissante sur $[0;+\infty[$.
+
+\end{Pv}
+\end{minipage}
+
+\end{pageCours} % Fin page de cours 1
+
+\begin{pageAD}
+
+\Sf{Parité d'une fonction}
+
+\begin{ExoCad}{Représenter. Raisonner.}{1234}{0}{0}{0}{0}{0}
+
+Déterminer si les fonctions suivantes sont paires ou impaires.
+
+\begin{center}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=.7cm,y=.7cm]
 \begin{axis}[
-x=0.7772020725388601cm,y=0.7772020725388601cm,
+x=.7cm,y=.7cm,
 axis lines=middle,
 ymajorgrids=true,
 xmajorgrids=true,
-xmin=-3.2800000000000002,
-xmax=3.42,
-ymin=-0.8400000000000007,
-ymax=7.079999999999996,
-xtick={-3.0,-2.0,...,3.0},
-ytick={-0.0,1.0,...,7.0},]
-\clip(-3.28,-0.84) rectangle (3.42,7.08);
-\draw [color=xfqqff](1.3,1.84) node[anchor=north west] {$y=x^2$};
-\draw[line width=2.pt,color=xfqqff,smooth,samples=100,domain=-3.2800000000000002:3.42] plot(\x,{(\x)*(\x)});
-\begin{scriptsize}
-\draw[color=xfqqff] (-2.96,8.93) node {$g$};
-\end{scriptsize}
+xmin=-5.987525829224177,
+xmax=5.987964363878517,
+ymin=-3.9956200100092336,
+ymax=3.9880401187258965,
+xtick={-5.0,-4.0,...,5.0},
+ytick={-3.0,-2.0,...,3.0},]
+\clip(-5.987525829224177,-3.9956200100092336) rectangle (5.987964363878517,3.9880401187258965);
+\draw[line width=2.pt,color=sacado_orange,smooth,samples=100,domain=-5.987525829224177:5.987964363878517] plot(\x,{0-sin(((\x)/2)*180/pi)*3});
 \end{axis}
 \end{tikzpicture}
-%%\end{Ill}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=.7cm,y=.7cm]
+\begin{axis}[
+x=.7cm,y=.7cm,
+axis lines=middle,
+ymajorgrids=true,
+xmajorgrids=true,
+xmin=-5.987525829224177,
+xmax=5.987964363878517,
+ymin=-3.9956200100092336,
+ymax=3.9880401187258965,
+xtick={-5.0,-4.0,...,5.0},
+ytick={-3.0,-2.0,...,3.0},]
+\clip(-5.987525829224177,-3.9956200100092336) rectangle (5.987964363878517,3.9880401187258965);
+\draw[line width=2.pt,color=sacado_orange,smooth,samples=100,domain=-9.161981166126003:11.063291160002994] plot(\x,{sqrt((\x)^(2)+1)-2});
+\end{axis}
+\end{tikzpicture}
+\end{center}\vspace{.2cm}
 
-\end{minipage}
+La fonction est .\dotfill La fonction est .\dotfill
 
+\end{ExoCad} 
+
+\begin{ExoCad}{Raisonner.}{1234}{0}{0}{0}{0}{0}
+A partir de la définition, démontrer que la fonction $f:x\mapsto x^2$ est \textbf{paire}.
+
+\point{3}
+
+%La fonction $f$ est définie sur l'ensemble des réels, ainsi : $\forall x\in D_f,-x\in D_f$.
+%
+%Montrons que l'image de $-x$ par la fonction $f$ est égale à l'image de $x$.
+%
+%$f(-x)=(-x)^2=(-x)\times(-x)=x^2=f(x)$.
+%
+%Ainsi, la fonction $f :x\mapsto x^2$ est paire.
+\end{ExoCad} 
+
+\Sf{Connaitre et utiliser la fonction Carré}
+
+\begin{ExoCad}{Raisonner.}{1234}{0}{0}{0}{0}{0}
+
+Comparer sans les calculer.
+\begin{description}[leftmargin=*]
+\item $\left( \dfrac{3}{2} \right)^2$ et  $\pi^2$
+
+%La fonction Carré est croissante sur $[0;+\infty]$, donc les images de deux nombres de $[0;+\infty]$ sont rangées dans le même ordre que ces nombres. Or comme $\dfrac{3}{2}<\pi$ alors $\dfrac{3}{2}^2<\pi^2$.
+
+\point{2}
+
+\item $(-11)^2$ et $(-6)^2$
+
+%La fonction Carré est décroissante sur $[-\infty,0]$, donc les images de deux nombres de $[-\infty,0]$ sont rangées dans l'ordre contraire de ces nombres. Or comme $-11<-6$ alors $(-11)^2>(-6)^2$.
+
+\point{2}
+
+ 
+\item $-7^2$ et $-8^2$
+
+%La fonction Carré est croissante sur $[0;+\infty]$, donc les images de deux nombres de $[0;+\infty]$ sont rangées dans le même ordre que ces nombres. Or comme $7<8$ alors $7^2<8^2$. Prendre l'opposé de deux nombres revient à prendre l'ordre contraire que ces nombres, ainsi : $-7^2>-8^2$.
+
+\point{3}
+\end{description}
+
+\end{ExoCad} 
+
+
+\begin{ExoCad}{Raisonner. Calculer.}{1234}{0}{0}{0}{0}{0}
+\begin{itemize}[leftmargin=*]
+\item Déterminer algébriquement l'intervalle de $x^2$ lorsque $x$ appartient à $[1;3]$. 
+
+\point{2}
+
+%La fonction $x\mapsto x^2$ est strictement croissante sur l'intervalle $[1;3]$. De plus $x$ est positif sur cet intervalle.
+%
+%$\textcolor{white}{\Leftrightarrow}1<x<3$
+%
+%$\Leftrightarrow1^2<x^2<3^2$
+%
+%$\Leftrightarrow1<x^2<9$
+%
+%Ainsi l'intervalle de $x^2$ lorsque $x$ appartient à $[1;3]$ est $[1;9]$.
+\item Déterminer algébriquement l'intervalle de $x^2$ lorsque $x$ appartient à $\left[-1;4 \right]$. 
+
+\point{3}
+
+%La fonction $x\mapsto x^2$ est décroissante sur l'intervalle $[-1;0]$ puis croissante sur l'intervalle $[0;4]$. Traitons les deux intervalles séparément :
+%
+%\mini{.47\linewidth}{
+%Sur $[-1;0]$, $x$ est négatif.
+%
+%$\textcolor{white}{\Leftrightarrow}-1<x<0$
+%
+%$\Leftrightarrow(-1)^2>x^2>0^2$
+%
+%$\Leftrightarrow1>x^2>0$
+%
+%Ainsi l'intervalle de $x^2$ lorsque $x$ appartient à $[-1;0]$ est $[0;1]$.
+%}{.47\linewidth}{
+%Sur $[0;4]$, $x$ est positif.
+%
+%$\textcolor{white}{\Leftrightarrow}0<x<4$
+%
+%$\Leftrightarrow0^2<x^2<4^2$
+%
+%$\Leftrightarrow0<x^2<16$
+%
+%Ainsi l'intervalle de $x^2$ lorsque $x$ appartient à $[0;4]$ est $[0;16]$.
+%}
+%
+%Donc lorsque $x\in[-1,0]\cup[0,4]$, $x^2\in[0,1]\cup[0,16]$, cet intervalle peut se simplifier en $[0,16]$.
+
+\end{itemize}
+
+\end{ExoCad}
+
+\end{pageAD}
+
+\begin{pageCours} 
 
 \section{La fonction Cube}
 
@@ -152,7 +376,60 @@ ytick={-5.0,-4.0,...,5.0},]
 
 \end{minipage}
 
-\end{pageCours} % Fin page de cours 1
+\section{{Positions relatives des courbes de $x$, $x^2$ et $x^3$}}
+
+\mini{.7\linewidth}{
+\begin{Pp}
+\textcolor{red}{Démonstration exigible}
+
+\begin{itemize}
+\item Si $0\leq x \leq 1$ alors $x\geq x^2 \geq x^3$.
+\item Si $x\geq 1$ alors $x\leq x^2 \leq x^3$
+\end{itemize}
+
+\begin{tikzpicture}
+   \tkzTabInit{$x$ / 1 , $x$ / 1, $x-1$ / 1, $f(x)$ / 1}{$-\infty$, $0$, $1$, $+\infty$}
+   \tkzTabLine{, -, z, +, t, +, }
+   \tkzTabLine{, -, t, -, z, +, }
+   \tkzTabLine{, +, z, -, z, +, }
+\end{tikzpicture}
+\end{Pp}
+
+\begin{Pv}
+Comparaison de $x$ et $x^2$ sur $[0;+\infty[$.
+
+Pour les comparer, on étudie le signe de leur différence.
+
+On définit la fonction $f$ par $f(x)=x^2-x$.
+
+$f(x)=x^2-x=x(x-1)$
+
+On peut établir le tableau de signes de $f(x)$.
+
+$(E):f(x)=0$ alors $S(E)=\{0;1\}$\vspace{.2cm}
+
+\begin{tikzpicture}
+   \tkzTabInit{$x$ / 1 , $x$ / 1, $x-1$ / 1, $f(x)$ / 1}{$-\infty$, $0$, $1$, $+\infty$}
+   \tkzTabLine{, -, z, +, t, +, }
+   \tkzTabLine{, -, t, -, z, +, }
+   \tkzTabLine{, +, z, -, z, +, }
+\end{tikzpicture}
+
+Ainsi :
+\begin{itemize}
+\item $\forall x \in ]0;1[,f(x)<0$ donc $x^2-x<0$ donc $x^2<x$
+\item $\forall x \in ]1;+\infty,f(x)>0$ donc $x^2-x>0$ donc $x^2>x$
+\end{itemize}
+\end{Pv}
+}{.3\linewidth}{
+\begin{center}
+\includegraphics[width=\linewidth]{FIG/position_relative.png}
+\end{center}
+}
+
+
+
+\end{pageCours} % Fin page de cours 2
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% Application direct 1
@@ -160,45 +437,24 @@ ytick={-5.0,-4.0,...,5.0},]
 
 \begin{pageAD}  % Début page d'exercice d'application direct 1
 \restoregeometry %Ne pas toucher cette ligne
-
-\Sf{Connaitre et utiliser la fonction Carré}
+ 
+\Sf{Connaitre et utiliser la fonction Cube}
 
 \begin{ExoCad}{Raisonner.}{1234}{0}{0}{0}{0}{0}
 
-Comparer sans les calculer.
-\begin{description}[leftmargin=*]
-\item $\left( \dfrac{3}{2} \right)^2$ et  $\pi^2$
-
-\point{2}
-
-\item $(-11)^2$ et $(-6)^2$
-
-\point{2}
-
- 
-\item $-7^2$ et $-8^2$
+A partir de la définition, démontrer que la fonction $f:x\mapsto x^3$ est \textbf{impaire}.
 
 \point{3}
-\end{description}
+
+%La fonction $f$ est définie sur l'ensemble des réels, ainsi : $\forall x\in D_f,-x\in D_f$.
+%
+%Montrons que l'image de $-x$ par la fonction $f$ est égale à l'inverse de l'image de $x$.
+%
+%$f(-x)=(-x)^3=(-x)\times(-x)\times(-x)=x^2\times(-x)=-x^3=-f(x)$.
+%
+%Ainsi, la fonction $f :x\mapsto x^3$ est impaire.
 
 \end{ExoCad} 
-
-
-\begin{ExoCad}{Raisonner. Calculer.}{1234}{0}{0}{0}{0}{0}
-\begin{enumerate}[leftmargin=*]
-\item Déterminer algébriquement l'intervalle de $x^2$ lorsque $x$ appartient à $[1;3]$. 
-
-\point{2}
-\item Déterminer algébriquement l'intervalle de $x^2$ lorsque $x$ appartient à $\left[-1;4 \right]$. 
-
-\point{3}
-\end{enumerate}
-
-\end{ExoCad}
-
-
- 
-\Sf{Connaitre et utiliser la fonction Cube}
 
 \begin{ExoCad}{Raisonner.}{1234}{0}{0}{0}{0}{0}
 
@@ -207,14 +463,75 @@ Comparer sans les calculer.
 \begin{description}[leftmargin=*]
 \item $\left(\frac{1}{5}\right)^3$ et $\pi^3$  
 
+%La fonction cube est croissante sur $\mathbb{R}$, donc les cubes de deux nombres réels sont rangés dans le même ordre que ces nombres.
+%
+%On sait que $\dfrac{1}{5}=0,2$ et que $\pi\approx3$, or comme $\frac{1}{5}<\pi$ alors $\frac{1}{5}^3<\pi^3$
+
 \point{2}
 
 \item $(-5)^3$ et $(-9)^3$
+
+%La fonction cube est croissante sur $\mathbb{R}$, donc les cubes de deux nombres réels sont rangés dans le même ordre que ces nombres.
+%
+%On sait que $-9>-5$ alors $(-9)^3<(-5)^3$.
 
 \point{2}
 \end{description}
 
 \end{ExoCad} 
+
+\Sf{Position relatives des courbes}
+
+\begin{ExoCad}{Raisonner. Communiquer.}{1234}{0}{0}{0}{0}{0}
+
+Comparer la position relative des courbes de $x^2$ et $x^3$ sur $[0;+\infty]$.
+
+\point{5}
+
+%Pour comparer la position relative des courbes de $x^2$ et $x^3$ on étudie le signe de leur différence.
+%
+%On définit la fonction $f$ par $f(x)=x^3-x^2=x^2(x-1)$
+%
+%On peut établir le tableau de signe de $f(x)$.
+%
+%$(E):f(x)=0$ alors $S(E)=\{0;1\}$
+%
+%\begin{tikzpicture}
+%   \tkzTabInit{$x$ / 1 , $x^2$ / 1, $x-1$ / 1, $f(x)$ / 1}{$-\infty$, $0$, $1$, $+\infty$}
+%   \tkzTabLine{, +, z, +, t, +, }
+%   \tkzTabLine{, -, t, -, z, +, }
+%   \tkzTabLine{, -, z, -, z, +, }
+%\end{tikzpicture}
+%
+%Ainsi :
+%
+%\begin{itemize}
+%\item $\forall x \in ]0;1[,f(x)<0$ donc $x^3-x^2<0$ donc $x^3<x^2$
+%\item $\forall x \in ]1;+\infty,f(x)>0$ donc $x^3-x^2>0$ donc $x^3>x^2$
+%\end{itemize}
+
+\end{ExoCad} 
+
+\begin{ExoCad}{Raisonner.}{1234}{0}{0}{0}{0}{0}
+
+Comparer sans les calculer.
+
+\begin{description}[leftmargin=*]
+\item $(\frac{1}{3})^3$ et $(\frac{1}{3})^2$  
+
+
+
+\point{2}
+
+\item $\frac{10}{9}$ et $(\frac{10}{9})^2$
+
+
+
+\point{2}
+\end{description}
+
+\end{ExoCad} 
+
  
 \end{pageAD} % Fin page d'exercice d'application direct 1
 
@@ -246,6 +563,8 @@ La hyperbole d'équation $y=\dfrac{1}{x}$ est symétrique par rapport à l'origi
 
 \begin{ThT}{Variations de la fonction Inverse}
 
+\textcolor{red}{Démonstration exigible}
+
 La fonction Carré est strictement décroissante sur $\mathbb{R}^*_-$ et strictement décroissante sur $\mathbb{R}^*_+$. 
 
 \begin{tikzpicture}
@@ -276,14 +595,36 @@ xtick={-4.0,-3.0,...,5.0},
 ytick={-4.0,-3.0,...,4.0},]
 \clip(-4.52,-4.48) rectangle (5.6,4.5);
 \draw [color=xfqqff](0.62,3.38) node[anchor=north west] {$y=\dfrac{1}{x}$};
-\draw[line width=2.pt,color=xfqqff,smooth,samples=100,domain=-4.5200000000000005:5.6000000000000005] plot(\x,{1/(\x)});
+\draw[line width=2.pt,color=xfqqff,smooth,samples=100,domain=-4.5200000000000005:-0.1] plot(\x,{1/(\x)});
+\draw[line width=2.pt,color=xfqqff,smooth,samples=100,domain=0.1:5.6000000000000005] plot(\x,{1/(\x)});
+
 \end{axis}
 \end{tikzpicture}
 %%\end{Ill}
 
 \end{minipage}
 
+\begin{Pv}
+Étude des variations $f:x\mapsto \frac{1}{x}$ sur $]-\infty;0[$.
 
+Soient $a$ et $b$ deux nombres appartenant à $]-\infty;0[$ tels que $a<b$.
+
+Comparons les images de $a$ et $b$ par la fonction $f$.
+
+$f(a)=\frac{1}{a}$ et $f(b)=\frac{1}{b}$
+
+Pour les comparer on étudie le signe de leur différence.
+
+$f(a)-f(b)=\frac{1}{a}-\frac{1}{b}=\frac{b}{ab}-\frac{a}{ab}=\frac{b-a}{ab}$
+
+\begin{itemize}
+\item $a$ et $b$ appartiennent à $]-\infty;0[$ donc $ab>0$
+\item $a<b$ donc $a-b<0$ donc $b-a>0$
+\item $\frac{b-a}{ab}>0\Rightarrow \frac{1}{a}-\frac{1}{b}>0 \Rightarrow f(a)-f(b)>0 \Rightarrow f(a)>f(b)$
+\end{itemize}
+
+Les images de $a$ et $b$ par la fonction $f$ sont rangés dans l'ordre contraire de celui de ces nombres. La fonction inverse est donc décroissante sur $]-\infty;0[$.
+\end{Pv}
 
 \section{La fonction Racine carrée}
 
@@ -301,7 +642,9 @@ L'ensemble de définition de la fonction Racine Carrée n'est pas centré. Donc 
 
 \begin{ThT}{Variations de la fonction Racine Carrée}
 
-La fonction Cube est strictement croissante sur $\mathbb{R}^+$. 
+\textcolor{red}{Démonstration exigible}
+
+La fonction Racine carrée est strictement croissante sur $\mathbb{R}^+$. 
 
 \begin{tikzpicture}
 \tkzTabInit[lgt=1,espcl=2]{ $x$ / 1,$f $ / 2}
@@ -338,6 +681,28 @@ ytick={-0.0,1.0,...,3.0},]
 
 \end{minipage}
 
+\begin{Pv}
+Etude des variations de $f:x\mapsto \sqrt{x}$ sur $[0;+\infty[$.
+
+Soient $a$ et $b$ deux nombres appartenant à $[0;+\infty[$ tels que $a<b$.
+
+Comparons les images de $a$ et $b$ par la fonction $f$.
+
+$f(a)=\sqrt{a}$ et $f(b)=\sqrt{b}$
+
+Pour les comparer on étudie le signe de leur différence.
+
+$f(a)-f(b)=\sqrt{a}-\sqrt{b}=(\sqrt{a}-\sqrt{b})\times\frac{\sqrt{a}+\sqrt{b}}{\sqrt{a}+\sqrt{b}}=\frac{(\sqrt{a}-\sqrt{b})(\sqrt{a}+\sqrt{b})}{\sqrt{a}+\sqrt{b}}=\frac{\sqrt{a}^2-\sqrt{b}^2}{\sqrt{a}+\sqrt{b}}=\frac{a-b}{\sqrt{a}+\sqrt{b}}$
+
+\begin{itemize}
+\item $\sqrt{a}+\sqrt{b}>0$
+\item $a<b$ donc $a-b<0$
+\item $\frac{a-b}{\sqrt{a}+\sqrt{b}}<0\Rightarrow \sqrt{a}-\sqrt{b}<0 \Rightarrow f(a)-f(b)<0 \Rightarrow f(a)<f(b)$
+\end{itemize}
+
+Les images de $a$ et $b$ par la fonction $f$ sont rangés dans le même ordre que celui de ces nombres. La fonction racine carrée est donc croissante sur $[0;+\infty[$. 
+\end{Pv}
+
 \end{pageCours} % Fin page de cours 2
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -349,21 +714,45 @@ ytick={-0.0,1.0,...,3.0},]
 
 \Sf{Connaitre et utiliser les fonctions Inverse et Racine Carrée}
 
+\begin{ExoCad}{Raisonner.}{1234}{0}{0}{0}{0}{0}
 
+A partir de la définition, démontrer que la fonction $f:x\mapsto \frac{1}{x}$ est \textbf{impaire}.
+
+\point{3}
+
+%La fonction $f$ est définie sur l'ensemble des réels privé de $0$, ainsi : $\forall x\in D_f,-x\in D_f$.
+%
+%Montrons que l'image de $-x$ par la fonction $f$ est égale à l'inverse de l'image de $x$.
+%
+%$f(-x)=\frac{1}{-x}=-(\frac{1}{x})=-f(x)$.
+%
+%Ainsi, la fonction $f :x\mapsto \frac{1}{x}$ est impaire.
+
+\end{ExoCad} 
 
 \begin{ExoCad}{Raisonner.}{1234}{0}{0}{0}{0}{0}
 
 Comparer sans les calculer.
 \begin{description}[leftmargin=*]
-\item $\frac{1}{5}$ et $\dfrac{1}{4}$  
+\item $\dfrac{1}{5}$ et $\dfrac{1}{4}$  
 
 \point{2}
+
+%La fonction inverse est décroissante sur $]0;+\infty[$ donc les inverses de deux nombres strictement positifs sont rangés dans l'ordre contraire de ces nombres. Or comme $5>4$ alors $\dfrac{1}{5}<\dfrac{1}{4}$.
+
 \item $-\dfrac{1}{4}$ et $-\dfrac{1}{6}$ 
 
 \point{3}
+
+%La fonction inverse est décroissante sur $]-\infty,0[$ donc les inverses de deux nombres strictement négatifs sont rangés dans l'ordre contraire de ces nombres. Or comme $-4<-6$ alors $-\dfrac{1}{4}>-\dfrac{1}{6}$.
+
 \item $\sqrt{10}$ et $\sqrt{100}$ 
 
+%La fonction racine carrée est croissante sur $]0;+\infty[$ donc la racine carrée de deux nombres sur cet intervalle sont rangés dans le même ordre que ces nombres. Or comme $10<100$ alors $\sqrt{10}<\sqrt{100}$.
+
 \point{2}
+
+
 \end{description}
 
 \end{ExoCad} 
@@ -374,6 +763,9 @@ Comparer sans les calculer.
 Expliquer pourquoi la fonction Inverse n'est pas décroissante sur $\mathbb{R}^\ast$.
 
  \point{3}
+
+%Si une fonction $f$ est décroissante sur un intervalle $I$, alors pour tous nombres de cet intervalle $a$ et $b$ tel que $a<b$ on a $f(a)>f(b)$. Prenons deux nombres sur $\mathbb{R}^\ast$ et vérifions la propriété : soit $-5$ et $3$ on a $-\dfrac{1}{5}<\dfrac{1}{3}$. Ces deux nombres ne vérifie pas la propriété donc la fonction inverse n'est pas décroissante sur $\mathbb{R}^\ast$.
+
 \end{ExoCadN}
  
 
@@ -385,8 +777,61 @@ Expliquer pourquoi la fonction Inverse n'est pas décroissante sur $\mathbb{R}^\
 
 Résoudre graphiquement les équations, puis retrouver les résultats algébriquement.
 \begin{enumerate}[leftmargin=*]
-\item $\frac{1}{x}=4$ \point{2}
-\item $\sqrt{x}=2$ \point{2}
+\item $\frac{1}{x}=4$ 
+\point{2}
+
+%\definecolor{ffqqqq}{rgb}{1.,0.,0.}
+%\definecolor{xfqqff}{rgb}{0.4980392156862745,0.,1.}
+%\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+%\begin{axis}[
+%x=1.0cm,y=1.0cm,
+%axis lines=middle,
+%ymajorgrids=true,
+%xmajorgrids=true,
+%xmin=-2.985442306278779,
+%xmax=3.873024152879434,
+%ymin=-1.860081495738546,
+%ymax=4.998384963419662,
+%xtick={-2.0,-1.0,...,3.0},
+%ytick={-1.0,0.0,...,4.0},]
+%\clip(-2.985442306278779,-1.860081495738546) rectangle (3.873024152879434,4.998384963419662);
+%\draw[line width=2.pt,color=xfqqff,smooth,samples=100,domain=-2.985442306278779:-0.01] plot(\x,{1/(\x)});
+%\draw[line width=2.pt,color=xfqqff,smooth,samples=100,domain=0.01:3.873024152879434] plot(\x,{1/(\x)});
+%\draw [line width=2.pt,color=ffqqqq,domain=-2.985442306278779:3.873024152879434] plot(\x,{(--4.-0.*\x)/1.});
+%\begin{scriptsize}
+%\draw[color=xfqqff] (-9.206361179092708,0.06222107520861367) node {$f$};
+%\draw[color=ffqqqq] (-9.206361179092708,3.868186969445704) node {$g$};
+%\draw [color=black] (0.25,4.)-- ++(-2.5pt,-2.5pt) -- ++(5.0pt,5.0pt) ++(-5.0pt,0) -- ++(5.0pt,-5.0pt);
+%\draw[color=black] (1.2648749360164515,4.467095308132758) node {$A(0.25, 4)$};
+%\end{scriptsize}
+%\end{axis}
+%\end{tikzpicture}
+\item $\sqrt{x}=2$ 
+\point{2}
+
+%\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+%\begin{axis}[
+%x=1.0cm,y=1.0cm,
+%axis lines=middle,
+%ymajorgrids=true,
+%xmajorgrids=true,
+%xmin=-0.5824490948339428,
+%xmax=9.386811339671995,
+%ymin=-0.6405197872153475,
+%ymax=3.4743091840740115,
+%xtick={-0.0,1.0,...,9.0},
+%ytick={-0.0,1.0,...,3.0},]
+%\clip(-0.5824490948339428,-0.6405197872153475) rectangle (9.386811339671995,3.4743091840740115);
+%\draw[line width=2.pt,color=xfqqff,smooth,samples=100,domain=4.946052066711085E-6:9.386811339671995] plot(\x,{sqrt((\x))});
+%\draw [line width=2.pt,color=ffqqqq,domain=-0.5824490948339428:9.386811339671995] plot(\x,{(--2.-0.*\x)/1.});
+%\begin{scriptsize}
+%\draw[color=xfqqff] (0.03644794556323789,0.20419103819161438) node {$f$};
+%\draw[color=ffqqqq] (-2.5060480041765314,1.8768857419677767) node {$g$};
+%\draw [color=black] (4.,2.)-- ++(-2.5pt,-2.5pt) -- ++(5.0pt,5.0pt) ++(-5.0pt,0) -- ++(5.0pt,-5.0pt);
+%\draw[color=black] (4.084369128701555,2.4790558353271948) node {$B(4, 2)$};
+%\end{scriptsize}
+%\end{axis}
+%\end{tikzpicture}
 \end{enumerate}
 Valider ces résultats par le calcul.
 
@@ -394,10 +839,12 @@ Valider ces résultats par le calcul.
 
 \begin{minipage}{0.48\linewidth}
 \point{3}
+%Pour la première équation nous trouvons graphiquement : $x=0,25$, on vérifie que $\dfrac{1}{0,25}=4$.
 \end{minipage}
 \hfill
 \begin{minipage}{0.48\linewidth}
 \point{3}
+%Pour la deuxième équation nous trouvons graphiquement : $x=4$, on vérifie que $\sqrt{4}=2$.
 \end{minipage}
 
 \end{ExoCad}
@@ -408,9 +855,14 @@ Valider ces résultats par le calcul.
 \item Déterminer algébriquement l'intervalle de $\dfrac{1}{x}$ lorsque $x$ appartient à $[1;3]$. 
 
 \point{3}
+
+%La fonction inverse est strictement monotone sur $[1;3]$, l'intervalle des images sera l'image de l'intervalle à savoir $[\dfrac{1}{3};\dfrac{1}{1}]$ autrement dit $[\dfrac{1}{3};1]$.
+
 \item Déterminer algébriquement l'intervalle de $\sqrt{x}$ lorsque $x$ appartient à $\left[1;2 \right]$. 
 
 \point{3}
+
+%La fonction racine carrée est strictement monotone sur $[1,2]$, l'intervalle des images sera l'image de l'intervalle à savoir $[\sqrt{1};\sqrt{2}]$ autrement dit $[1;\sqrt{2}]$.
 \end{enumerate}
 
 \end{ExoCad}
@@ -424,23 +876,140 @@ Valider ces résultats par le calcul.
 \begin{pageParcoursu} % Début du parcours niveau 1
 
 %Premier exo du parcours 1
-\begin{ExoCu}{Compétence.}{1234}{2}{0}{0}{0}{0}
-  
-\end{ExoCu}
+\begin{ExoCuN}{Représenter. Raisonner.}{0}{0}{0}{0}{0}
+Associer à chaque représentation la fonction de référence qui lui correspond.\vspace{.2cm}
+
+\begin{center}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=.4cm,y=.4cm]
+\begin{axis}[
+x=.4cm,y=.4cm,
+axis lines=middle,
+ymajorgrids=true,
+xmajorgrids=true,
+xmin=-5,
+xmax=5,
+ymin=-5,
+ymax=5,
+xtick={-4.0,-2.0,...,4.0},
+ytick={-4.0,-2.0,...,4.0},]
+\clip(-5,-5) rectangle (5,5);
+%\draw[line width=2.pt,smooth,samples=100,domain=-5:5] plot(\x,{(\x)^(2)});
+\draw[line width=2.pt,smooth,samples=100,domain=-5:5] plot(\x,{(\x)^(3)});
+%\draw[line width=2.pt,smooth,samples=100,domain=-5:5] plot(\x,{1/(\x)});
+%\draw[line width=2.pt,smooth,samples=100,domain=.1:5] plot(\x,{sqrt((\x))});
+\end{axis}
+\end{tikzpicture}\hspace{.2cm}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=.4cm,y=.4cm]
+\begin{axis}[
+x=.4cm,y=.4cm,
+axis lines=middle,
+ymajorgrids=true,
+xmajorgrids=true,
+xmin=-5,
+xmax=5,
+ymin=-5,
+ymax=5,
+xtick={-4.0,-2.0,...,4.0},
+ytick={-4.0,-2.0,...,4.0},]
+\clip(-5,-5) rectangle (5,5);
+%\draw[line width=2.pt,smooth,samples=100,domain=-5:5] plot(\x,{(\x)^(2)});
+%\draw[line width=2.pt,smooth,samples=100,domain=-5:5] plot(\x,{(\x)^(3)});
+%\draw[line width=2.pt,smooth,samples=100,domain=-5:5] plot(\x,{1/(\x)});
+\draw[line width=2.pt,smooth,samples=100,domain=.01:5] plot(\x,{sqrt((\x))});
+\end{axis}
+\end{tikzpicture}\hspace{.2cm}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=.4cm,y=.4cm]
+\begin{axis}[
+x=.4cm,y=.4cm,
+axis lines=middle,
+ymajorgrids=true,
+xmajorgrids=true,
+xmin=-5,
+xmax=5,
+ymin=-5,
+ymax=5,
+xtick={-4.0,-2.0,...,4.0},
+ytick={-4.0,-2.0,...,4.0},]
+\clip(-5,-5) rectangle (5,5);
+\draw[line width=2.pt,smooth,samples=100,domain=-5:5] plot(\x,{(\x)^(2)});
+%\draw[line width=2.pt,smooth,samples=100,domain=-5:5] plot(\x,{(\x)^(3)});
+%\draw[line width=2.pt,smooth,samples=100,domain=-5:5] plot(\x,{1/(\x)});
+%\draw[line width=2.pt,smooth,samples=100,domain=.001:5] plot(\x,{sqrt((\x))});
+\end{axis}
+\end{tikzpicture}\hspace{.2cm}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=.4cm,y=.4cm]
+\begin{axis}[
+x=.4cm,y=.4cm,
+axis lines=middle,
+ymajorgrids=true,
+xmajorgrids=true,
+xmin=-5,
+xmax=5,
+ymin=-5,
+ymax=5,
+xtick={-4.0,-2.0,...,4.0},
+ytick={-4.0,-2.0,...,4.0},]
+\clip(-5,-5) rectangle (5,5);
+%\draw[line width=2.pt,smooth,samples=100,domain=-5:5] plot(\x,{(\x)^(2)});
+%\draw[line width=2.pt,smooth,samples=100,domain=-5:5] plot(\x,{(\x)^(3)});
+\draw[line width=2.pt,smooth,samples=100,domain=-5:-0.01] plot(\x,{1/(\x)});
+\draw[line width=2.pt,smooth,samples=100,domain=0.01:5] plot(\x,{1/(\x)});
+%\draw[line width=2.pt,smooth,samples=100,domain=.1:5] plot(\x,{sqrt((\x))});
+\end{axis}
+\end{tikzpicture}
+\end{center}\vspace{.2cm}
+
+.\dotfill
+\end{ExoCuN}
 
 %Deuxième exo du parcours 1
-\begin{ExoCuN}{Compétence.}{1}{0}{0}{0}{0}
+\begin{ExoCuN}{Raisonner. Calculer.}{0}{0}{0}{0}{0}
+Résoudre dans $\mathbb{R}$ les équations et inéquations suivantes :
 
+\begin{enumerate}
+\item $x^2=6$
+\item $x^2=\frac{5}{3}$
+\item $x^2\leq 3$
+\item $\frac{1}{x}\geq1$
+\end{enumerate}
 \end{ExoCuN}
 
 %Troisième exo du parcours 1
 \begin{ExoCuN}{Compétence.}{1}{0}{0}{0}{0}
+Associer à chaque courbe la fonction qui correspond :
+\[f:x\mapsto 2x^2 \quad g:x\mapsto x^2+2 \quad h:x\mapsto x^2-1\]
+\begin{center}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=.8cm,y=.8cm]
+	\begin{axis}[
+	x=.8cm,y=.8cm,
+	axis lines=middle,
+	ymajorgrids=true,
+	xmajorgrids=true,
+	xmin=-2.9997324598484885,
+	xmax=3.0081249478055305,
+	ymin=-1.9900228646581366,
+	ymax=3.993754954187645,
+	xtick={-2.0,-1.0,...,3.0},
+	ytick={-1.0,0.0,...,3.0},]
+\clip(-3,-2) rectangle (3.0081249478055305,3.993754954187645);
+\draw[line width=2.pt,color=sacado_violet,smooth,samples=100,domain=-2.9997324598484885:3.0081249478055305] plot(\x,{(\x)^(2.0)+2});
+\draw[line width=2.pt,color=sacado_blue,smooth,samples=100,domain=-2.9997324598484885:3.0081249478055305] plot(\x,{(\x)^(2)-1});
+\draw[line width=2.pt,color=sacado_green,smooth,samples=100,domain=-2.9997324598484885:3.0081249478055305] plot(\x,{2*(\x)^(2)});
+	\end{axis}
+\end{tikzpicture}
+\end{center}
 
 \end{ExoCuN}
 
 %Quatrième exo du parcours 1
-\begin{ExoCuN}{Compétence.}{1}{0}{0}{0}{0}
-
+\begin{ExoCuN}{Raisonner.}{1}{0}{0}{0}{0}
+Dire si les phrases suivantes sont vraies ou fausses :
+\begin{enumerate}
+\item Un nombre et son carré ont toujours le même signe.
+\item L'équation $x^2=k$ a toujours une solution.
+\item La fonction $x\mapsto x^2$ sera toujours supérieure à $x\mapsto -1$.
+\item Si $x\in[0,1]$ alors $x^2\in[0,1]$.
+\end{enumerate}
 \end{ExoCuN}
 
 %Cinquième exo du parcours 1
@@ -463,28 +1032,77 @@ Valider ces résultats par le calcul.
 \begin{pageParcoursd} % Début du parcours niveau 2
 
 %Premier exo du parcours 2
-\begin{ExoCdN}{Compétence.}{2}{0}{0}{0}{0}
+\begin{ExoCdN}{Raisonner. Communiquer.}{0}{0}{0}{0}{0}
+
+Démontrer que $f:x\mapsto x^2$ est décroissante sur $[-\infty;0[$.\vspace{.2cm}
+
+\point{5}
 
 \end{ExoCdN}
 
 %Deuxième exo du parcours 2
-\begin{ExoCdN}{Compétence.}{2}{0}{0}{0}{0}
+\begin{ExoCdN}{Raisonner. Communiquer.}{0}{0}{0}{0}{0}
+En utilisant la propriété de parité de la fonction $x\mapsto x^2$, montrer que $2x^2+3$ est paire.\vspace{.2cm}
 
+\point{3}
 \end{ExoCdN}
 
 %Troisième exo du parcours 2
-\begin{ExoCdN}{Compétence.}{2}{0}{0}{0}{0}
+\begin{ExoCdN}{Raisonner. Calculer.}{2}{0}{0}{0}{0}
+Résoudre dans $\mathbb{R}$ les équations et inéquations suivantes :
 
+\begin{enumerate}
+\item $x^2+3=4$
+\item $\sqrt{x}=25$
+\item $x^2\geq \frac{16}{36}$
+\item $\frac{1}{x}\leq1$
+\end{enumerate}
 \end{ExoCdN}
 
 %Quatrième exo du parcours 2
-\begin{ExoCdN}{Compétence.}{2}{0}{0}{0}{0}
+\begin{ExoCdN}{Raisonner.}{1}{0}{0}{0}{0}
+Les hyperboles suivantes correspondent toutes à une fonction ayant la forme $x\mapsto \frac{k}{x}$. Analyser les courbes et identifier les fonctions :
 
+\[f(x)=\frac{\ldots}{x}\hspace{1cm}g(x)=\frac{\ldots}{x}\hspace{1cm}h(x)=\frac{\ldots}{x}\]
+
+\begin{center}
+\definecolor{ffxfqq}{rgb}{1.,0.4980392156862745,0.}
+\definecolor{ffvvqq}{rgb}{1.,0.3333333333333333,0.}
+\definecolor{qqqqff}{rgb}{0.,0.,1.}
+\definecolor{xfqqff}{rgb}{0.4980392156862745,0.,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\begin{axis}[
+x=1.0cm,y=1.0cm,
+axis lines=middle,
+ymajorgrids=true,
+xmajorgrids=true,
+xmin=-6.9930343163225785,
+xmax=6.992498216875903,
+ymin=-4.007317166218129,
+ymax=4.00485492441223,
+xtick={-6.0,-5.0,...,6.0},
+ytick={-4.0,-3.0,...,4.0},]
+\clip(-6.9930343163225785,-4.007317166218129) rectangle (6.992498216875903,4.00485492441223);
+\draw[line width=2.pt,color=xfqqff,smooth,samples=100,domain=-6.9930343163225785:6.992498216875903] plot(\x,{5/(\x)});
+\draw[line width=2.pt,color=qqqqff,smooth,samples=100,domain=-6.9930343163225785:6.992498216875903] plot(\x,{4/(\x)});
+\draw[line width=2.pt,color=ffvvqq,smooth,samples=100,domain=-6.9930343163225785:6.992498216875903] plot(\x,{0-1/(\x)});
+\draw [color=xfqqff](2.4141141650871423,2.8423745987627362) node[anchor=north west] {$\mathcal{C}_f$};
+\draw [color=qqqqff](1.6093200934836491,2.0018119017546403) node[anchor=north west] {$\mathcal{C}_g$};
+\draw [color=ffxfqq](-1.860236570762522,1.5368197714948428) node[anchor=north west] {$\mathcal{C}_h$};
+\end{axis}
+\end{tikzpicture}
+\end{center}
 \end{ExoCdN}
 
 %Cinquième exo du parcours 2
-\begin{ExoCdN}{Compétence.}{2}{0}{0}{0}{0}
-
+\begin{ExoCdN}{Raisonner.}{0}{0}{0}{0}{0}
+Dire si les phrases suivantes sont vraies ou fausses :
+\begin{enumerate}
+\item Un nombre et son cube ont toujours le même signe.
+\item L'équation $\sqrt{x}=k$ admet toujours une solution.
+\item La fonction $x\mapsto x^2$ n'admet pas de maximum.
+\item La fonction inverse est décroissante sur $[-1,1]$.
+\end{enumerate}
 \end{ExoCdN}
 
 %Sixième exo du parcours 2
@@ -500,24 +1118,78 @@ Valider ces résultats par le calcul.
 
 \begin{pageParcourst} % Début du parcours niveau 3
 
+% Cinquième exo du parcours 3
+\begin{ExoCtN}{Raisonner.}{1}{1}{0}{0}{0}
+Déterminer la parité de la fonction $f:x\mapsto \frac{1}{x^2+1}$.
+
+\point{4}
+\end{ExoCtN}
+
 % Premier exo du parcours 3
-\begin{ExoCtN}{Compétence.}{1}{1}{0}{0}{0}
- 
+\begin{ExoCtN}{Raisonner. Calculer}{1}{0}{0}{0}{0}
+ Résoudre dans $\mathbb{R}$ les équations et inéquations suivantes :
+
+\begin{enumerate}
+\item $4x^2+3=8$
+\item $2\sqrt{x}=72$
+\item $x^2+2\leq 6$
+\item $\frac{1}{x}-1\leq-2$
+\end{enumerate}
 \end{ExoCtN}
 
 % Deuxième exo du parcours 3
-\begin{ExoCtN}{Compétence.}{1}{1}{0}{0}{0}
+\begin{ExoCtN}{Raisonner. Communiquer.}{1}{1}{0}{0}{0}
+Sachant que $a^3-a^3=(a-b)(a^2+ab+b^2)$, montrer que $f:x\mapsto x^3$ est croissante sur $[0;+\infty[$.\vspace{.2cm}
+
+\point{5}
  
 \end{ExoCtN}
 
 % Troisième exo du parcours 3
-\begin{ExoCtN}{Compétence.}{1}{1}{0}{0}{0}
- 
+\begin{ExoCtN}{Raisonner.}{1}{1}{0}{0}{0}
+Les courbes suivantes correspondent toutes à une fonction cubique, retrouver leur expressions.
+
+\[f(x)=\ldots\ldots\ldots\hspace{1cm}g(x)=\ldots\ldots\ldots\hspace{1cm}h(x)=\ldots\ldots\ldots\]
+
+ \definecolor{xfqqff}{rgb}{0.4980392156862745,0.,1.}
+\definecolor{zzttqq}{rgb}{0.6,0.2,0.}
+\definecolor{dcrutc}{rgb}{0.8627450980392157,0.0784313725490196,0.23529411764705882}
+\definecolor{zzttff}{rgb}{0.6,0.2,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\begin{axis}[
+x=1.0cm,y=1.0cm,
+axis lines=middle,
+ymajorgrids=true,
+xmajorgrids=true,
+xmin=-2.9733677267582084,
+xmax=2.9846155317648115,
+ymin=-5.012969380833157,
+ymax=5.018523198213632,
+xtick={-2.0,-1.0,...,2.0},
+ytick={-5.0,-4.0,...,5.0},]
+\clip(-2.9733677267582084,-5.012969380833157) rectangle (2.9846155317648115,5.018523198213632);
+\draw[line width=2.pt,color=zzttff,smooth,samples=100,domain=-2.9733677267582084:2.9846155317648115] plot(\x,{(\x)^(3)/2});
+\draw[line width=2.pt,color=dcrutc,smooth,samples=100,domain=-2.9733677267582084:2.9846155317648115] plot(\x,{(\x)^(3)+1});
+\draw[line width=2.pt,color=zzttqq,smooth,samples=100,domain=-2.9733677267582084:2.9846155317648115] plot(\x,{(\x)^(3)-2});
+\draw [color=xfqqff](2.280317191300429,3.533786156153576) node[anchor=north west] {$\mathcal{C}_f$};
+\draw [color=zzttqq](1.271457406310908,-0.5777933449358101) node[anchor=north west] {$\mathcal{C}_g$};
+\draw [color=dcrutc](0.376808163018314,3.2672948921940788) node[anchor=north west] {$\mathcal{C}_h$};
+\begin{scriptsize}
+\draw[color=zzttff] (-2.17389393487972,-5.384153641348171) node {$f$};
+\draw[color=dcrutc] (-1.8122272195061182,-5.36511855106535) node {$g$};
+\draw[color=zzttqq] (-1.4695955944153376,-5.384153641348171) node {$h$};
+\end{scriptsize}
+\end{axis}
+\end{tikzpicture}
 \end{ExoCtN}
 
 % Quatrième exo du parcours 3
 \begin{ExoCtN}{Compétence.}{1}{1}{0}{0}{0}
- 
+ Dire si les phrases suivantes sont vraies ou fausses :
+\begin{enumerate}
+\item A partir de $x=1$ la courbe de $x^2$ est toujours comprise entre celles de $x^3$ et $x$.
+\item 
+\end{enumerate}
 \end{ExoCtN}
 
 % Cinquième exo du parcours 3
