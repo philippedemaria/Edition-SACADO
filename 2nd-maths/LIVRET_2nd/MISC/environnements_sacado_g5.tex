@@ -403,54 +403,14 @@ title= \stepcounter{cpt} Attention \thecpt. ]}{%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  
  
- 
+
+
 %%%%%%%%%%%%% ExoCad 7 paramètres : Compétences, qrcode , calculatrice, python, scratch, tableur, annales
-\newenvironment{ExoCad}[7]{% code avant
-\tcbset{top=-0.2cm }
+\newenvironment{ExoCad}[2]{% code avant
+ 
 \stepcounter{exo}
 
-\begin{tcolorbox}[right=-5mm, enhanced, lifted shadow={0mm}{0mm}{0mm}{0mm}%
-{black!60!white}, attach boxed title to top right={xshift=-0.3cm, yshift*=-2mm}, coltitle=sacado_violet!85!black, colback=white!100!white, boxed title style={colback=white}, colframe=sacado_violet!100!black,title= {\footnotesize  #1}  ]
- 
-\hspace{-1.3cm} 
-\begin{minipage}[t]{0.7cm}
-
- \begin{tikzpicture}
- 	\node[fill=sacado_violet,minimum width=0.7cm]{\textcolor{white}{\bf {\Large \theexo}}};
- \end{tikzpicture}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%% Condition pour la calculatrice
- \ifthenelse{\equal{#3}{1}}{
- \begin{tikzpicture}
- 	\node[minimum width=0.7cm]{\includegraphics[scale=0.5]{../MISC/calculator.png} };
- \end{tikzpicture} 
- }{
- \ifthenelse{\equal{#3}{2}}{
- \begin{tikzpicture}
- 	\node[minimum width=0.7cm]{\includegraphics[scale=0.5]{../MISC/no_calculator.png} };
- \end{tikzpicture} 
- }{}
- }
-
-\end{minipage}
-\hfill
-\begin{minipage}[t]{17.3cm}
-} 
-{ 
-\end{minipage}%code  après
-\hfill
-\begin{minipage}[t]{1cm}
-
-\begin{center}
-\colorbox{sacado_violet}{\includegraphics[height=1cm]{QRcodes/qrDummy.png}}
-\colorbox{white}{ {\footnotesize /b/ABCD} }
-\end{center}
-
-\end{minipage}
-
-\end{tcolorbox}
-\par 
+\begin{tcolorbox} 
 }
 
  
