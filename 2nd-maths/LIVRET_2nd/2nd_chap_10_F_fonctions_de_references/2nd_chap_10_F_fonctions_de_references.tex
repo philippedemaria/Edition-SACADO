@@ -1131,12 +1131,15 @@ ymax=4.00485492441223,
 xtick={-6.0,-5.0,...,6.0},
 ytick={-4.0,-3.0,...,4.0},]
 \clip(-6.9930343163225785,-4.007317166218129) rectangle (6.992498216875903,4.00485492441223);
-\draw[line width=2.pt,color=xfqqff,smooth,samples=100,domain=-6.9930343163225785:6.992498216875903] plot(\x,{5/(\x)});
-\draw[line width=2.pt,color=qqqqff,smooth,samples=100,domain=-6.9930343163225785:6.992498216875903] plot(\x,{4/(\x)});
-\draw[line width=2.pt,color=ffvvqq,smooth,samples=100,domain=-6.9930343163225785:6.992498216875903] plot(\x,{0-1/(\x)});
-\draw [color=xfqqff](2.4141141650871423,2.8423745987627362) node[anchor=north west] {$\mathcal{C}_f$};
-\draw [color=qqqqff](1.6093200934836491,2.0018119017546403) node[anchor=north west] {$\mathcal{C}_g$};
-\draw [color=ffxfqq](-1.860236570762522,1.5368197714948428) node[anchor=north west] {$\mathcal{C}_h$};
+\draw[line width=2.pt,color=sacado_violet,smooth,samples=100,domain=-6.9930343163225785:-0.1] plot(\x,{5/(\x)});
+\draw[line width=2.pt,color=sacado_violet,smooth,samples=100,domain=0.1:6.992498216875903] plot(\x,{5/(\x)});
+\draw[line width=2.pt,color=sacado_blue,smooth,samples=100,domain=-6.9930343163225785:-0.1] plot(\x,{4/(\x)});
+\draw[line width=2.pt,color=sacado_blue,smooth,samples=100,domain=.1:6.992498216875903] plot(\x,{4/(\x)});
+\draw[line width=2.pt,color=sacado_green,smooth,samples=100,domain=-6.9930343163225785:-0.1] plot(\x,{0-1/(\x)});
+\draw[line width=2.pt,color=sacado_green,smooth,samples=100,domain=.1:6.992498216875903] plot(\x,{0-1/(\x)});
+\draw [color=sacado_violet](2.4141141650871423,2.8423745987627362) node[anchor=north west] {$\mathcal{C}_f$};
+\draw [color=sacado_blue](1.6093200934836491,2.0018119017546403) node[anchor=north west] {$\mathcal{C}_g$};
+\draw [color=sacado_green](-1.860236570762522,1.5368197714948428) node[anchor=north west] {$\mathcal{C}_h$};
 \end{axis}
 \end{tikzpicture}
 \end{center}
@@ -1144,7 +1147,8 @@ ytick={-4.0,-3.0,...,4.0},]
 
 %Cinquième exo du parcours 2
 \begin{ExoCdN}{Raisonner.}{0}{0}{0}{0}{0}
-Dire si les phrases suivantes sont vraies ou fausses :
+ Dire si les phrases suivantes sont vraies ou fausses :
+
 \begin{enumerate}
 \item Un nombre et son cube ont toujours le même signe.
 \item L'équation $\sqrt{x}=k$ admet toujours une solution.
@@ -1170,27 +1174,62 @@ Dire si les phrases suivantes sont vraies ou fausses :
 \begin{ExoCtN}{Raisonner.}{1}{1}{0}{0}{0}
 Déterminer la parité de la fonction $f:x\mapsto \frac{1}{x^2+1}$.
 
-\point{4}
+%\point{4}
+
+La fonction $f$ n'admet pas de valeur interdite car $x^2+1>0$. Ainsi, elle est définit sur $\mathbb{R}$.
+
+Pour $x\in \mathbb{R}$ calculons $f(-x)$ :
+
+$f(-x)=\frac{1}{(-x)^2+1}=\frac{1}{x^2+1}=f(x)$.
+
+La fonction est paire.
 \end{ExoCtN}
 
 % Premier exo du parcours 3
 \begin{ExoCtN}{Raisonner. Calculer}{1}{0}{0}{0}{0}
- Résoudre dans $\mathbb{R}$ les équations et inéquations suivantes :
+Résoudre dans $\mathbb{R}$ les équations et inéquations suivantes :
 
 \begin{enumerate}
 \item $4x^2+3=8$
 \item $2\sqrt{x}=72$
-\item $x^2+2\leq 6$
+\item $x^3+2\leq 10$
 \item $\frac{1}{x}-1\leq-2$
 \end{enumerate}
+
+%\begin{enumerate}
+%\item $x=\frac{\sqrt{5}}{2}$ et $x=-\frac{\sqrt{5}}{2}$
+%\item $x=36$
+%\item $x\in]-\infty;2]$
+%\item $x\in[-1;0[$
+%\end{enumerate}
 \end{ExoCtN}
 
 % Deuxième exo du parcours 3
 \begin{ExoCtN}{Raisonner. Communiquer.}{1}{1}{0}{0}{0}
-Sachant que $a^3-a^3=(a-b)(a^2+ab+b^2)$, montrer que $f:x\mapsto x^3$ est croissante sur $[0;+\infty[$.\vspace{.2cm}
+Sachant que $a^3-b^3=(a-b)(a^2+ab+b^2)$, montrer que $f:x\mapsto x^3$ est croissante sur $[0;+\infty[$.\vspace{.2cm}
 
 \point{5}
- 
+
+%Etude des variations de $f:x\mapsto x^3$ sur $[0;+\infty[$ :
+%
+%Soient $a$ et $b$ deux nombres appartenant à $[0;+\infty[$ tels que $a<b$. 
+%
+%Comparons les images de $a$ et $b$ par la fonction $f$.
+%
+%$f(a)=a^3$ et $f(b)=b^3$
+%
+%Pour les comparer on étudie le signe de leur différence :
+%
+%$f(a)-f(b)=a^3-b^3=(a-b)(a^2+ab+b^2)$
+%
+%\begin{itemize}
+%\item $a<b$ donc $a-b<0$
+%\item $a^2>0$ et $b^2>0$
+%\item $a$ et $b$ appartiennent à $[0;+\infty[$ donc $ab>0$
+%\item $(a-b)(a^2+ab+b^2)<0\Rightarrow a^3-b^3<0 \Rightarrow f(a)-f(b)<0 \Rightarrow f(a)<f(b)$
+%\end{itemize}
+%
+%Les images de $a$ et $b$ par la fonction $f$ sont rangés dans le même ordre que celui de ces nombres. La fonction cube est donc croissante sur $[0;+\infty[$. 
 \end{ExoCtN}
 
 % Troisième exo du parcours 3
@@ -1199,10 +1238,9 @@ Les courbes suivantes correspondent toutes à une fonction cubique, retrouver le
 
 \[f(x)=\ldots\ldots\ldots\hspace{1cm}g(x)=\ldots\ldots\ldots\hspace{1cm}h(x)=\ldots\ldots\ldots\]
 
- \definecolor{xfqqff}{rgb}{0.4980392156862745,0.,1.}
-\definecolor{zzttqq}{rgb}{0.6,0.2,0.}
-\definecolor{dcrutc}{rgb}{0.8627450980392157,0.0784313725490196,0.23529411764705882}
-\definecolor{zzttff}{rgb}{0.6,0.2,1.}
+%\[f(x)=\frac{x^3}{2}\hspace{1cm}g(x)=x^3-2\hspace{1cm}h(x)=x^3+1\]
+
+
 \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
 \begin{axis}[
 x=1.0cm,y=1.0cm,
@@ -1216,17 +1254,12 @@ ymax=5.018523198213632,
 xtick={-2.0,-1.0,...,2.0},
 ytick={-5.0,-4.0,...,5.0},]
 \clip(-2.9733677267582084,-5.012969380833157) rectangle (2.9846155317648115,5.018523198213632);
-\draw[line width=2.pt,color=zzttff,smooth,samples=100,domain=-2.9733677267582084:2.9846155317648115] plot(\x,{(\x)^(3)/2});
-\draw[line width=2.pt,color=dcrutc,smooth,samples=100,domain=-2.9733677267582084:2.9846155317648115] plot(\x,{(\x)^(3)+1});
-\draw[line width=2.pt,color=zzttqq,smooth,samples=100,domain=-2.9733677267582084:2.9846155317648115] plot(\x,{(\x)^(3)-2});
-\draw [color=xfqqff](2.280317191300429,3.533786156153576) node[anchor=north west] {$\mathcal{C}_f$};
-\draw [color=zzttqq](1.271457406310908,-0.5777933449358101) node[anchor=north west] {$\mathcal{C}_g$};
-\draw [color=dcrutc](0.376808163018314,3.2672948921940788) node[anchor=north west] {$\mathcal{C}_h$};
-\begin{scriptsize}
-\draw[color=zzttff] (-2.17389393487972,-5.384153641348171) node {$f$};
-\draw[color=dcrutc] (-1.8122272195061182,-5.36511855106535) node {$g$};
-\draw[color=zzttqq] (-1.4695955944153376,-5.384153641348171) node {$h$};
-\end{scriptsize}
+\draw[line width=2.pt,color=sacado_violet,smooth,samples=100,domain=-2.9733677267582084:2.9846155317648115] plot(\x,{(\x)^(3)/2});
+\draw[line width=2.pt,color=sacado_blue,smooth,samples=100,domain=-2.9733677267582084:2.9846155317648115] plot(\x,{(\x)^(3)+1});
+\draw[line width=2.pt,color=sacado_green,smooth,samples=100,domain=-2.9733677267582084:2.9846155317648115] plot(\x,{(\x)^(3)-2});
+\draw [color=sacado_violet](2.280317191300429,3.533786156153576) node[anchor=north west] {$\mathcal{C}_f$};
+\draw [color=sacado_green](1.271457406310908,-0.5777933449358101) node[anchor=north west] {$\mathcal{C}_g$};
+\draw [color=sacado_blue](0.376808163018314,3.2672948921940788) node[anchor=north west] {$\mathcal{C}_h$};
 \end{axis}
 \end{tikzpicture}
 \end{ExoCtN}
@@ -1244,22 +1277,57 @@ ytick={-5.0,-4.0,...,5.0},]
 \begin{ExoCtN}{Compétence.}{1}{1}{0}{0}{0}
 Les courbes de la fonction racine carrée $f:x\mapsto \sqrt{x}$ et de la fonction linéaire $y=x$ sont représentées sur le graphique suivant. Les points $A$ et $A'$ sont symétriques l'un de l'autre par rapport à la droite $y=x$
 
+%\begin{enumerate}
+%\item Donner les coordonnées des points $A$ et $A'$ : $A(\ldots\ldots;\ldots\ldots)\quad A'(\ldots\ldots;\ldots\ldots)$.*
+%\item Le point $B$ a pour coordonnées $B(3;1,73)$ sachant que l'ordonnée est approximative, quelle est son ordonnée exacte ? Expliquer.
+%
+%\point{2} 
+%\item Déterminer les coordonnées exactes du point $B'$ symétrique du point $B$ par rapport à la droite $y=x$ : $B'(\ldots\ldots;\ldots\ldots)$. Placer ce point sur le graphique.
+%\item Quelle relation existe-t-il entre les coordonnées de $A$ et $A'$, $B$ et $B'$ ?
+%
+%\point{2}
+%\item Conjecturer de quelle fonction est la courbe symétrique de $\mathcal{C}_k$ par rapport à la droite $y=x$.
+%
+%\point{1}
+%
+%\item Démontrer cette conjecture.
+%
+%\point{3}
+%\end{enumerate}
+
 \begin{enumerate}
-\item Donner les coordonnées des points $A$ et $A'$ : $A(\ldots\ldots;\ldots\ldots)\quad A'(\ldots\ldots;\ldots\ldots)$.*
+\item Donner les coordonnées des points $A$ et $A'$ : $A(4;2)\quad A'(2;4)$.
 \item Le point $B$ a pour coordonnées $B(3;1,73)$ sachant que l'ordonnée est approximative, quelle est son ordonnée exacte ? Expliquer.
 
-\point{2} 
-\item Déterminer les coordonnées exactes du point $B'$ symétrique du point $B$ par rapport à la droite $y=x$ : $B'(\ldots\ldots;\ldots\ldots)$. Placer ce point sur le graphique.
+$B$ est un point de $\mathcal{C}_k$ son ordonnée est donc $f(3)=\sqrt{3}\approx1,73$. 
+\item Déterminer les coordonnées exactes du point $B'$ symétrique du point $B$ par rapport à la droite $y=x$ : $B'(\sqrt{3};3)$. Placer ce point sur le graphique.
 \item Quelle relation existe-t-il entre les coordonnées de $A$ et $A'$, $B$ et $B'$ ?
 
-\point{2}
-\item Conjecturer de quelle fonction est la courbe symétrique de $\mathcal{C}_k$ par rapport à la droite $y=x$.
+L'abscisse de $A$ est l'ordonnée de $A'$ et vice versa, de même que pour $B$ et $B'$.
+\item Conjecturer de quelle fonction est la courbe symétrique de $\mathcal{C}_k$ par rapport à la droite $y=x$. On l'appellera $m$.
 
-\point{1}
+La fonction dont la courbe est symétrique à $\mathcal{C}_k$ par rapport à $y=x$ semble être la fonction $x\mapsto x^2$. En effet, $A'(2;2^2)$ et $B'(\sqrt{3};\sqrt{3}^2)$.
 
-\item Démontrer cette conjecture.
+\item On dit que ces fonctions sont réciproques. Pour démontrer que deux fonctions $f$ et $g$ sont réciproques on montre que $f(g(x))=g(f(x))=x$. Démontrer la conjecture.
 
-\point{3}
+1. Montrons que \(m(k(x)) = x\) :
+
+   - \(m(x) = x^2\) signifie que vous prenez un nombre \(x\), le multipliez par lui-même, ce qui revient à élever \(x\) au carré.
+   
+   - \(k(x) = \sqrt{x}\) signifie que vous prenez la racine carrée de \(x\), c'est-à-dire trouver un nombre qui, lorsqu'il est multiplié par lui-même, donne \(x\).
+   
+   Maintenant, si nous prenons \(x\), trouvons d'abord sa racine carrée en utilisant \(g(x)\), puis élevons cette racine carrée au carré en utilisant \(f(x)\), nous obtenons le même \(x\) de départ.
+
+   Donc, \(m(k(x)) = x\) pour tous les \(x\) réels.
+
+2. Montrons que \(k(m(x)) = x\) :
+
+   - Avec \(k(m(x))\), vous prenez d'abord \(x\), l'élevez au carré en utilisant \(m(x)\) pour obtenir \(x^2\).
+   
+   - Ensuite, vous prenez la racine carrée de \(x^2\) en utilisant \(k(x)\), ce qui vous donne  \(x\).
+
+Donc, pour tous les \(x\) réels, \(m(x) = x^2\) est bien la fonction réciproque de \(k(x) = \sqrt{x}\).
+
 \end{enumerate}
 
 \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
@@ -1286,6 +1354,8 @@ ytick={-1.0,0.0,...,5.0},]
 \draw[color=black] (2.159358531428865,4.284418975157499) node {$A'$};
 \draw [fill=black] (3.002999871496749,1.7329165794973367) circle (2.5pt);
 \draw[color=black] (3.1103724056872073,2.020987877560526) node {$B$};
+\draw [fill=black] (1.7320508075688772,3.) circle (2.5pt);
+\draw[color=black] (1.9246453597344089,3.351414984999301) node {$B'$};
 \end{scriptsize}
 \end{axis}
 \end{tikzpicture}
