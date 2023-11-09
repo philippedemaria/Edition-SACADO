@@ -1,0 +1,213 @@
+\input{../MISC/preambule_sacado.tex}
+\input{../MISC/environnements_sacado_g5.tex}
+\input{../MISC/macro_sacado.tex}
+
+\title{Mathématiques 2nde  : le livre sacado}
+\author{L'équipe SACADO}
+
+%%%%%%%%%%%%%%%  Indentation  %%%%%%%%%%%%%%%%%%
+\setlength{\parindent}{0cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{document}
+
+\includegraphics[scale=0.5]{../MISC/pageCours.png} 
+
+\begin{minipage}{0.7\linewidth}\end{minipage}
+\begin{minipage}{0.3\linewidth}\end{minipage}
+
+\section{Les nombres entiers naturels et nombres entiers relatifs}
+ 
+\begin{DefT}{} 
+
+\begin{enumerate}
+\item On appelle \textbf{entiers naturels} les nombres : $0$ ; $1$ ; $2$ ; $3$ ; $\ldots$  Leur ensemble est noté $\N$.\index{Ensemble de nombres! Entiers naturels $\mathbb N$}, on a donc : $\mathbb N=  \lbrace 0 ; 1 ; 2 ; 3 \ldots \rbrace $
+ 
+\item  On appelle \textbf{entiers relatifs} ou simplement \textbf{entiers} les nombres entiers naturels et leurs opposés. Leur ensemble est noté $\mathbb Z$ \index{Ensemble de nombres! Entiers $\mathbb Z$}(d'après le mot allemand Zahl qui signifie chiffre, nombre).
+On a donc : $\mathbb Z = \lbrace \ldots -3 ; -2 ; -1 ; 0 ; 1 ; 2 ; 3  \cdots  \rbrace$
+Parfois, on dit abusivement que les nombres entiers sont les nombres sans partie décimale.
+\end{enumerate}
+\end{DefT}
+
+\section{ Multiples et diviseurs }
+ 
+\begin{DefTB}{Multiples et diviseurs} 
+
+\hspace{1mm}
+\begin{minipage}{0.98\linewidth}
+
+Soit $d$ un nombre entier. Le nombre $m$ est dit \textbf{multiple} de $d$ s'il existe un entier $q \in \Z$ tel que $m=qd$. Dans ce cas, on dit aussi que $d$ est un \textbf{diviseur} de $m$.
+
+\end{minipage}
+
+\vspace{3mm}
+\colorbox{white}{
+\begin{minipage}{0.98\linewidth}
+ 
+  $35=5 \times 7$ où $7 \in \Z$ donc $35$ est un multiple de $5$
+  et $5$ est un diviseur de $35$. Comme $5 \in \Z$, on peut aussi
+  dire que $35$ est un multiple de $7$ et que $7$ est un diviseur de
+  $35$.
+  1 est un diviseur de tous les entiers, et tous les entiers
+  divisent 0.
+ 
+\end{minipage}
+}
+\end{DefTB}
+
+
+
+\section{ Nombres pairs et impairs }
+ 
+\begin{DefTB}{Nombre  pair  et impair } 
+
+\hspace{1mm}
+\begin{minipage}{0.98\linewidth}
+
+ Un \textbf{nombre pair} est un nombre entier divisible par 2, autrement
+  dit un nombre entier $n$ est pair lorsqu'il existe $k \in \Z$
+  tel que $n=2k$.
+ % . \\  Soit $n$ un nombre pair, $n=2\times k$ avec $k\in\Z$.
+
+  Un entier $n$ est un \textbf{nombre impair} lorsqu'il existe $k \in \Z$
+  tel que $n=2k+1$.
+
+\end{minipage}
+
+ 
+ \vspace{3mm}
+\colorbox{white}{
+\begin{minipage}{0.98\linewidth}
+
+$46 = 2 \times 23$ et $23\in\Z$ donc $46$ est un nombre pair.
+
+  $15= 2 \times 7,5$. Comme $7,5 \not\in\Z$, $15$ n'est pas pair. Par contre,
+  $15=2 \times 7+1$ avec $7 \in \Z$, donc $15$ est impair.  
+ \end{minipage}
+}
+
+\end{DefTB}
+
+
+\section{ Nombres premiers }
+
+\begin{DefTB}{Nombre premier} 
+
+\hspace{1mm}
+\begin{minipage}{0.98\linewidth}
+Un \textbf{nombre premier}\index{Nombre premier} est un nombre entier naturel qui a exactement 2 diviseurs positifs (qui sont alors 1 et lui-même) 
+\end{minipage}
+
+  \vspace{3mm}
+\colorbox{white}{
+\begin{minipage}{0.98\linewidth}
+
+$19$ est un nombre premier :  il n'est divisible que par 1 et lui-même.
+
+  $1$ n'est pas premier, car il n'a qu'un seul diviseur.  
+ \end{minipage}
+}
+\end{DefTB}
+
+
+
+\section{ Décomposition en facteurs premiers }
+
+\begin{Th}
+
+\hspace{1mm}
+\begin{minipage}{0.98\linewidth}
+  Tout entier naturel supérieur ou égal à 2 se décompose de façon unique en produit de facteurs premiers. 
+\end{minipage}
+
+\vspace{3mm}
+\colorbox{white}{
+\begin{minipage}{0.98\linewidth}
+
+Les décompositions en facteurs premiers de $8$, $15$ et $19$ sont respectivement  
+$8=2^3$ ; $15=3 \times 5$ ; $19=19$.
+ \end{minipage}
+}
+\end{Th}
+
+
+\newpage
+
+\includegraphics[scale=0.5]{../MISC/pageAd.png} 
+
+
+
+\newpage
+
+\includegraphics[scale=0.5]{../MISC/pageCours.png} 
+
+\section{ Nombres premiers entre eux}
+
+\begin{DefTB}{ } 
+
+\hspace{1mm}
+\begin{minipage}{0.98\linewidth}
+Deux nombres entiers $a$ et $b$ sont premiers entre eux lorsque leur seul diviseur positif commun est 1.
+\end{minipage}
+
+  \vspace{3mm}
+\colorbox{white}{
+\begin{minipage}{0.98\linewidth}
+
+Les diviseurs positifs de 8 sont 1 ; 2 ; 4 et 8. Ceux de 15 sont 1 ; 3 ; 5 et 15. Le seul diviseur commun est 1 ;
+donc 8 et 15 sont premiers entre eux (pourtant, ils ne sont pas premiers).
+
+ \end{minipage}
+}
+\end{DefTB}
+
+
+\section{ Fraction irréductible}
+
+\begin{DefTB}{Fraction irréductible} 
+
+\hspace{1mm}
+\begin{minipage}{0.98\linewidth}
+Une fraction est irréductible lorsque son numérateur et son dénominateur sont premiers entre eux. 
+\end{minipage}
+
+
+  \vspace{3mm}
+\colorbox{white}{
+\begin{minipage}{0.98\linewidth}
+
+ La fraction $\dfrac{8}{15}$ est irréductible, puisque 8 et 15 sont premiers entre eux.
+ 
+La fraction $\dfrac{12}{10}$ n'est pas irréductible : 10 et 12 ne sont pas premiers entre eux : ils admettent un facteur commun
+différent de 1, comme 2 par exemple.
+
+ \end{minipage}
+}
+
+
+
+\begin{BoxMt}
+Pour rendre une fraction irréductible, on peut décomposer en facteurs premiers son numérateur
+et son dénominateur, puis simplifier tous les facteurs communs.
+
+ $\dfrac{12}{10}= \dfrac{2 \times 2 \times 3}{2 \times 5}= \dfrac{2 \times 3}{5}= \dfrac{6}{5}$. La forme irréductible de $\dfrac{12}{10}$ est $\dfrac{6}{5}$.
+\end{BoxMt}
+
+\end{DefTB}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
