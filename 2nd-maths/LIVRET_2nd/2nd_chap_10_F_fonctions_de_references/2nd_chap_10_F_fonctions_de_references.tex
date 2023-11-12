@@ -379,7 +379,6 @@ ytick={-5.0,-4.0,...,5.0},]
 
 \section{{Positions relatives des courbes de $x$, $x^2$ et $x^3$}}
 
-\mini{.7\linewidth}{
 \begin{Pp}
 \textcolor{red}{Démonstration exigible}
 
@@ -422,12 +421,47 @@ Ainsi :
 \item $\forall x \in ]1;+\infty,f(x)>0$ donc $x^2-x>0$ donc $x^2>x$
 \end{itemize}
 \end{Pv}
-}{.3\linewidth}{
-\begin{center}
-\includegraphics[width=\linewidth]{FIG/position_relative.png}
-\end{center}
-}
 
+\begin{center}
+\definecolor{dcrutc}{rgb}{0.8627450980392157,0.0784313725490196,0.23529411764705882}
+\definecolor{qqffqq}{rgb}{0.,1.,0.}
+\definecolor{ccqqqq}{rgb}{0.8,0.,0.}
+\definecolor{qqwuqq}{rgb}{0.,0.39215686274509803,0.}
+\definecolor{xfqqff}{rgb}{0.4980392156862745,0.,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=3cm,y=3cm]
+\begin{axis}[
+x=3cm,y=3cm,
+axis lines=middle,
+ymajorgrids=true,
+xmajorgrids=true,
+xmin=-0.9895118469329964,
+xmax=2.4900075771745533,
+ymin=-0.4948457027902155,
+ymax=3.393104895253198,
+xtick={0,1.0,...,2.0},
+ytick={0,1,...,3.0},]
+\clip(-0.9895118469329964,-0.4948457027902155) rectangle (2.4900075771745533,3.393104895253198);
+\draw [line width=2.pt,color=sacado_violet,domain=-0.9895118469329964:2.4900075771745533] plot(\x,{(-0.--1.*\x)/1.});
+\draw[line width=2.pt,color=sacado_green,smooth,samples=100,domain=-0.9895118469329964:2.4900075771745533] plot(\x,{(\x)^(2)});
+\draw[line width=2.pt,color=sacado_blue,smooth,samples=100,domain=-0.9895118469329964:2.4900075771745533] plot(\x,{(\x)^(3)});
+\draw [line width=2.pt,dash pattern=on 1pt off 1pt,color=qqffqq] (1.2882773923247675,2.1381007043410847)-- (1.2882773923247675,0.);
+\draw [line width=2.pt,dash pattern=on 1pt off 1pt,color=sacado_violet] (1.2882773923247675,1.2882773923247675)-- (0.,1.2882773923247675);
+\draw [line width=2.pt,dash pattern=on 1pt off 1pt,color=sacado_green] (1.2882773923247675,1.6596586395751027)-- (0.,1.6596586395751027);
+\draw [line width=2.pt,dash pattern=on 1pt off 1pt,color=sacado_blue] (1.2882773923247675,2.1381007043410847)-- (0.,2.1381007043410847);
+\draw [color=qqffqq] (1.2332962727564767,-0.03143340928605109) node[anchor=north west] {$x$};
+\draw [color=sacado_blue](-0.3690106403765711,2.3327547321504487) node[anchor=north west] {$x^3$};
+\draw [color=sacado_green](-0.3690106403765711,1.8457791016884455) node[anchor=north west] {$x^2$};
+\draw [color=sacado_violet](-0.3375928577661192,1.4373479277525718) node[anchor=north west] {$x$};
+\draw [fill=qqffqq] (1.2882773923247675,0.) circle (2.5pt);
+\draw [fill=sacado_violet] (1.2882773923247675,1.2882773923247675) circle (2.5pt);
+\draw [fill=sacado_green] (1.2882773923247675,1.6596586395751027) circle (2.5pt);
+\draw [fill=sacado_blue] (1.2882773923247675,2.1381007043410847) circle (2.5pt);
+\draw [fill=sacado_blue] (0.,2.1381007043410847) circle (2.5pt);
+\draw [fill=sacado_green] (0.,1.6596586395751027) circle (2.5pt);
+\draw [fill=sacado_violet] (0.,1.2882773923247675) circle (2.5pt);
+\end{axis}
+\end{tikzpicture}
+\end{center}
 
 
 \end{pageCours} % Fin page de cours 2
@@ -1377,11 +1411,15 @@ ytick={-1.0,0.0,...,5.0},]
 %QCM
 \begin{ExoAutoN}{Compétence.}{1}{0}{0}{0}{0}
 \vspace{.2cm}
-\begin{tabular}{|M{.4\linewidth}|M{.18\linewidth}|M{.18\linewidth}|M{.18\linewidth}|}
+\begin{tabular}{|M{.4\linewidth}|M{.17\linewidth}|M{.17\linewidth}|M{.17\linewidth}|}
 \hline
 Enoncé & A & B & C \\\hline
 $f:x\mapsto \frac{1}{x}$, sachant que $f(a)=-7,54$ que vaut $f(-a)$ ? & $f(-a)=-7,54$ & $f(-a)=7,54$ & On ne peut pas savoir \\\hline
 La fonction $g$ est telle que $g(5)=g(-5)$ & La fonction est paire. & La fonction est impaire. & On ne peut pas conclure quand à sa parité. \\\hline
+Soit la fonction est $f(x)=4x^2+5$ qu'elle est la parité de la fonction ? & La fonction est paire. & La fonction est impaire. & On ne peut pas savoir. \\\hline
+Soient la fonction $f:x\mapsto x^2$ et deux nombres $a$ et $b$ appartenant à $]-\infty;0]$ tel que $a<b$. Que peut-on dire de $f(a)$ et $f(b)$ ? & $f(a)<f(b)$ & $f(a)=f(b)$ & $f(a)>f(b)$ \\\hline
+Soient la fonction $g:x\mapsto x^3$ et deux nombres $a$ et $b$ appartenant à $]-\infty;0]$ tel que $a<b$. Que peut-on dire de $g(a)$ et $g(b)$ ? & $g(a)<g(b)$ & $g(a)=g(b)$ & $g(a)>g(b)$ \\\hline
+Soient deux nombres $a$ et $b$ tel que $a<b<1$. & $a^2<b^3$ & $a^2>b^3$ & $a<b^2$ \\\hline
 \end{tabular}
 \end{ExoAutoN}
 
