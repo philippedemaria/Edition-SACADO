@@ -1,4 +1,4 @@
-=>PYTHONTEX#py#default#default#0#code#####280#
+=>PYTHONTEX#py#default#default#0#code#####283#
 import qrcode
 def qr(data):
      fic=r"QRcodes/qr"+data+'.png'
