@@ -392,8 +392,6 @@ Si $\Omega=\lbrace{0;1;2;3;4;5;6\rbrace}$ et $A=\lbrace{3;4;6\rbrace}$ alors $\O
 
 \end{minipage}
 \end{DefT}
- 
-
 
  
 \begin{minipage}[t]{0.68\linewidth}
@@ -458,7 +456,6 @@ alors $A \cap B= \oslash $
 \end{Rq}
 \end{minipage}
 
-
 \begin{DefT}{Réunion}\index{Ensemble!Réunion}
 
 \begin{minipage}{0.68\linewidth}
@@ -490,6 +487,21 @@ Si $A=\lbrace{0;1;2;3;4;5;6\rbrace}$ et $B=\lbrace{3;4;7;8\rbrace}$ alors $A \cu
 \end{minipage}
 
 \end{DefT}
+
+\definecolor{ffqqqq}{rgb}{1.,0.,0.}
+\definecolor{xfqqff}{rgb}{0.4980392156862745,0.,1.}
+\definecolor{ffttww}{rgb}{1.,0.2,0.4}
+\definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(0.06,0.8) rectangle (4.82,4.12);
+\draw [rotate around={-2.7263109939062526:(3.08,2.22)},line width=2.pt,color=xdxdff,fill=xdxdff,fill opacity=0.5] (3.08,2.22) ellipse (1.44092369450198cm and 1.1700688412983384cm);
+\draw [rotate around={-61.97549946792966:(1.29,2.28)},line width=2.pt,color=ffttww,fill=ffttww,fill opacity=0.550000011920929] (1.29,2.28) ellipse (1.123788251075678cm and 0.8772685069325883cm);
+\draw [color=xfqqff](4.16,3.52) node[anchor=north west] {$B$};
+\draw [color=ffqqqq](0.28,3.98) node[anchor=north west] {$A$};
+\draw (1.36,3.96) node[anchor=north west] {$A\cup B$};
+\draw [rotate around={-2.7263109939062526:(3.08,2.22)},line width=1.pt,fill=black,pattern=north east lines,pattern color=black] (3.08,2.22) ellipse (1.44092369450198cm and 1.1700688412983384cm);
+\draw [rotate around={-61.97549946792966:(1.29,2.28)},line width=1.pt,fill=black,pattern=north east lines,pattern color=black] (1.29,2.28) ellipse (1.123788251075678cm and 0.8772685069325883cm);
+\end{tikzpicture}
 
 \end{pageCours} % Fin page de cours 2
 
