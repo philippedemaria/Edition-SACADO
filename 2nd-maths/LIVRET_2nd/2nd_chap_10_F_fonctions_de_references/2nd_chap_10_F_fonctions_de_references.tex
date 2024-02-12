@@ -45,7 +45,23 @@ Sophie Germain (1776-1831) était une mathématicienne française pionnière du 
 \end{His}
 
 \begin{ExoDec}{Compétence.}{1234}{1}{0}{0}{0}
-% Un exercice de découverte/d'accroche
+\vspace{.2cm}
+
+\begin{tikzpicture}
+   \tkzTabInit[lgt=3cm]{$x$ / 1 , $2x+6$ / 1, $-x+2$ / 1, $(2x+6)(-x+2)$ / 1}{$-\infty$, $-3$, $2$, $+\infty$}
+   \tkzTabLine{, -, z, +, , +,}
+   \tkzTabLine{, +, , +, z, -,}
+   \tkzTabLine{, -, z, +, z, -,}
+%   \tkzTabLine{, +, z, -, }
+\end{tikzpicture}
+\vspace{.2cm}
+
+\begin{tikzpicture}
+   \tkzTabInit{$x$ / 1 , Signe de $A$ / 1}{$-\infty$, $-4$, $+\infty$}
+   \tkzTabLine{, -, z, +, }
+%   \tkzTabLine{, +, z, -, }
+\end{tikzpicture}
+
 \end{ExoDec}
 }
 
