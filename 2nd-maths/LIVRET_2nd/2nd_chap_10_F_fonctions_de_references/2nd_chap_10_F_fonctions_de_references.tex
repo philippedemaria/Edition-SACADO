@@ -57,9 +57,17 @@ Sophie Germain (1776-1831) était une mathématicienne française pionnière du 
 \vspace{.2cm}
 
 \begin{tikzpicture}
-   \tkzTabInit{$x$ / 1 , Signe de $A$ / 1}{$-\infty$, $-4$, $+\infty$}
-   \tkzTabLine{, -, z, +, }
+   \tkzTabInit{$x$ / 1 , Signe de $-3x-6$ / 1}{$-\infty$, $-2$, $+\infty$}
+   \tkzTabLine{, +, z, -, }
 %   \tkzTabLine{, +, z, -, }
+\end{tikzpicture}
+\vspace{.2cm}
+
+\begin{tikzpicture}
+   \tkzTabInit{$x$ / 1 , Signe de $x^3-1$ / 1, Signe de $x$ / 1, Signe de $\frac{x^3-1}{x}$ / 1}{$-\infty$, $0$, $1$, $+\infty$}
+   \tkzTabLine{, -, , -, z, +}
+   \tkzTabLine{, -, z, +, , +}
+   \tkzTabLine{, +, d, -, z, +}
 \end{tikzpicture}
 
 \end{ExoDec}
